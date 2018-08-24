@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './login.dart';
+import './preference.dart';
 
 class DashboardPage extends StatefulWidget {
   DashboardPage({Key key, this.title}) : super(key: key);
@@ -23,6 +25,61 @@ class _DashboardPageState extends State<DashboardPage> {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),
+        elevation: 0.0,        
+      ),
+      drawer: new Drawer(
+        child: new ListView(
+          children: <Widget>[
+            new UserAccountsDrawerHeader(
+              accountName: new Text("User Name"),
+              accountEmail: new Text("User Email"),
+              currentAccountPicture: new CircleAvatar(
+                backgroundColor: Colors.grey,
+                child: new Text("U")
+              ),
+              otherAccountsPictures: <Widget>[
+                new CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: new Text("U")
+                ),
+              ],
+            ),
+            new ListTile(
+              title: new Text("Dashboard"),
+              trailing: new Icon(Icons.dashboard),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (BuildContext context) => new PreferencePage(title: "Preference")
+                  )
+                );
+                // new PreferencePage(title: 'Options XFocus Apps');
+              },
+            ),
+            new ListTile(
+              title: new Text("Master"),
+              trailing: new Icon(Icons.restaurant_menu),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (BuildContext context) => new LoginPage(title: "Login Page")
+                  )
+                );
+                // new PreferencePage(title: 'Options XFocus Apps');
+              },
+            ),
+            new ListTile(
+              title: new Text("Laporan"),
+              trailing: new Icon(Icons.assessment)
+            ),
+            new ListTile(
+              title: new Text("Chart"),
+              trailing: new Icon(Icons.pie_chart)
+            )            
+          ]
+        ),
       ),
       body: new Center(
         child: new Column(
@@ -39,6 +96,7 @@ class _DashboardPageState extends State<DashboardPage> {
         ),
       ),
       floatingActionButton: new FloatingActionButton(
+        elevation: 0.0,
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: new Icon(Icons.add),
