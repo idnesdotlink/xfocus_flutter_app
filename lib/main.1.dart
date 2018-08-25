@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_flutter_app/route.dart';
+import './pages/dashboard.dart';
 
 void main() => runApp(new XFocusApp());
 
@@ -12,8 +12,7 @@ class XFocusApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      initialRoute: '/',
-      routes: appRoutes,
+      home: new DashboardPage(title: 'Options XFocus Apps'),
     );
   }
 }
