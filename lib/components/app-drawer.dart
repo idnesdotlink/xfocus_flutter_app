@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class AppDrawer extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -23,22 +24,26 @@ class AppDrawer extends StatelessWidget {
             new ListTile(
               title: new Text("Dashboard"),
               trailing: new Icon(Icons.dashboard),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/dashboard');
+              },
             ),
             new ListTile(
-              title: new Text("Master"),
-              trailing: new Icon(Icons.restaurant_menu),
+              title: new Text('Preference'),
+              trailing: new Icon(Icons.desktop_windows),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed('/preference');
-              }
+              },
             ),
             new ListTile(
-              title: new Text("Laporan"),
-              trailing: new Icon(Icons.assessment),
-            ),
-            new ListTile(
-              title: new Text("Chart"),
-              trailing: new Icon(Icons.pie_chart)
+              title: new Text('Log Out'),
+              trailing: new Icon(FontAwesomeIcons.signOutAlt, color: Colors.orange,),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/');
+              },
             )            
           ]
         ),
