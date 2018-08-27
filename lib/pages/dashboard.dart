@@ -5,6 +5,8 @@ import 'package:xfocus_flutter_app/components/line-chart.dart';
 import 'package:xfocus_flutter_app/components/slider-behaviour.dart';
 import 'package:xfocus_flutter_app/components/donut.dart';
 import 'package:xfocus_flutter_app/components/simple-series-legend.dart';
+import 'package:xfocus_flutter_app/components/infobox.dart';
+import 'package:flutter/foundation.dart';
 class DashboardPage extends StatefulWidget {
   DashboardPage({Key key, this.title}) : super(key: key);
 
@@ -36,25 +38,40 @@ class _DashboardPageState extends State<DashboardPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
 new Container(
-  height: 60.0,
+  height: 100.0,
   color: Colors.green,
   child: new ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              Container(
-                width: 160.0,
-                color: Colors.red,
-                child: new Icon(Icons.alarm, color: Colors.white,),
-              ),
-              Container(
-                width: 160.0,
+              new InfoBox(
+                title: 'Kas Bank',
+                percentage: 100.0,
+                ammount: 100000.0,
                 color: Colors.blue,
-                child: new Icon(Icons.calendar_today, color: Colors.white,),
               ),
-              Container(
-                width: 160.0,
+              new InfoBox(
+                title: 'Penjualan',
+                percentage: 100.0,
+                ammount: 100000.0,
                 color: Colors.green,
-                child: new Icon(Icons.add_to_queue, color: Colors.white,),
+              ),
+              new InfoBox(
+                title: 'Persediaan',
+                percentage: 100.0,
+                ammount: 100000.0,
+                color: Colors.pink,
+              ),
+              new InfoBox(
+                title: 'A/R',
+                percentage: 100.0,
+                ammount: 100000.0,
+                color: Colors.red,
+              ),
+              new InfoBox(
+                title: 'A/P',
+                percentage: 100.0,
+                ammount: 100000.0,
+                color: Colors.orange,
               ),
             ],
           ),
