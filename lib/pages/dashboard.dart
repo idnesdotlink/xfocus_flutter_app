@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:xfocus_flutter_app/components/app-drawer.dart';
+import 'package:xfocus_flutter_app/components/barchart.dart';
+import 'package:xfocus_flutter_app/components/line-chart.dart';
+import 'package:xfocus_flutter_app/components/slider-behaviour.dart';
+import 'package:xfocus_flutter_app/components/donut.dart';
+import 'package:xfocus_flutter_app/components/simple-series-legend.dart';
 class DashboardPage extends StatefulWidget {
   DashboardPage({Key key, this.title}) : super(key: key);
 
@@ -27,16 +32,56 @@ class _DashboardPageState extends State<DashboardPage> {
         ],
       ),
       drawer: new AppDrawer(),
-      body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Text(
-              'Hallo Ummiza Sayang',
-            ),
+      body: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+new Container(
+  height: 60.0,
+  color: Colors.green,
+  child: new ListView(
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Container(
+                width: 160.0,
+                color: Colors.red,
+                child: new Icon(Icons.alarm, color: Colors.white,),
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.blue,
+                child: new Icon(Icons.calendar_today, color: Colors.white,),
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.green,
+                child: new Icon(Icons.add_to_queue, color: Colors.white,),
+              ),
+            ],
+          ),
+),
+new Expanded(
+  child: new CustomScrollView(
+  shrinkWrap: true,
+  slivers: <Widget>[
+    new SliverPadding(
+      padding: const EdgeInsets.all(20.0),
+      sliver: new SliverList(
+        delegate: new SliverChildListDelegate(
+          <Widget>[
+            new MyBarChart(),
+            new SimpleSeriesLegend.withSampleData(),
+            new DonutAutoLabelChart.withSampleData(),
+            new SliderLine.withSampleData(),
+            new MyLineChart.withSampleData(),
           ],
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+    ),
+  ],
+      ),
+)
+
+      ],) // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

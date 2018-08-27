@@ -38,6 +38,14 @@ class AppDrawer extends StatelessWidget {
               },
             ),
             new ListTile(
+              title: new Text('Chart Example'),
+              trailing: new Icon(Icons.desktop_windows),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/chart-example');
+              },
+            ),
+            new ListTile(
               title: new Text('Log Out'),
               trailing: new Icon(FontAwesomeIcons.signOutAlt, color: Colors.orange,),
               onTap: () {

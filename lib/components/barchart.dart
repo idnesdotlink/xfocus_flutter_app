@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 class MyBarChart extends StatefulWidget {
-  MyBarChart({Key key, this.title}) : super(key: key);
+  MyBarChart({Key key, this.initialCount}) : super(key: key);
 
-  final String title;
+  final int initialCount;
 
   @override
   _MyBarChart createState() => new _MyBarChart();
@@ -12,15 +12,13 @@ class MyBarChart extends StatefulWidget {
 
 class _MyBarChart extends State<MyBarChart> {
 
-  int _counter = 0;
-
   @override
     Widget build(BuildContext context) {
 
     var data = [
       new ClicksPerYear('2016', 12, Colors.red),
       new ClicksPerYear('2017', 42, Colors.yellow),
-      new ClicksPerYear('2018', _counter, Colors.green),
+      new ClicksPerYear('2018', widget.initialCount, Colors.green),
     ];
 
     var series = [
@@ -44,7 +42,15 @@ class _MyBarChart extends State<MyBarChart> {
         child: chart,
       ),
     );
-    return chartWidget;
+    return new Center(
+      child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          new Text('bar chart data'),
+          chartWidget
+        ],
+      ),
+    );
   }
 
 }

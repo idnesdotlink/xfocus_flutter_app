@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:xfocus_flutter_app/components/donut.dart';
 
 class ChartExamplePage extends StatefulWidget {
   ChartExamplePage({Key key, this.title}) : super(key: key);
@@ -10,13 +11,6 @@ class ChartExamplePage extends StatefulWidget {
 }
 
 class _ChartExamplePageState extends State<ChartExamplePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,20 +22,9 @@ class _ChartExamplePageState extends State<ChartExamplePage> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text(
-              'You have pushed the button this many times:',
-            ),
-            new Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            new Text('text data'),
           ],
         ),
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: new Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

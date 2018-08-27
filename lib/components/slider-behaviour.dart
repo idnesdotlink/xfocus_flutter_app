@@ -120,7 +120,7 @@ class _SliderCallbackState extends State<SliderLine> {
     if (_sliderDomainValue != null) {
       children.add(new Padding(
           padding: new EdgeInsets.only(top: 5.0),
-          child: new Text('Slider domain value: $_sliderDomainValue')));
+          child: new Text('Slider domain value: ${_sliderDomainValue}')));
     }
     if (_sliderPosition != null) {
       children.add(new Padding(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:xfocus_flutter_app/components/barchart.dart';
 class PreferencePage extends StatefulWidget {
   PreferencePage({Key key, this.title}) : super(key: key);
@@ -29,7 +28,9 @@ class _PreferencePageState extends State<PreferencePage> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new MyBarChart(),
+            new MyBarChart(
+              initialCount: _counter,
+            ),
           ],
         ),
       ),

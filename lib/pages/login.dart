@@ -18,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
           children: <Widget>[
             new Container(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              color: Colors.blue,
               child: new TextFormField(
                 decoration: InputDecoration(
                   labelText: 'Enter your username'
