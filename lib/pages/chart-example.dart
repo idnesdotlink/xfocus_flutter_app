@@ -11,7 +11,6 @@ class ChartExamplePage extends StatefulWidget {
 }
 
 class _ChartExamplePageState extends State<ChartExamplePage> {
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(

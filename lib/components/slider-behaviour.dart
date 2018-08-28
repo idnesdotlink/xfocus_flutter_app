@@ -32,7 +32,6 @@ class SliderLine extends StatefulWidget {
     );
   }
 
-
   // We need a Stateful widget to build the selection details with the current
   // selection as the state.
   @override
@@ -120,7 +119,7 @@ class _SliderCallbackState extends State<SliderLine> {
     if (_sliderDomainValue != null) {
       children.add(new Padding(
           padding: new EdgeInsets.only(top: 5.0),
-          child: new Text('Slider domain value: ${_sliderDomainValue}')));
+          child: new Text('Slider domain value: $_sliderDomainValue')));
     }
     if (_sliderPosition != null) {
       children.add(new Padding(

@@ -29,7 +29,6 @@ class SelectionCallbackExample extends StatefulWidget {
     );
   }
 
-
   // We need a Stateful widget to build the selection details with the current
   // selection as the state.
   @override

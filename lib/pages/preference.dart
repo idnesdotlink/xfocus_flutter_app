@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xfocus_flutter_app/components/barchart.dart';
+
 class PreferencePage extends StatefulWidget {
   PreferencePage({Key key, this.title}) : super(key: key);
 
@@ -8,6 +9,7 @@ class PreferencePage extends StatefulWidget {
   @override
   _PreferencePageState createState() => new _PreferencePageState();
 }
+
 class _PreferencePageState extends State<PreferencePage> {
   int _counter = 0;
 
@@ -17,9 +19,8 @@ class _PreferencePageState extends State<PreferencePage> {
     });
   }
 
-@override
+  @override
   Widget build(BuildContext context) {
-
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title),

@@ -16,22 +16,19 @@ class SimpleSeriesLegend extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
-    return 
-    new Container(
-      width: 200.0,
-      height: 200.0,
-      child: new charts.BarChart(
-        seriesList,
-        animate: animate,
-        barGroupingType: charts.BarGroupingType.grouped,
-        // Add the series legend behavior to the chart to turn on series legends.
-        // By default the legend will display above the chart.
-        behaviors: [new charts.SeriesLegend()],
-      )
-    );
+    return new Container(
+        width: 200.0,
+        height: 200.0,
+        child: new charts.BarChart(
+          seriesList,
+          animate: animate,
+          barGroupingType: charts.BarGroupingType.grouped,
+          // Add the series legend behavior to the chart to turn on series legends.
+          // By default the legend will display above the chart.
+          behaviors: [new charts.SeriesLegend()],
+        ));
   }
 
   /// Create series list with multiple series

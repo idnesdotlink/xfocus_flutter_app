@@ -8,21 +8,20 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Colors.orange,
       body: new Center(
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            new Text('XFOCUS Apps'),
             new Container(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               color: Colors.blue,
               child: new TextFormField(
-                decoration: InputDecoration(
-                  labelText: 'Enter your username'
-                ),
+                decoration: InputDecoration(labelText: 'Enter your username'),
               ),
             ),
             new RaisedButton(

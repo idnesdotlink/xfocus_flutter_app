@@ -11,10 +11,8 @@ class MyBarChart extends StatefulWidget {
 }
 
 class _MyBarChart extends State<MyBarChart> {
-
   @override
-    Widget build(BuildContext context) {
-
+  Widget build(BuildContext context) {
     var data = [
       new ClicksPerYear('2016', 12, Colors.red),
       new ClicksPerYear('2017', 42, Colors.yellow),
@@ -45,14 +43,10 @@ class _MyBarChart extends State<MyBarChart> {
     return new Center(
       child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          new Text('bar chart data'),
-          chartWidget
-        ],
+        children: <Widget>[new Text('bar chart data'), chartWidget],
       ),
     );
   }
-
 }
 
 class ClicksPerYear {
