@@ -53,7 +53,7 @@ class _DashboardPageState extends State<DashboardPage> {
             PopupMenuButton<Choice>(
               onSelected: _select,
               itemBuilder: (BuildContext context) {
-                return choices.skip(2).map((Choice choice) {
+                return choices.map((Choice choice) {
                   return PopupMenuItem<Choice>(
                     value: choice,
                     child: Text(choice.title),
@@ -68,7 +68,7 @@ class _DashboardPageState extends State<DashboardPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             InfoBox(),
-            Text(_selectedChoice.toString()),
+            Icon(_selectedChoice.icon),
             Expanded(
               child: new CustomScrollView(
                 shrinkWrap: true,
@@ -103,9 +103,6 @@ class Choice {
 }
 
 const List<Choice> choices = const <Choice>[
-  const Choice(title: 'car', icon: Icons.directions_car),
-  const Choice(title: 'car', icon: Icons.directions_car),
-  const Choice(title: 'car', icon: Icons.directions_car),
-  const Choice(title: 'car', icon: Icons.directions_car),
-  const Choice(title: 'car', icon: Icons.directions_car),
+  const Choice(title: 'Dalam Jutaan', icon: Icons.directions_car),
+  const Choice(title: 'Dalam Ribuan', icon: Icons.add_circle),
 ];
