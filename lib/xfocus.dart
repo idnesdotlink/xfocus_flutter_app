@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_flutter_app/route.dart';
+import 'package:xfocus_mobile/route.dart';
 
 class XFocusApp extends StatelessWidget {
   // This widget is the root of your application.

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_flutter_app/components/info_box_item.dart';
+import 'package:xfocus_mobile/components/info_box_item.dart';
 
 class InfoBox extends StatefulWidget {
   InfoBoxState createState() => InfoBoxState();

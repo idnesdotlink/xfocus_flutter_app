@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_flutter_app/components/barchart.dart';
+import 'package:xfocus_mobile/components/barchart.dart';
 
 class PreferencePage extends StatefulWidget {
   PreferencePage({Key key, this.title}) : super(key: key);

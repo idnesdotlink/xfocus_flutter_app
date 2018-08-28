@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_flutter_app/components/app-drawer.dart';
-import 'package:xfocus_flutter_app/components/barchart.dart';
-import 'package:xfocus_flutter_app/components/line-chart.dart';
-import 'package:xfocus_flutter_app/components/slider-behaviour.dart';
-import 'package:xfocus_flutter_app/components/donut.dart';
-import 'package:xfocus_flutter_app/components/simple-series-legend.dart';
-import 'package:xfocus_flutter_app/components/info_box.dart';
+import 'package:xfocus_mobile/components/app-drawer.dart';
+import 'package:xfocus_mobile/components/barchart.dart';
+import 'package:xfocus_mobile/components/line-chart.dart';
+import 'package:xfocus_mobile/components/slider-behaviour.dart';
+import 'package:xfocus_mobile/components/donut.dart';
+import 'package:xfocus_mobile/components/simple-series-legend.dart';
+import 'package:xfocus_mobile/components/info_box.dart';
 import 'package:flutter/foundation.dart';
 
 class DashboardPage extends StatefulWidget {

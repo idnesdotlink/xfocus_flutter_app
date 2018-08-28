@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:xfocus_flutter_app/components/donut.dart';
+// import 'package:xfocus_mobile/components/donut.dart';
 
 class ChartExamplePage extends StatefulWidget {
   ChartExamplePage({Key key, this.title}) : super(key: key);
