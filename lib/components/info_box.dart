@@ -18,7 +18,7 @@ class InfoBoxState extends State<InfoBox> {
             title: 'Kas Bank',
             percentage: 100.0,
             ammount: 100000.0,
-            color: Colors.blue,
+            color: Colors.purple,
           ),
           new InfoBoxItem(
             title: 'Penjualan',
