@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
 
@@ -11,7 +12,8 @@ class DummyJson {
   }
 
   Future<String> loadAsset() async {
-    return await rootBundle.loadString('assets/json/dummy.json');
+    var data = await rootBundle.loadString('assets/json/dummy.json');
+    return json.decode(data);
   }
 
   Future<File> get _localFile async {

@@ -22,12 +22,11 @@ class _DashboardPageState extends State<DashboardPage> {
   Choice _selectedChoice = choices[0];
   void _select(Choice choice) {
     debugPrint(choice.toString());
-    setState(
-      () {
-        _selectedChoice = choice;
-      }
-    );
+    setState(() {
+      _selectedChoice = choice;
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -51,16 +50,15 @@ class _DashboardPageState extends State<DashboardPage> {
               },
             ), */
             PopupMenuButton<Choice>(
-              onSelected: _select,
-              itemBuilder: (BuildContext context) {
-                return choices.map((Choice choice) {
-                  return PopupMenuItem<Choice>(
-                    value: choice,
-                    child: Text(choice.title),
-                  );
-                }).toList();
-              }
-            )
+                onSelected: _select,
+                itemBuilder: (BuildContext context) {
+                  return choices.map((Choice choice) {
+                    return PopupMenuItem<Choice>(
+                      value: choice,
+                      child: Text(choice.title),
+                    );
+                  }).toList();
+                })
           ],
         ),
         drawer: new AppDrawer(),
@@ -97,7 +95,7 @@ class _DashboardPageState extends State<DashboardPage> {
 }
 
 class Choice {
-  const Choice({ this.title, this.icon });
+  const Choice({this.title, this.icon});
   final String title;
   final IconData icon;
 }

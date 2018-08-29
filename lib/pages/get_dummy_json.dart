@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/dummy.dart';
+
 class GetDummyJson extends StatefulWidget {
   final DummyJson storage;
 
@@ -19,11 +20,10 @@ class _GetDummyJsonState extends State<GetDummyJson> {
   @override
   void initState() {
     super.initState();
-    widget.storage.loadAsset().then(
-      (String value) {
-        debugPrint(value);
-      }
-    );
+    widget.storage.loadAsset().then((String value) {
+      debugPrint('get value');
+      debugPrint(value);
+    });
     widget.storage.readCounter().then((int value) {
       setState(() {
         _counter = value;
