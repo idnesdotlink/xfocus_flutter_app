@@ -53,7 +53,7 @@ class AppDrawer extends StatelessWidget {
           },
         ),
         new ListTile(
-          title: new Text('Local Json'),
+          title: new Text('Get Local Data'),
           trailing: new Icon(
             FontAwesomeIcons.signOutAlt,
             color: Colors.orange,
@@ -64,7 +64,7 @@ class AppDrawer extends StatelessWidget {
           },
         ),
         new ListTile(
-          title: new Text('Server Json'),
+          title: new Text('Get Server Data'),
           trailing: new Icon(
             FontAwesomeIcons.signOutAlt,
             color: Colors.orange,

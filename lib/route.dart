@@ -1,11 +1,11 @@
-import 'package:xfocus_mobile/pages/login.dart';
-import 'package:xfocus_mobile/pages/dashboard/dashboard.dart';
-import 'package:xfocus_mobile/pages/preference.dart';
-import 'package:xfocus_mobile/pages/chart-example.dart';
-import 'package:xfocus_mobile/pages/table.dart';
-import 'package:xfocus_mobile/pages/get_dummy_json.dart';
+import 'package:xfocus_mobile/screen/login.dart';
+import 'package:xfocus_mobile/screen/dashboard/dashboard.dart';
+import 'package:xfocus_mobile/screen/preference.dart';
+import 'package:xfocus_mobile/screen/chart-example.dart';
+import 'package:xfocus_mobile/screen/table.dart';
+import 'package:xfocus_mobile/screen/get_dummy_json.dart';
 import 'package:xfocus_mobile/dummy.dart';
-import 'package:xfocus_mobile/pages/server_json.dart';
+import 'package:xfocus_mobile/screen/server_json.dart';
 
 final appRoutes = {
   '/': (context) => new LoginPage(),
