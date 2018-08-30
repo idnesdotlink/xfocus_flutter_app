@@ -16,18 +16,27 @@ class _LoginPageState extends State<LoginPage> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text('XFOCUS Apps'),
+            Container(
+              width: 200.0,
+              height: 200.0,
+              child: DecoratedBox(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/png/logo-50.png')
+                )
+              ),
+            ),
+            ),
             new Container(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              color: Colors.blue,
               child: new TextFormField(
                 decoration: InputDecoration(labelText: 'Enter your username'),
               ),
             ),
             new RaisedButton(
-              color: Colors.lightBlueAccent,
+              color: Colors.purple,
               child: new Text(
-                'Go to Homepage',
+                'Login',
                 style: new TextStyle(
                   color: Colors.white,
                   fontSize: 18.0,
