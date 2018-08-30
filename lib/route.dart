@@ -6,6 +6,7 @@ import 'package:xfocus_mobile/screen/table.dart';
 import 'package:xfocus_mobile/screen/get_dummy_json.dart';
 import 'package:xfocus_mobile/dummy.dart';
 import 'package:xfocus_mobile/screen/server_json.dart';
+import 'package:xfocus_mobile/screen/dashboard/picker.dart';
 
 final appRoutes = {
   '/': (context) => new LoginPage(),
@@ -17,4 +18,5 @@ final appRoutes = {
         storage: DummyJson(),
       ),
   '/getserverjson': (context) => ServerJson(),
+  '/picker': (context) => DateAndTimePickerDemo(),
 };

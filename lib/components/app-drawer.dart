@@ -75,14 +75,14 @@ class AppDrawer extends StatelessWidget {
           },
         ),
         new ListTile(
-          title: new Text('Log Out'),
+          title: new Text('Picker'),
           trailing: new Icon(
             FontAwesomeIcons.signOutAlt,
             color: Colors.orange,
           ),
           onTap: () {
             Navigator.of(context).pop();
-            Navigator.of(context).pushNamed('/');
+            Navigator.of(context).pushNamed('/picker');
           },
         ),
         new ListTile(
