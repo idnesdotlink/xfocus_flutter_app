@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/components/line-chart.dart';
+
 class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -8,12 +9,12 @@ class MyCard extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(0.0)),
       ),
       elevation: 0.0,
-  child: new Column(
-    mainAxisSize: MainAxisSize.max,
-    children: <Widget>[
-      MyLineChart.withSampleData(),
-    ],
-  ),
-);
+      child: new Column(
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          MyLineChart.withSampleData(),
+        ],
+      ),
+    );
   }
 }

@@ -48,13 +48,10 @@ class PostList {
   });
 
   factory PostList.fromJson(List<dynamic> parsedJson) {
-
     List<Post> posts = new List<Post>();
-    posts = parsedJson.map((i)=>Post.fromJson(i)).toList();
+    posts = parsedJson.map((i) => Post.fromJson(i)).toList();
 
-    return new PostList(
-      posts: posts
-    );
+    return new PostList(posts: posts);
   }
 }
 
