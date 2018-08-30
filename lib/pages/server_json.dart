@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 // import 'package:archive/archive_io.dart';
 // import 'dart:convert';
 
-Future<String> consolidateHttpClientResponse(HttpClientResponse response) async {
+Future<String> consolidateHttpClientResponse(
+    HttpClientResponse response) async {
   final Completer<String> completer = new Completer<String>.sync();
   final StringBuffer buffer = new StringBuffer();
 
@@ -16,24 +17,26 @@ Future<String> consolidateHttpClientResponse(HttpClientResponse response) async 
     print(chunk); // all the chunks will get printed
   }, onDone: () {
     print('DONE'); // will be printed after last chunk is printed from above
-    print(buffer.toString()); // will not include the last chunk we got above.  callers will be missing some data.
-    completer.complete(buffer.toString()); 
+    print(buffer
+        .toString()); // will not include the last chunk we got above.  callers will be missing some data.
+    completer.complete(buffer.toString());
   }, onError: completer.completeError, cancelOnError: true);
 
   return completer.future;
 }
 
-Future<String> psg () async {
-final psgbgt = await HttpClient().get('10.0.2.2', 9080, '/dummy')
-     .then((HttpClientRequest request) => request.close())
-     .then((HttpClientResponse response) async {
-       return await consolidateHttpClientResponse(response);
-      //  response.transform(utf8.decoder).listen((contents) {
-      //    // handle data
-      //    debugPrint(contents);
-      //    return contents;
-      //  });
-     });
+Future<String> psg() async {
+  final psgbgt = await HttpClient()
+      .get('10.0.2.2', 9080, '/dummy')
+      .then((HttpClientRequest request) => request.close())
+      .then((HttpClientResponse response) async {
+    return await consolidateHttpClientResponse(response);
+    //  response.transform(utf8.decoder).listen((contents) {
+    //    // handle data
+    //    debugPrint(contents);
+    //    return contents;
+    //  });
+  });
   return psgbgt;
 }
 
@@ -42,11 +45,14 @@ Future<Post> fetchPost() async {
       await http.get('https://jsonplaceholder.typicode.com/posts/1'); */
   final response = await http.get(
     'http://10.0.2.2:9080/dummy',
-    headers: {HttpHeaders.ACCEPT_ENCODING: 'gzip'},
+    headers: {HttpHeaders.acceptEncodingHeader: 'gzip'},
   );
 
   // utf8.encode(response.body);
   // debugPrint(response.bodyBytes);
+  // Converter.castFrom(source)
+  debugPrint('hello');
+  debugPrint(Utf8Decoder().convert(response.bodyBytes));
   debugPrint(response.body);
 
   // consolidateHttpClientResponse(response);
@@ -86,11 +92,11 @@ class ServerJson extends StatelessWidget {
         title: Text('Fetch Data Example'),
       ),
       body: Center(
-        child: FutureBuilder<String>(
-          future: psg(),
+        child: FutureBuilder<Post>(
+          future: fetchPost(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              debugPrint(snapshot.data);
+              // debugPrint(snapshot.data);
               // return Text(snapshot.data.title);
             } else if (snapshot.hasError) {
               // return Text("${snapshot.error}");

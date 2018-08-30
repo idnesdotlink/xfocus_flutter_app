@@ -64,7 +64,7 @@ class AppDrawer extends StatelessWidget {
           },
         ),
         new ListTile(
-          title: new Text('Local Json'),
+          title: new Text('Server Json'),
           trailing: new Icon(
             FontAwesomeIcons.signOutAlt,
             color: Colors.orange,
