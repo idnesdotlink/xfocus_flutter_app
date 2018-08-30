@@ -84,7 +84,40 @@ class AppDrawer extends StatelessWidget {
             Navigator.of(context).pop();
             Navigator.of(context).pushNamed('/');
           },
-        )
+        ),
+        new ListTile(
+          title: new Text('Log Out'),
+          trailing: new Icon(
+            FontAwesomeIcons.signOutAlt,
+            color: Colors.orange,
+          ),
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed('/');
+          },
+        ),
+        new ListTile(
+          title: new Text('Log Out'),
+          trailing: new Icon(
+            FontAwesomeIcons.signOutAlt,
+            color: Colors.orange,
+          ),
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed('/');
+          },
+        ),
+        new ListTile(
+          title: new Text('Log Out'),
+          trailing: new Icon(
+            FontAwesomeIcons.signOutAlt,
+            color: Colors.orange,
+          ),
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed('/');
+          },
+        ),
       ]),
     );
   }

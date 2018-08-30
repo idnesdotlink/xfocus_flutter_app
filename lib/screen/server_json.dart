@@ -4,22 +4,18 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
-Future<Post> fetchPost() async {
+Future<PostList> fetchPost() async {
   final response = await http.get(
     'http://10.0.2.2:9080/dummy',
     headers: {HttpHeaders.acceptEncodingHeader: 'gzip'},
   );
   final String data = utf8.decode(response.bodyBytes).toString();
 
-  // final String data = response.body;
-
-  var cmpr = jsonDecode(data);
-  var cmp1 = cmpr[0];
-  debugPrint(cmp1["title"].toString());
-
   if (response.statusCode == 200) {
-    // If the call to the server was successful, parse the JSON
-    return Post.fromJson(json.decode(data));
+    var x = PostList.fromJson(json.decode(data));
+    // var x = json.decode(data).map((i)=>Post.fromJson(i)).toList();
+    // debugPrint(x.post.displayTitle);
+    return x;
   } else {
     // If that call was not successful, throw an error.
     throw Exception('Failed to load post');
@@ -29,8 +25,8 @@ Future<Post> fetchPost() async {
 class Post {
   final String title;
   final String displayTitle;
-  final int ammount;
-  final int percentage;
+  final String ammount;
+  final String percentage;
 
   Post({this.title, this.displayTitle, this.ammount, this.percentage});
 
@@ -44,27 +40,23 @@ class Post {
   }
 }
 
-/* class Post {
-  String _username;
-  String _password;
-  User(this._usn, this._password);
+class PostList {
+  final List<Post> posts;
 
-  User.map(dynamic obj) {
-    this._username = obj["username"];
-    this._password = obj["password"];
+  PostList({
+    this.posts,
+  });
+
+  factory PostList.fromJson(List<dynamic> parsedJson) {
+
+    List<Post> posts = new List<Post>();
+    posts = parsedJson.map((i)=>Post.fromJson(i)).toList();
+
+    return new PostList(
+      posts: posts
+    );
   }
-
-  String get username => _username;
-  String get password => _password;
-
-  Map<String, dynamic> toMap() {
-    var map = new Map<String, dynamic>();
-    map["username"] = _username;
-    map["password"] = _password;
-
-    return map;
-  }
-} */
+}
 
 class ServerJson extends StatelessWidget {
   @override
@@ -74,11 +66,11 @@ class ServerJson extends StatelessWidget {
         title: Text('Fetch Data Example'),
       ),
       body: Center(
-        child: FutureBuilder<Post>(
+        child: FutureBuilder<PostList>(
           future: fetchPost(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              return Text(snapshot.data.title);
+              return Text(snapshot.data.posts[0].title);
             } else if (snapshot.hasError) {
               return Text("${snapshot.error}");
             }

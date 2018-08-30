@@ -7,6 +7,8 @@ import 'package:xfocus_mobile/components/donut.dart';
 import 'package:xfocus_mobile/components/simple-series-legend.dart';
 import 'package:xfocus_mobile/components/info_box.dart';
 import 'package:flutter/foundation.dart';
+import './card.dart';
+import './table.dart';
 
 class DashboardPage extends StatefulWidget {
   DashboardPage({Key key, this.title = ''}) : super(key: key);
@@ -76,11 +78,13 @@ class _DashboardPageState extends State<DashboardPage> {
                     sliver: new SliverList(
                       delegate: new SliverChildListDelegate(
                         <Widget>[
-                          new MyBarChart(),
-                          new SimpleSeriesLegend.withSampleData(),
-                          new DonutAutoLabelChart.withSampleData(),
-                          new SliderLine.withSampleData(),
-                          new MyLineChart.withSampleData(),
+                          DashboardTable(),
+                          MyCard(),
+                          MyBarChart(),
+                          SimpleSeriesLegend.withSampleData(),
+                          DonutAutoLabelChart.withSampleData(),
+                          SliderLine.withSampleData(),
+                          MyLineChart.withSampleData(),
                         ],
                       ),
                     ),
