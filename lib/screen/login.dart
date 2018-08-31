@@ -4,16 +4,16 @@ class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => new _LoginPageState();
+  _LoginPageState createState() =>  _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return  Scaffold(
       backgroundColor: Colors.orange,
-      body: new Center(
-        child: new Column(
+      body:  Center(
+        child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
@@ -27,17 +27,17 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             ),
-            new Container(
+             Container(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: new TextFormField(
-                decoration: InputDecoration(labelText: 'Enter your username'),
+              child:  TextFormField(
+                decoration: InputDecoration(labelText: 'Masukan Nama'),
               ),
             ),
-            new RaisedButton(
+             RaisedButton(
               color: Colors.purple,
-              child: new Text(
+              child:  Text(
                 'Login',
-                style: new TextStyle(
+                style:  TextStyle(
                   color: Colors.white,
                   fontSize: 18.0,
                 ),

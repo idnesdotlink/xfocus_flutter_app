@@ -4,12 +4,12 @@ import 'package:xfocus_mobile/components/line-chart.dart';
 class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Card(
+    return  Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(0.0)),
       ),
       elevation: 0.0,
-      child: new Column(
+      child:  Column(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           MyLineChart.withSampleData(),

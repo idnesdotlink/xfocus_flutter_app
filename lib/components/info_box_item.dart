@@ -1,40 +1,63 @@
 import 'package:flutter/material.dart';
 
 class InfoBoxItem extends StatefulWidget {
-  /// *components:InfoBoxItem*
-  ///
-  /// [test] test component InfoBoxItem
+
   InfoBoxItem(
-      {Key key,
+    {
+      Key key,
       this.title,
       this.percentage = 0.0,
       this.ammount = 0.0,
-      this.color = Colors.white})
+      this.color = Colors.white,
+      this.isUp = true,
+    }
+  )
       : super(key: key);
 
   final String title;
   final double percentage;
   final double ammount;
   final Color color;
+  final bool isUp;
   @override
-  _InfoBoxItemState createState() => new _InfoBoxItemState();
+  _InfoBoxItemState createState() => _InfoBoxItemState();
 }
 
 class _InfoBoxItemState extends State<InfoBoxItem> {
   @override
   Widget build(BuildContext context) {
-    return new GestureDetector(
-      onTap: () => print('printing'),
+    return GestureDetector(
+      onTap: () => {
+      },
       child: Container(
-        width: 100.0,
-        color: widget.color,
-        child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Text(widget.title.toString()),
-              new Text(widget.percentage.toString()),
-              new Text(widget.ammount.toString()),
-            ]),
+        height: 20.0,
+        
+        decoration: BoxDecoration(
+          color: widget.color.withOpacity(0.5),  
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              widget.title.toString(),
+              style: TextStyle(
+                fontSize: 12.0,
+                fontWeight: FontWeight.bold,
+              )
+            ),
+            Text(
+              widget.percentage.toString() + ' %',
+              style: TextStyle(
+                fontSize: 14.0,
+              )
+            ),
+            Icon(
+              widget.isUp ? Icons.trending_up : Icons.trending_down,
+              color: widget.isUp ? Colors.green : Colors.red,
+            ),
+          ]
+        ),
       ),
     );
   }

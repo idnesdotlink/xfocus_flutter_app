@@ -4,11 +4,11 @@ import 'dart:async';
 //import OneSignal
 import 'package:onesignal/onesignal.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp( MyApp());
 
 class MyApp extends StatefulWidget {
   @override
-  _MyAppState createState() => new _MyAppState();
+  _MyAppState createState() =>  _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -208,37 +208,37 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
-          appBar: new AppBar(
+    return  MaterialApp(
+      home:  Scaffold(
+          appBar:  AppBar(
             title: const Text('OneSignal Flutter Demo'),
             backgroundColor: Color.fromARGB(255, 212, 86, 83),
           ),
           body: Container(
             padding: EdgeInsets.all(10.0),
             child: SingleChildScrollView(
-              child: new Table(
+              child:  Table(
                 children: [
-                  new TableRow(children: [
-                    new OneSignalButton(
+                   TableRow(children: [
+                     OneSignalButton(
                         "Get Tags", _handleGetTags, !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton(
+                   TableRow(children: [
+                     OneSignalButton(
                         "Send Tags", _handleSendTags, !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton("Prompt for Push Permission",
+                   TableRow(children: [
+                     OneSignalButton("Prompt for Push Permission",
                         _handlePromptForPushPermission, !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton(
+                   TableRow(children: [
+                     OneSignalButton(
                         "Print Permission Subscription State",
                         _handleGetPermissionSubscriptionState,
                         !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new TextField(
+                   TableRow(children: [
+                     TextField(
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
                           hintText: "Email Address",
@@ -252,42 +252,42 @@ class _MyAppState extends State<MyApp> {
                       },
                     )
                   ]),
-                  new TableRow(children: [
+                   TableRow(children: [
                     Container(
                       height: 8.0,
                     )
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton(
+                   TableRow(children: [
+                     OneSignalButton(
                         "Set Email", _handleSetEmail, !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton("Logout Email", _handleLogoutEmail,
+                   TableRow(children: [
+                     OneSignalButton("Logout Email", _handleLogoutEmail,
                         !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton("Provide GDPR Consent", _handleConsent,
+                   TableRow(children: [
+                     OneSignalButton("Provide GDPR Consent", _handleConsent,
                         _enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton("Set Location Shared",
+                   TableRow(children: [
+                     OneSignalButton("Set Location Shared",
                         _handleSetLocationShared, !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton(
+                   TableRow(children: [
+                     OneSignalButton(
                         "Delete Tag", _handleDeleteTag, !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton("Post Notification",
+                   TableRow(children: [
+                     OneSignalButton("Post Notification",
                         _handleSendNotification, !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new OneSignalButton("Post Silent Notification",
+                   TableRow(children: [
+                     OneSignalButton("Post Silent Notification",
                         _handleSendSilentNotification, !_enableConsentButton)
                   ]),
-                  new TableRow(children: [
-                    new Container(
-                      child: new Text(_debugLabelString),
+                   TableRow(children: [
+                     Container(
+                      child:  Text(_debugLabelString),
                       alignment: Alignment.center,
                     )
                   ])
@@ -308,27 +308,27 @@ class OneSignalButton extends StatefulWidget {
 
   OneSignalButton(this.title, this.onPressed, this.enabled);
 
-  State<StatefulWidget> createState() => new OneSignalButtonState();
+  State<StatefulWidget> createState() =>  OneSignalButtonState();
 }
 
 class OneSignalButtonState extends State<OneSignalButton> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new Table(
+    return  Table(
       children: [
-        new TableRow(children: [
-          new FlatButton(
+         TableRow(children: [
+           FlatButton(
             disabledColor: Color.fromARGB(180, 212, 86, 83),
             disabledTextColor: Colors.white,
             color: Color.fromARGB(255, 212, 86, 83),
             textColor: Colors.white,
             padding: EdgeInsets.all(8.0),
-            child: new Text(widget.title),
+            child:  Text(widget.title),
             onPressed: widget.enabled ? widget.onPressed : null,
           )
         ]),
-        new TableRow(children: [
+         TableRow(children: [
           Container(
             height: 8.0,
           )

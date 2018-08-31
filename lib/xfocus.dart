@@ -5,9 +5,9 @@ class XFocusApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return  MaterialApp(
       title: 'XFocus Mock Up',
-      theme: new ThemeData(
+      theme:  ThemeData(
         primarySwatch: Colors.yellow,
       ),
       initialRoute: '/',

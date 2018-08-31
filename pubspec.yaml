@@ -9,7 +9,7 @@ dependencies:
   sqflite: any
   http: ^0.11.3+16
   web_socket_channel: ^1.0.7
-  image_picker: ^0.4.7
+  image_picker: ^0.4.10
   flutter_search_bar: ^2.0.5
   intro_views_flutter: ^2.2.3
   font_awesome_flutter: ^8.0.1
@@ -25,6 +25,7 @@ dependencies:
   flutter_sparkline: ^0.0.4
   flutter_circular_chart: ^0.0.3
   async_loader: ^0.1.2
+  flutter_app_badger: ^1.0.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

@@ -5,16 +5,20 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/dummy.dart';
 
-class GetDummyJson extends StatefulWidget {
+class GetLocal extends StatefulWidget {
   final DummyJson storage;
 
-  GetDummyJson({Key key, @required this.storage}) : super(key: key);
+  GetLocal({Key key, this.storage}) : super(key: key);
+
+  factory GetLocal.withDummyData() {
+    return GetLocal( storage: DummyJson(), );
+  }
 
   @override
-  _GetDummyJsonState createState() => _GetDummyJsonState();
+  _GetLocalState createState() => _GetLocalState();
 }
 
-class _GetDummyJsonState extends State<GetDummyJson> {
+class _GetLocalState extends State<GetLocal> {
   int _counter;
 
   @override

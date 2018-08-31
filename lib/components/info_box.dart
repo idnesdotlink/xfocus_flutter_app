@@ -8,37 +8,42 @@ class InfoBox extends StatefulWidget {
 class InfoBoxState extends State<InfoBox> {
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      height: 100.0,
-      color: Colors.green,
-      child: new ListView(
-        scrollDirection: Axis.horizontal,
+    return Expanded(
+      flex: 2,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.5),  
+        ),
+        child:  GridView.count(
+        crossAxisCount: 5,
         children: <Widget>[
-          new InfoBoxItem(
-            title: 'Kas Bank',
+           InfoBoxItem(
+            title: 'Kas',
             percentage: 100.0,
             ammount: 100000.0,
             color: Colors.purple,
+            isUp: false,
           ),
-          new InfoBoxItem(
-            title: 'Penjualan',
+           InfoBoxItem(
+            title: 'Sales',
             percentage: 100.0,
             ammount: 100000.0,
-            color: Colors.green,
+            color: Colors.blue,
           ),
-          new InfoBoxItem(
-            title: 'Persediaan',
+           InfoBoxItem(
+            title: 'Inventory',
             percentage: 100.0,
             ammount: 100000.0,
             color: Colors.pink,
           ),
-          new InfoBoxItem(
+           InfoBoxItem(
             title: 'A/R',
             percentage: 100.0,
             ammount: 100000.0,
             color: Colors.red,
+            isUp: false,
           ),
-          new InfoBoxItem(
+           InfoBoxItem(
             title: 'A/P',
             percentage: 100.0,
             ammount: 100000.0,
@@ -46,6 +51,7 @@ class InfoBoxState extends State<InfoBox> {
           ),
         ],
       ),
+    ),
     );
   }
 }

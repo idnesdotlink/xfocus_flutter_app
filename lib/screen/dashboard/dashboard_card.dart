@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'table/cash.dart';
 
 class DashboardCard extends StatefulWidget{
+  final Widget widget;
+  DashboardCard(this.widget);
   DashboardCardState createState()=>  DashboardCardState();
 }
 
@@ -28,6 +29,7 @@ class DashboardCardState extends State<DashboardCard> {
           Container(
             color: Colors.orange,
             child: ListTile(
+              dense: true,
               title: const Text('Kas'),
               trailing: PopupMenuButton<Choice>(
                 onSelected: _select,
@@ -45,10 +47,7 @@ class DashboardCardState extends State<DashboardCard> {
           Icon(_selectedChoice.icon),
           Padding(
             padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
-            child: DataTable(
-              columns: dataColumn,
-              rows: dataRow
-            ),
+            child: widget.widget,
           )
         ]
       ),

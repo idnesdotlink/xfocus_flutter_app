@@ -48,14 +48,14 @@ class PostList {
   });
 
   factory PostList.fromJson(List<dynamic> parsedJson) {
-    List<Post> posts = new List<Post>();
+    List<Post> posts =  List<Post>();
     posts = parsedJson.map((i) => Post.fromJson(i)).toList();
 
-    return new PostList(posts: posts);
+    return  PostList(posts: posts);
   }
 }
 
-class ServerJson extends StatelessWidget {
+class GetServer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

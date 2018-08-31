@@ -199,9 +199,9 @@ class _DateAndTimePickerDemoState extends State<DateAndTimePickerDemo> {
                 child: DropdownButton<String>(
                   value: _activity,
                   isDense: true,
-                  onChanged: (String newValue) {
+                  onChanged: (String Value) {
                     setState(() {
-                      _activity = newValue;
+                      _activity = Value;
                     });
                   },
                   items: _allActivities.map((String value) {

@@ -7,21 +7,21 @@ class ChartExamplePage extends StatefulWidget {
   final String title;
 
   @override
-  _ChartExamplePageState createState() => new _ChartExamplePageState();
+  _ChartExamplePageState createState() =>  _ChartExamplePageState();
 }
 
 class _ChartExamplePageState extends State<ChartExamplePage> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+    return  Scaffold(
+      appBar:  AppBar(
+        title:  Text(widget.title),
       ),
-      body: new Center(
-        child: new Column(
+      body:  Center(
+        child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text('text data'),
+             Text('text data'),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
