@@ -22,7 +22,7 @@ class MyLineChart extends StatefulWidget {
 
   /// Creates a [charts.TimeSeriesChart] with sample data and no transition.
   factory MyLineChart.withSampleData() {
-    return  MyLineChart(
+    return MyLineChart(
       _createSampleData(),
       // Disable animations for image tests.
       animate: false,
@@ -32,32 +32,32 @@ class MyLineChart extends StatefulWidget {
   // We need a Stateful widget to build the selection details with the current
   // selection as the state.
   @override
-  State<StatefulWidget> createState() =>  _SelectionCallbackState();
+  State<StatefulWidget> createState() => _SelectionCallbackState();
 
   /// Create one series with sample hard coded data.
   static List<charts.Series<TimeSeriesSales, DateTime>> _createSampleData() {
     final usData = [
-       TimeSeriesSales( DateTime(2017, 9, 19), 5),
-       TimeSeriesSales( DateTime(2017, 9, 26), 25),
-       TimeSeriesSales( DateTime(2017, 10, 3), 78),
-       TimeSeriesSales( DateTime(2017, 10, 10), 54),
+      TimeSeriesSales(DateTime(2017, 9, 19), 5),
+      TimeSeriesSales(DateTime(2017, 9, 26), 25),
+      TimeSeriesSales(DateTime(2017, 10, 3), 78),
+      TimeSeriesSales(DateTime(2017, 10, 10), 54),
     ];
 
     final ukData = [
-       TimeSeriesSales( DateTime(2017, 9, 19), 15),
-       TimeSeriesSales( DateTime(2017, 9, 26), 33),
-       TimeSeriesSales( DateTime(2017, 10, 3), 68),
-       TimeSeriesSales( DateTime(2017, 10, 10), 48),
+      TimeSeriesSales(DateTime(2017, 9, 19), 15),
+      TimeSeriesSales(DateTime(2017, 9, 26), 33),
+      TimeSeriesSales(DateTime(2017, 10, 3), 68),
+      TimeSeriesSales(DateTime(2017, 10, 10), 48),
     ];
 
     return [
-       charts.Series<TimeSeriesSales, DateTime>(
+      charts.Series<TimeSeriesSales, DateTime>(
         id: 'US Sales',
         domainFn: (TimeSeriesSales sales, _) => sales.time,
         measureFn: (TimeSeriesSales sales, _) => sales.sales,
         data: usData,
       ),
-       charts.Series<TimeSeriesSales, DateTime>(
+      charts.Series<TimeSeriesSales, DateTime>(
         id: 'UK Sales',
         domainFn: (TimeSeriesSales sales, _) => sales.time,
         measureFn: (TimeSeriesSales sales, _) => sales.sales,
@@ -103,14 +103,14 @@ class _SelectionCallbackState extends State<MyLineChart> {
   Widget build(BuildContext context) {
     // The children consist of a Chart and Text widgets below to hold the info.
     final children = <Widget>[
-       Container(
+      Container(
           height: 150.0,
           width: 150.0,
-          child:  charts.TimeSeriesChart(
+          child: charts.TimeSeriesChart(
             widget.seriesList,
             animate: widget.animate,
             selectionModels: [
-               charts.SelectionModelConfig(
+              charts.SelectionModelConfig(
                 type: charts.SelectionModelType.info,
                 listener: _onSelectionChanged,
               )
@@ -120,15 +120,14 @@ class _SelectionCallbackState extends State<MyLineChart> {
 
     // If there is a selection, then include the details.
     if (_time != null) {
-      children.add( Padding(
-          padding:  EdgeInsets.only(top: 5.0),
-          child:  Text(_time.toString())));
+      children.add(Padding(
+          padding: EdgeInsets.only(top: 5.0), child: Text(_time.toString())));
     }
     _measures?.forEach((String series, num value) {
-      children.add( Text('$series: $value'));
+      children.add(Text('$series: $value'));
     });
 
-    return  Column(children: children);
+    return Column(children: children);
   }
 }
 

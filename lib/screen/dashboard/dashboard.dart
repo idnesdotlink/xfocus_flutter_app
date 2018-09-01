@@ -3,6 +3,7 @@ import 'package:xfocus_mobile/components/app-drawer.dart';
 import 'package:xfocus_mobile/components/info_box.dart';
 import 'package:flutter/foundation.dart';
 import 'card/cash.dart';
+
 class DashboardPage extends StatefulWidget {
   DashboardPage({Key key, this.title = ''}) : super(key: key);
 
@@ -20,50 +21,52 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: _scaffoldKey,
-        appBar: AppBar(
-          title: Text(widget.title),
-          elevation: 0.0,
-          leading: IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: () => _scaffoldKey.currentState.openDrawer()),
-          actions: <Widget>[
-          ],
+      key: _scaffoldKey,
+      appBar: AppBar(
+        title: Text(widget.title),
+        elevation: 0.0,
+        leading: IconButton(
+          icon: Icon(
+            Icons.menu,
+          ),
+          onPressed: () => _scaffoldKey.currentState.openDrawer(),
         ),
-        drawer: AppDrawer(),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            InfoBox(),
-            Switch(
-              value: _switchState,
-              onChanged: (bool Value) {
-                setState(() {
-                  _switchState = Value;
-                });
-              },
-            ),
-            Expanded(
-              child: CustomScrollView(
-                shrinkWrap: true,
-                slivers: <Widget>[
-                  SliverPadding(
-                    padding: const EdgeInsets.all(0.0),
-                    sliver: SliverList(
-                      delegate: SliverChildListDelegate(
-                        <Widget>[
-                          CashCard(),
-                          CashCard(),
-                          CashCard(),
-                        ],
-                      ),
+        actions: <Widget>[],
+      ),
+      drawer: AppDrawer(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          InfoBox(),
+          Switch(
+            value: _switchState,
+            onChanged: (bool value) {
+              setState(() {
+                _switchState = value;
+              });
+            },
+          ),
+          Expanded(
+            child: CustomScrollView(
+              shrinkWrap: true,
+              slivers: <Widget>[
+                SliverPadding(
+                  padding: const EdgeInsets.all(0.0),
+                  sliver: SliverList(
+                    delegate: SliverChildListDelegate(
+                      <Widget>[
+                        CashCard(),
+                        CashCard(),
+                        CashCard(),
+                      ],
                     ),
                   ),
-                ],
-              ),
-            )
-          ],
-        ) // This trailing comma makes auto-formatting nicer for build methods.
-        );
+                ),
+              ],
+            ),
+          )
+        ],
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
   }
 }

@@ -3,8 +3,9 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
+import 'package:xfocus_mobile/config/assets_registry.dart';
 
-class DummyJson {
+class LocalJson {
   Future<String> get _localPath async {
     final directory = await getApplicationDocumentsDirectory();
 
@@ -12,7 +13,7 @@ class DummyJson {
   }
 
   Future<String> loadAsset() async {
-    var data = await rootBundle.loadString('assets/json/dummy.json');
+    var data = await rootBundle.loadString(assetsRegistry['config']);
     return json.decode(data);
   }
 

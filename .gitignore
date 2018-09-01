@@ -1,9 +1,8 @@
 .DS_Store
 .dart_tool/
-
 .packages
 .pub/
-
+*.ignore.txt
+lib/example
 build/
-
 .flutter-plugins

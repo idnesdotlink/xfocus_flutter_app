@@ -10,7 +10,7 @@ class DonutCash extends StatelessWidget {
   DonutCash(this.seriesList, {this.animate});
 
   factory DonutCash.withSampleData() {
-    return  DonutCash(
+    return DonutCash(
       _createSampleData(),
       animate: true,
     );
@@ -20,22 +20,21 @@ class DonutCash extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Column(
-      children: <Widget>[
-        Text('Kas'),
-        Container(
-          width: 200.0,
-          height: 200.0,
-          child: FlutterChart.PieChart(
-            seriesList,
-            animate: animate,
-            defaultRenderer: FlutterChart.ArcRendererConfig(
-              arcWidth: 60,
-              arcRendererDecorators: [FlutterChart.ArcLabelDecorator()]
+        children: <Widget>[
+          Text('Kas'),
+          Container(
+            width: 200.0,
+            height: 200.0,
+            child: FlutterChart.PieChart(
+              seriesList,
+              animate: animate,
+              defaultRenderer: FlutterChart.ArcRendererConfig(
+                  arcWidth: 60,
+                  arcRendererDecorators: [FlutterChart.ArcLabelDecorator()]),
             ),
           ),
-        ),
-      ],
-    ),
+        ],
+      ),
     );
   }
 

@@ -3,15 +3,17 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/dummy.dart';
+import 'package:xfocus_mobile/library/LocalJson.dart';
 
 class GetLocal extends StatefulWidget {
-  final DummyJson storage;
+  final LocalJson storage;
 
   GetLocal({Key key, this.storage}) : super(key: key);
 
   factory GetLocal.withDummyData() {
-    return GetLocal( storage: DummyJson(), );
+    return GetLocal(
+      storage: LocalJson(),
+    );
   }
 
   @override

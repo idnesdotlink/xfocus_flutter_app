@@ -11,7 +11,7 @@ class DonutAutoLabelChart extends StatelessWidget {
 
   /// Creates a [PieChart] with sample data and no transition.
   factory DonutAutoLabelChart.withSampleData() {
-    return  DonutAutoLabelChart(
+    return DonutAutoLabelChart(
       _createSampleData(),
       // Disable animations for image tests.
       animate: false,
@@ -20,10 +20,10 @@ class DonutAutoLabelChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
         width: 200.0,
         height: 200.0,
-        child:  charts.PieChart(seriesList,
+        child: charts.PieChart(seriesList,
             animate: animate,
             // Configure the width of the pie slices to 60px. The remaining space in
             // the chart will be left as a hole in the center.
@@ -40,22 +40,22 @@ class DonutAutoLabelChart extends StatelessWidget {
             //        charts.ArcLabelDecorator(
             //          insideLabelStyleSpec:  charts.TextStyleSpec(...),
             //          outsideLabelStyleSpec:  charts.TextStyleSpec(...)),
-            defaultRenderer:  charts.ArcRendererConfig(
+            defaultRenderer: charts.ArcRendererConfig(
                 arcWidth: 60,
-                arcRendererDecorators: [ charts.ArcLabelDecorator()])));
+                arcRendererDecorators: [charts.ArcLabelDecorator()])));
   }
 
   /// Create one series with sample hard coded data.
   static List<charts.Series<LinearSales, int>> _createSampleData() {
     final data = [
-       LinearSales(0, 100),
-       LinearSales(1, 75),
-       LinearSales(2, 25),
-       LinearSales(3, 5),
+      LinearSales(0, 100),
+      LinearSales(1, 75),
+      LinearSales(2, 25),
+      LinearSales(3, 5),
     ];
 
     return [
-       charts.Series<LinearSales, int>(
+      charts.Series<LinearSales, int>(
         id: 'Sales',
         domainFn: (LinearSales sales, _) => sales.year,
         measureFn: (LinearSales sales, _) => sales.sales,

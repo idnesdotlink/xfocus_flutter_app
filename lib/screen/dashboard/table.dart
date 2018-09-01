@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'table/cash.dart';
 
-class DashboardCard extends StatefulWidget{
-  DashboardCardState createState()=>  DashboardCardState();
+class DashboardCard extends StatefulWidget {
+  DashboardCardState createState() => DashboardCardState();
 }
-
 
 class DashboardCardState extends State<DashboardCard> {
   Choice _selectedChoice = choices[0];
@@ -22,39 +21,35 @@ class DashboardCardState extends State<DashboardCard> {
       ),
       elevation: 1.0,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          Container(
-            color: Colors.orange,
-            child: ListTile(
-              title: const Text('Kas'),
-              trailing: PopupMenuButton<Choice>(
-                onSelected: _select,
-                itemBuilder: (BuildContext context) {
-                  return choices.map((Choice choice) {
-                    return PopupMenuItem<Choice>(
-                      value: choice,
-                      child: Text(choice.title),
-                    );
-                  }).toList();
-                }
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Container(
+              color: Colors.orange,
+              child: ListTile(
+                title: const Text('Kas'),
+                trailing: PopupMenuButton<Choice>(
+                    onSelected: _select,
+                    itemBuilder: (BuildContext context) {
+                      return choices.map((Choice choice) {
+                        return PopupMenuItem<Choice>(
+                          value: choice,
+                          child: Text(choice.title),
+                        );
+                      }).toList();
+                    }),
               ),
             ),
-          ),
-          Icon(_selectedChoice.icon),
-          Padding(
-            padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
-            child: DataTable(
-              columns: dataColumn,
-              rows: dataRow
-            ),
-          )
-        ]
-      ),
+            Icon(_selectedChoice.icon),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
+              child: DataTable(columns: dataColumn, rows: dataRow),
+            )
+          ]),
     );
   }
 }
+
 class Choice {
   const Choice({this.title, this.icon});
   final String title;

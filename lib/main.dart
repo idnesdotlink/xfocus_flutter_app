@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/xfocus.dart';
+import 'package:xfocus_mobile/app.dart';
 
-void main() => runApp( XFocusApp());
+final application = App();
+
+void main() {
+  debugPrint('debug print');
+  try {
+    return runApp(application);
+  } catch (e) {} finally {}
+}
