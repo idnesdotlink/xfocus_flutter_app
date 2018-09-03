@@ -55,14 +55,14 @@ class AppDrawer extends StatelessWidget {
           },
         ),
         ListTile(
-          title: Text('Sign Up'),
+          title: Text('example line chart'),
           trailing: Icon(
             Icons.access_time,
             color: Colors.orange,
           ),
           onTap: () {
             Navigator.of(context).pop();
-            Navigator.of(context).pushNamed('/sign_up');
+            Navigator.of(context).pushNamed('/example_line_chart');
           },
         ),
         /*  ListTile(

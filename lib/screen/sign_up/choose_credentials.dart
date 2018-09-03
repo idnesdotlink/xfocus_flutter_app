@@ -12,7 +12,14 @@ class _ChooseCredentialsState extends State<ChooseCredentials> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.blue,
-      child: Text('Choose Credentials'),
+      child: Column(
+        children: <Widget>[RaisedButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed('/sign_up/personal_info');
+        },
+        child: Text('Choose Credentials')
+        )]
+      ),
     );
   }
 }

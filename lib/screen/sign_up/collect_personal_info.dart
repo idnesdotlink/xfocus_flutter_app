@@ -9,8 +9,13 @@ class _CollectPersonalInfoState extends State<CollectPersonalInfo> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
-      child: Text('Collect Personal Info'),
+      color: Colors.blue,
+      child: RaisedButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed('/sign_up/choose_credentials');
+        },
+        child: Text('Choose Credentials')
+      ),
     );
   }
 }

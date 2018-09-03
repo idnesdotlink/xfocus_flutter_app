@@ -1,19 +1,12 @@
-// import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:web_socket_channel/io.dart';
+import 'package:xfocus_mobile/config/socket_urls.dart';
 
 class GetWebsocket extends StatefulWidget {
-  final String url;
 
-  GetWebsocket({Key key, @required this.url}) : super(key: key);
-
-  factory GetWebsocket.withExample() {
-    return GetWebsocket(
-      url: 'ws://10.0.2.2:9081',
-    );
-  }
+  GetWebsocket({Key key}) : super(key: key);
 
   @override
   _GetWebsocketState createState() => _GetWebsocketState();
@@ -27,14 +20,10 @@ class _GetWebsocketState extends State<GetWebsocket> {
   WebSocketChannel channel;
   TextEditingController controller;
   List<String> messages = [];
-  final Map<int, String> urls = {
-    1: 'ws://echo.websocket.org',
-    2: 'ws://10.0.2.2:9081'
-  };
 
   List<Widget> _psg() {
     List<Widget> a = [];
-    urls.forEach((id, url) {
+    socketUrls.forEach((id, url) {
       a.add(Row(
         children: <Widget>[
           Row(
@@ -78,7 +67,7 @@ class _GetWebsocketState extends State<GetWebsocket> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Text(urls[activeUrl]),
+              Text(socketUrls[activeUrl]),
               Column(
                 children: _psg(),
               ),
@@ -134,7 +123,7 @@ class _GetWebsocketState extends State<GetWebsocket> {
   }
 
   void _connect() {
-    String url = urls[activeUrl];
+    String url = socketUrls[activeUrl];
     debugPrint('connect $url');
     channel = IOWebSocketChannel.connect(url);
     connecting = true;
