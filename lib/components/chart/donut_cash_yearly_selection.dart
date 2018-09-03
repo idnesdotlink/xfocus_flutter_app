@@ -17,33 +17,20 @@ class SelectionCallback extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => new _SelectionCallbackState();
 
-  static List<charts.Series<TimeSeriesSales, DateTime>> _createSampleData() {
-    final usData = [
-      new TimeSeriesSales(new DateTime(2017, 9, 19), 5),
-      new TimeSeriesSales(new DateTime(2017, 9, 26), 25),
-      new TimeSeriesSales(new DateTime(2017, 10, 3), 78),
-      new TimeSeriesSales(new DateTime(2017, 10, 10), 54),
-    ];
-
-    final ukData = [
-      new TimeSeriesSales(new DateTime(2017, 9, 19), 15),
-      new TimeSeriesSales(new DateTime(2017, 9, 26), 33),
-      new TimeSeriesSales(new DateTime(2017, 10, 3), 68),
-      new TimeSeriesSales(new DateTime(2017, 10, 10), 48),
+  static List<charts.Series<LinearSales, int>> _createSampleData() {
+    final data = [
+      new LinearSales(0, 100),
+      new LinearSales(1, 75),
+      new LinearSales(2, 25),
+      new LinearSales(3, 5),
     ];
 
     return [
-      new charts.Series<TimeSeriesSales, DateTime>(
-        id: 'US Sales',
-        domainFn: (TimeSeriesSales sales, _) => sales.time,
-        measureFn: (TimeSeriesSales sales, _) => sales.sales,
-        data: usData,
-      ),
-      new charts.Series<TimeSeriesSales, DateTime>(
-        id: 'UK Sales',
-        domainFn: (TimeSeriesSales sales, _) => sales.time,
-        measureFn: (TimeSeriesSales sales, _) => sales.sales,
-        data: ukData,
+      new charts.Series<LinearSales, int>(
+        id: 'Sales',
+        domainFn: (LinearSales sales, _) => sales.year,
+        measureFn: (LinearSales sales, _) => sales.sales,
+        data: data,
       )
     ];
   }
@@ -52,8 +39,13 @@ class SelectionCallback extends StatefulWidget {
 class _SelectionCallbackState extends State<SelectionCallback> {
   DateTime _time;
   Map<String, num> _measures;
+
   _onSelectionChanged(charts.SelectionModel model) {
     final selectedDatum = model.selectedDatum;
+    if (selectedDatum.isNotEmpty) {
+      debugPrint(selectedDatum.first.datum.year.toString());
+    }
+    /* final selectedDatum = model.selectedDatum;
 
     DateTime time;
     final measures = <String, num>{};
@@ -68,7 +60,7 @@ class _SelectionCallbackState extends State<SelectionCallback> {
     setState(() {
       _time = time;
       _measures = measures;
-    });
+    }); */
   }
 
   @override
@@ -76,7 +68,7 @@ class _SelectionCallbackState extends State<SelectionCallback> {
     final children = <Widget>[
       new SizedBox(
           height: 150.0,
-          child: new charts.TimeSeriesChart(
+          /* child: new charts.TimeSeriesChart(
             widget.seriesList,
             animate: widget.animate,
             selectionModels: [
@@ -85,7 +77,25 @@ class _SelectionCallbackState extends State<SelectionCallback> {
                 listener: _onSelectionChanged,
               )
             ],
-          )),
+          ), */
+          child: charts.PieChart(widget.seriesList,
+        animate: widget.animate,
+        selectionModels: [
+              new charts.SelectionModelConfig(
+                type: charts.SelectionModelType.info,
+                listener: _onSelectionChanged,
+              )
+            ],
+        behaviors: [
+          
+        ],
+        // Configure the width of the pie slices to 60px. The remaining space in
+        // the chart will be left as a hole in the center.
+        defaultRenderer: new charts.ArcRendererConfig(
+          arcWidth: 40,
+          arcRendererDecorators: [new charts.ArcLabelDecorator()]
+        )),
+        ),
     ];
 
     if (_time != null) {
@@ -101,9 +111,9 @@ class _SelectionCallbackState extends State<SelectionCallback> {
   }
 }
 
-class TimeSeriesSales {
-  final DateTime time;
+class LinearSales {
+  final int year;
   final int sales;
 
-  TimeSeriesSales(this.time, this.sales);
+  LinearSales(this.year, this.sales);
 }

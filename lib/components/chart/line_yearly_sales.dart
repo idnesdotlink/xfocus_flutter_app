@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
-class SimpleLine extends StatelessWidget {
+class LineYearlySales extends StatelessWidget {
   final List<charts.Series> seriesList;
   final bool animate;
 
-  SimpleLine(this.seriesList, {this.animate});
+  LineYearlySales(this.seriesList, {this.animate});
 
-  factory SimpleLine.withSampleData() {
-    return new SimpleLine(
+  factory LineYearlySales.withSampleData() {
+    return new LineYearlySales(
       _createSampleData(),
       // Disable animations for image tests.
       animate: false,
@@ -78,7 +78,7 @@ class SimpleLine extends StatelessWidget {
           measureFn: (OrdinalSales sales, _) => sales.sales,
           data: tableSalesData),
       new charts.Series<OrdinalSales, String>(
-          id: 'Mobile ',
+          id: '2017-2018 ',
           colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
           domainFn: (OrdinalSales sales, _) => sales.year,
           measureFn: (OrdinalSales sales, _) => sales.sales,

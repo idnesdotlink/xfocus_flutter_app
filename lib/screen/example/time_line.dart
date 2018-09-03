@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/chart/simple_line.dart';
+import 'package:xfocus_mobile/components/chart/line_yearly_sales.dart';
+import 'package:xfocus_mobile/components/chart/donut_cash_yearly.dart';
+import 'package:xfocus_mobile/components/chart/donut_cash_yearly_selection.dart';
 
 class ExampleTimeLine extends StatefulWidget {
   ExampleTimeLine({Key key, this.title}) : super(key: key);
@@ -27,7 +29,9 @@ class _ExampleTimeLineState extends State<ExampleTimeLine> {
             Expanded(
               child: Padding(
                 padding: EdgeInsets.all(20.0),
-                child: SimpleLine.withSampleData()
+                // child: LineYearlySales.withSampleData(),
+                // child: DonutCashYearly.withSampleData(),
+                child: SelectionCallback.withSampleData(),
               ),
             ),
             Container(
