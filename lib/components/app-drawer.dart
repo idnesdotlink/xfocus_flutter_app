@@ -32,15 +32,37 @@ class AppDrawer extends StatelessWidget {
             Navigator.of(context).pushNamed('/basic');
           },
         ),
-         ListTile(
-          title:  Text('Get Server Data'),
-          trailing:  Icon(
+        ListTile(
+          title: Text('Get Server Data'),
+          trailing: Icon(
             Icons.access_time,
             color: Colors.orange,
           ),
           onTap: () {
             Navigator.of(context).pop();
             Navigator.of(context).pushNamed('/get_server');
+          },
+        ),
+        ListTile(
+          title: Text('Get WS Data'),
+          trailing: Icon(
+            Icons.access_time,
+            color: Colors.orange,
+          ),
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed('/get_websocket');
+          },
+        ),
+        ListTile(
+          title: Text('Sign Up'),
+          trailing: Icon(
+            Icons.access_time,
+            color: Colors.orange,
+          ),
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed('/sign_up');
           },
         ),
         /*  ListTile(

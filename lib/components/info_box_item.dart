@@ -25,7 +25,8 @@ class _InfoBoxItemState extends State<InfoBoxItem> {
     return GestureDetector(
       onTap: () => {},
       child: Container(
-        height: 20.0,
+        height: 100.0,
+        width: 100.0,
         decoration: BoxDecoration(
           color: widget.color.withOpacity(0.5),
         ),
@@ -35,12 +36,12 @@ class _InfoBoxItemState extends State<InfoBoxItem> {
             children: <Widget>[
               Text(widget.title.toString(),
                   style: TextStyle(
-                    fontSize: 12.0,
+                    fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                   )),
               Text(widget.percentage.toString() + ' %',
                   style: TextStyle(
-                    fontSize: 14.0,
+                    fontSize: 16.0,
                   )),
               Icon(
                 widget.isUp ? Icons.trending_up : Icons.trending_down,

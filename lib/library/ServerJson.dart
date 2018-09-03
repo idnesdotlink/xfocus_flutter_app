@@ -21,4 +21,3 @@ Future<PostList> fetchPost() async {
     throw Exception('Failed to load post');
   }
 }
-

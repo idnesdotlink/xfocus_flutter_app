@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/components/app-drawer.dart';
-import 'package:xfocus_mobile/components/info_box.dart';
+// import 'package:xfocus_mobile/components/info_box.dart';
 import 'package:flutter/foundation.dart';
 import 'card/cash.dart';
 
@@ -35,9 +35,37 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       drawer: AppDrawer(),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          InfoBox(),
+          Container(
+              width: 100.0,
+              height: 50.0,
+              color: Colors.blue,
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      color: Colors.blue,
+                      child: Text(
+                        'Inventory',
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      color: Colors.blue,
+                      child: Text(
+                        'Inventory',
+                      ),
+                    ),
+                  ),
+                ],
+              )),
           Switch(
             value: _switchState,
             onChanged: (bool value) {
@@ -64,7 +92,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
               ],
             ),
-          )
+          ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
