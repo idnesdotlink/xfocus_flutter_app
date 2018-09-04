@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class InventoryScreen extends StatefulWidget{
-  _InventoryScreenState createState()=>  _InventoryScreenState();
+class AccountReceivableScreen extends StatefulWidget{
+  _AccountReceivableScreenState createState()=>  _AccountReceivableScreenState();
 }
 
 
-class _InventoryScreenState extends State<InventoryScreen> {
+class _AccountReceivableScreenState extends State<AccountReceivableScreen> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Inventory'),
+        title: Text('Account Receivable'),
         backgroundColor: Colors.orange,
         actions: <Widget>[
           IconButton(
@@ -25,7 +25,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
       ),
       body: Column(
         children: <Widget>[
-          Text('Inventory Screen'),
+          Text('Account Receivable Screen'),
         ],
       ),
     );
