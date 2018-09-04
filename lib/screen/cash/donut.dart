@@ -1,29 +1,29 @@
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
-class DonutCashYearlySelection extends StatefulWidget {
+class DonutChart extends StatefulWidget {
   final List<charts.Series> seriesList;
   final bool animate;
   final onSelected;
 
-  DonutCashYearlySelection(this.seriesList, {this.animate, this.onSelected});
+  DonutChart(this.seriesList, {this.animate, this.onSelected});
 
-  factory DonutCashYearlySelection.withSampleData() {
-    return new DonutCashYearlySelection(
+  factory DonutChart.withSampleData() {
+    return new DonutChart(
       _createSampleData(),
       animate: false,
     );
   }
 
   @override
-  State<StatefulWidget> createState() => new _DonutCashYearlySelectionState();
+  State<StatefulWidget> createState() => new _DonutChartState();
 
   static List<charts.Series<LinearSales, dynamic>> _createSampleData() {
     return sampleData();
   }
 }
 
-class _DonutCashYearlySelectionState extends State<DonutCashYearlySelection> {
+class _DonutChartState extends State<DonutChart> {
   _onSelectionChanged(charts.SelectionModel model) {
     final selectedDatum = model.selectedDatum;
     if (selectedDatum.isNotEmpty) {

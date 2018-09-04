@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:xfocus_mobile/components/app_bar.dart';
 
-class AccountPayableScreen extends StatefulWidget{
-  _AccountPayableScreenState createState()=>  _AccountPayableScreenState();
+class AccountPayableScreen extends StatefulWidget {
+  _AccountPayableScreenState createState() => _AccountPayableScreenState();
 }
-
 
 class _AccountPayableScreenState extends State<AccountPayableScreen> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Text('Account Payable'),
-        backgroundColor: Colors.orange,
+      appBar: VersionOne(
+        pageTitle: 'Hutang',
         actions: <Widget>[
           IconButton(
             icon: Icon(
-            FontAwesomeIcons.bell,
+              FontAwesomeIcons.bell,
             ),
             onPressed: () => {},
           ),

@@ -4,11 +4,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Scrolling Detection'),
-        ),
-        body: ScrollDetection(),
-      );
+      appBar: AppBar(
+        title: Text('Scrolling Detection'),
+      ),
+      body: ScrollDetection(),
+    );
   }
 }
 

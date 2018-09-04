@@ -1,4 +1,3 @@
-
 /// Donut chart example. This is a simple pie chart with a hole in the middle.
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
@@ -18,20 +17,16 @@ class DonutCashYearly extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return new charts.PieChart(seriesList,
         animate: animate,
-        behaviors: [
-          
-        ],
+        behaviors: [],
         // Configure the width of the pie slices to 60px. The remaining space in
         // the chart will be left as a hole in the center.
         defaultRenderer: new charts.ArcRendererConfig(
-          arcWidth: 40,
-          arcRendererDecorators: [new charts.ArcLabelDecorator()]
-        ));
+            arcWidth: 40,
+            arcRendererDecorators: [new charts.ArcLabelDecorator()]));
   }
 
   /// Create one series with sample hard coded data.

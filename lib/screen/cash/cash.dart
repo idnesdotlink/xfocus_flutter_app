@@ -1,23 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'donut.dart';
 
-class CashScreen extends StatefulWidget{
-  _CashScreenState createState()=>  _CashScreenState();
+class CashScreen extends StatefulWidget {
+  _CashScreenState createState() => _CashScreenState();
 }
 
+Widget _topColumn = Container(
+  color: Colors.red,
+  height: 50.0,
+  child: Row(
+    mainAxisSize: MainAxisSize.max,
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: <Widget>[
+      Text('Yearly'),
+      Text('Monthly'),
+    ],
+  ),
+);
+
+Widget _middleColumn = Expanded(
+  child: Container(
+    color: Colors.white,
+    child: Padding(
+        padding: EdgeInsets.all(20.0), child: DonutChart.withSampleData()),
+  ),
+);
+
+Widget _bottomColumn = Container(
+  color: Color(0xFFb74093),
+  height: 200.0,
+  child: Column(children: <Widget>[
+    Text('Text'),
+  ]),
+);
 
 class _CashScreenState extends State<CashScreen> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(9, 28, 79, 1.0),
-      appBar: AppBar(
-        title: Text('kas Bank'),
-        backgroundColor: Colors.orange,
+      backgroundColor: Colors.grey, // Color.fromRGBO(9, 28, 79, 1.0),
+      appBar: VersionOne(
+        pageTitle: 'Kas Bank',
         actions: <Widget>[
           IconButton(
             icon: Icon(
-            FontAwesomeIcons.bell,
+              FontAwesomeIcons.bell,
             ),
             onPressed: () => {},
           ),
@@ -28,37 +57,9 @@ class _CashScreenState extends State<CashScreen> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Container(
-            color: Colors.red,
-            height: 50.0,
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                RaisedButton(
-                  onPressed: () => {},
-                ),
-                Text('Text 2'),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Container(
-              child: Text('Cash Screen',),
-            ),
-          ),
-          Container(
-            color: Colors.red,
-            height: 50.0,
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Text('Text 1'),
-                Text('Text 2'),
-              ],
-            ),
-          ),
+          _topColumn,
+          _middleColumn,
+          _bottomColumn,
         ],
       ),
     );

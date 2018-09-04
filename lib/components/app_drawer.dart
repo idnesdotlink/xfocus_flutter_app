@@ -9,9 +9,7 @@ var drawerHeader = UserAccountsDrawerHeader(
   ),
 );
 
-
 class AppDrawer extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Drawer(

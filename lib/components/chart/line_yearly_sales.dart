@@ -17,29 +17,28 @@ class LineYearlySales extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
-    return new charts.OrdinalComboChart(seriesList,
-        animate: animate,
-        // Configure the default renderer as a bar renderer.
-        defaultRenderer: new charts.LineRendererConfig(),
-        // Custom renderer configuration for the line series. This will be used for
-        // any series that does not define a rendererIdKey.
-        behaviors: [
-          new charts.SeriesLegend(),
+    return new charts.OrdinalComboChart(
+      seriesList,
+      animate: animate,
+      // Configure the default renderer as a bar renderer.
+      defaultRenderer: new charts.LineRendererConfig(),
+      // Custom renderer configuration for the line series. This will be used for
+      // any series that does not define a rendererIdKey.
+      behaviors: [
+        new charts.SeriesLegend(),
         new charts.LinePointHighlighter(
-          showHorizontalFollowLine:
-              charts.LinePointHighlighterFollowLineType.none,
-          showVerticalFollowLine:
-              charts.LinePointHighlighterFollowLineType.nearest),
-        ],
+            showHorizontalFollowLine:
+                charts.LinePointHighlighterFollowLineType.none,
+            showVerticalFollowLine:
+                charts.LinePointHighlighterFollowLineType.nearest),
+      ],
     );
   }
 
   /// Create series list with multiple series
   static List<charts.Series<OrdinalSales, String>> _createSampleData() {
-
     final tableSalesData = [
       new OrdinalSales('Jan', 5),
       new OrdinalSales('Feb', 25),

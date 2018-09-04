@@ -3,15 +3,12 @@ import 'dart:async';
 
 //import OneSignal
 import 'package:onesignal/onesignal.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
+class OneSignalScreen extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _OneSignalScreenState createState() => _OneSignalScreenState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _OneSignalScreenState extends State<OneSignalScreen> {
   String _debugLabelString = "";
   String _emailAddress;
   bool _enableConsentButton = false;
@@ -69,7 +66,7 @@ class _MyAppState extends State<MyApp> {
 
     // NOTE: Replace with your own app ID from https://www.onesignal.com
     await OneSignal.shared
-        .init("b2f7f966-d8cc-11e4-bed1-df8f05be55ba", iOSSettings: settings);
+        .init("bdccc281-1a90-4dcb-b746-89e80e53de8b", iOSSettings: settings);
 
     OneSignal.shared
         .setInFocusDisplayType(OSNotificationDisplayType.notification);
@@ -208,8 +205,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
           appBar: AppBar(
             title: const Text('OneSignal Flutter Demo'),
             backgroundColor: Color.fromARGB(255, 212, 86, 83),
@@ -294,7 +290,7 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
             ),
-          )),
+          ),
     );
   }
 }

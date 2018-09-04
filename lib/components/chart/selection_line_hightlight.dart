@@ -16,7 +16,6 @@ class SelectionLineHighlight extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     // This is just a simple line chart with a behavior that highlights the

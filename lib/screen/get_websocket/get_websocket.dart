@@ -5,7 +5,6 @@ import 'package:web_socket_channel/io.dart';
 import 'package:xfocus_mobile/config/socket_urls.dart';
 
 class GetWebsocket extends StatefulWidget {
-
   GetWebsocket({Key key}) : super(key: key);
 
   @override
