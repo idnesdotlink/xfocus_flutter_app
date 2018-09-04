@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 /* import 'collect_personal_info.dart';
 import 'choose_credentials.dart'; */
-import 'package:xfocus_mobile/components/app-drawer.dart';
+import 'package:xfocus_mobile/components/app_drawer.dart';
 import 'package:xfocus_mobile/library/RouteGenerator.dart';
 
 class SignUp extends StatelessWidget {

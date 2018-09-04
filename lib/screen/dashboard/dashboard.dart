@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app-drawer.dart';
-// import 'package:xfocus_mobile/components/info_box.dart';
 import 'package:flutter/foundation.dart';
-import 'card/cash.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:xfocus_mobile/components/app_drawer.dart';
 
 class DashboardPage extends StatefulWidget {
   DashboardPage({Key key, this.title = ''}) : super(key: key);
@@ -13,17 +12,61 @@ class DashboardPage extends StatefulWidget {
   _DashboardPageState createState() => _DashboardPageState();
 }
 
+class DashboardIcon extends StatelessWidget {
+  final String title;
+  final onTap;
+  final IconData icon;
+  
+  DashboardIcon({ @required this.title, this.icon, this.onTap }) : super();
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: this.onTap,
+      child: Container(
+        height: 150.0,
+        width: 150.0,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Icon(
+              (this.icon == null) ? Icons.access_alarms : this.icon,
+              color: Colors.white,
+              size: 60.0,
+            ),
+            Text(
+              this.title,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                // package: ,
+                fontSize: 18.0,
+                fontFamily: 'Roboto',
+                color: Colors.orange,
+              )
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _DashboardPageState extends State<DashboardPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
-  var _switchState = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(widget.title),
+        backgroundColor: Colors.orange,
+        title: Text(
+          'Options XFocus',
+          style: TextStyle(
+            color: Colors.black.withOpacity(0.5),
+          ),
+        ),
         elevation: 0.0,
         leading: IconButton(
           icon: Icon(
@@ -31,70 +74,82 @@ class _DashboardPageState extends State<DashboardPage> {
           ),
           onPressed: () => _scaffoldKey.currentState.openDrawer(),
         ),
-        actions: <Widget>[],
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+            FontAwesomeIcons.bell,
+            ),
+            onPressed: () => {},
+          ),
+        ],
       ),
       drawer: AppDrawer(),
       body: Column(
         mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Container(
-              width: 100.0,
-              height: 50.0,
-              color: Colors.blue,
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+              ),
+              child: Wrap(
+                direction: Axis.horizontal,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                alignment: WrapAlignment.spaceEvenly,
+                runAlignment: WrapAlignment.start,
                 children: <Widget>[
-                  Expanded(
-                    child: Container(
-                      color: Colors.blue,
-                      child: Text(
-                        'Inventory',
-                      ),
-                    ),
+                  DashboardIcon(
+                    title: 'Kas Bank',
+                    icon: Icons.account_balance_wallet,
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/cash');
+                      debugPrint('on tap');
+                    },
                   ),
-                  Expanded(
-                    child: Container(
-                      color: Colors.blue,
-                      child: Text(
-                        'Inventory',
-                      ),
-                    ),
+                  DashboardIcon(
+                    title: 'Persediaan',
+                    icon: FontAwesomeIcons.phabricator,
+                    onTap: () {
+                      debugPrint('on tap');
+                    },
+                  ),
+                  DashboardIcon(
+                    title: 'Penjualan',
+                    icon: Icons.shopping_cart,
+                    onTap: () {
+                      debugPrint('on tap');
+                    },
+                  ),
+                  DashboardIcon(
+                    title: 'A/P',
+                    icon: FontAwesomeIcons.moneyBillAlt,
+                    onTap: () {
+                      debugPrint('on tap');
+                    },
+                  ),
+                  DashboardIcon(
+                    title: 'A/R',
+                    icon: FontAwesomeIcons.moneyBillAlt,
+                    onTap: () {
+                      debugPrint('on tap');
+                    },
+                  ),
+                  DashboardIcon(
+                    title: 'Help',
+                    icon: Icons.help,
+                    onTap: () {
+                      debugPrint('on tap');
+                    },
                   ),
                 ],
-              )),
-          Switch(
-            value: _switchState,
-            onChanged: (bool value) {
-              setState(() {
-                _switchState = value;
-              });
-            },
-          ),
-          Expanded(
-            child: CustomScrollView(
-              shrinkWrap: true,
-              slivers: <Widget>[
-                SliverPadding(
-                  padding: const EdgeInsets.all(0.0),
-                  sliver: SliverList(
-                    delegate: SliverChildListDelegate(
-                      <Widget>[
-                        CashCard(),
-                        CashCard(),
-                        CashCard(),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
         ],
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      backgroundColor: Colors.transparent, // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

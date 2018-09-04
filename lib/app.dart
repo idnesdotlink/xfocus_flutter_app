@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/config/app_routes.dart';
 
-Color primarySwatch = Colors.blue;
-String title = 'XFocus Mobile';
-final themeData = ThemeData(
-  primarySwatch: primarySwatch,
-);
-
 class App extends StatelessWidget {
+
+  final String title = 'XFocus Mobile';
+  final themeData = ThemeData(
+    primarySwatch: Colors.blue,
+  );
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: title,
       theme: themeData,
       initialRoute: '/',
-      routes: appRoutes,
+      routes: appRoutes, // package:xfocus_mobile/config/app_routes.dart
     );
   }
 }
