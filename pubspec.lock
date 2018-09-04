@@ -113,6 +113,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.2"
+  currency_input_formatter:
+    dependency: "direct main"
+    description:
+      name: currency_input_formatter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.5"
   dio:
     dependency: "direct main"
     description:
@@ -120,13 +127,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
-  firebase_messaging:
-    dependency: "direct main"
-    description:
-      name: firebase_messaging
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.5"
   fluro:
     dependency: "direct main"
     description:
@@ -160,6 +160,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.3"
+  flutter_is_emulator:
+    dependency: "direct main"
+    description:
+      name: flutter_is_emulator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   flutter_redux:
     dependency: "direct main"
     description:
@@ -312,6 +319,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.6+2"
+  money:
+    dependency: "direct main"
+    description:
+      name: money
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.6"
   multi_server_socket:
     dependency: transitive
     description:
@@ -326,13 +340,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.4"
-  onesignal:
-    dependency: "direct main"
-    description:
-      name: onesignal
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
   package_config:
     dependency: transitive
     description:
@@ -361,13 +368,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.1"
-  platform:
-    dependency: transitive
-    description:
-      name: platform
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.2.0"
   plugin:
     dependency: transitive
     description:
