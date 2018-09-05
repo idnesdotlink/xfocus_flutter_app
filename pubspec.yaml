@@ -10,6 +10,7 @@ dependencies:
   http: ^0.11.3+16
   web_socket_channel: ^1.0.7
   image_picker: ^0.4.10
+  numberpicker: ^0.1.6
   flutter_search_bar: ^2.0.5
   intro_views_flutter: ^2.2.3
   font_awesome_flutter: ^8.0.1
@@ -29,6 +30,7 @@ dependencies:
   money: ^0.1.6
   currency_input_formatter: ^0.0.5
   flutter_is_emulator: ^1.0.0
+  flutter_picker: ^0.0.6
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -51,12 +53,12 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/json/dummy.json
     - assets/json/cash.json
     - assets/json/inventory.json
     - assets/json/account_receivable.json
     - assets/json/account_payable.json
     - assets/json/sales.json
+    - assets/json/counter.json
     - assets/png/logo.png
     - assets/png/logo-50.png
   # To add assets to your application, add an assets section, like this:

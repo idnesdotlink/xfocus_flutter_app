@@ -1,150 +1,194 @@
-{
-  "2017": {
-    "1": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "2": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "3": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "4": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "5": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "6": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "7": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "8": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "9": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "10": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "11": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "12": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    }
+[
+  {
+    "year": 2017,
+    "month": 1,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
   },
-  "2018": {
-    "1": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "2": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "3": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "4": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "5": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "6": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "7": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "8": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "9": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "10": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "11": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    },
-    "12": {
-      "receivable": 0.00,
-      "receivable_due": 0.00,
-      "discounted_receivable": 0.00,
-      "received_receivables": 0.00
-    }
+  {
+    "year": 2017,
+    "month": 2,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 3,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 4,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 5,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 6,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 7,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 8,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 9,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 10,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 11,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2017,
+    "month": 12,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 1,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 2,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 3,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 4,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 5,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 6,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 7,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 8,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 9,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 10,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 11,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
+  },
+  {
+    "year": 2018,
+    "month": 12,
+    "receivable": 0.00,
+    "receivable_due": 0.00,
+    "discounted_receivable": 0.00,
+    "received_receivables": 0.00
   }
-}
+]

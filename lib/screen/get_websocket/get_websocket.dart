@@ -123,7 +123,6 @@ class _GetWebsocketState extends State<GetWebsocket> {
 
   void _connect() {
     String url = socketUrls[activeUrl];
-    debugPrint('connect $url');
     channel = IOWebSocketChannel.connect(url);
     connecting = true;
     channel.stream.listen((data) => setState(() => messages.add(data)));

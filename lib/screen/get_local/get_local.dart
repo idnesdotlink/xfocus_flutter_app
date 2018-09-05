@@ -5,22 +5,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/library/LocalJson.dart';
 
-class GetLocal extends StatefulWidget {
+class GetLocalScreen extends StatefulWidget {
   final LocalJson storage;
 
-  GetLocal({Key key, this.storage}) : super(key: key);
+  GetLocalScreen({Key key, this.storage}) : super(key: key);
 
-  factory GetLocal.withDummyData() {
-    return GetLocal(
+  factory GetLocalScreen.withDummyData() {
+    return GetLocalScreen(
       storage: LocalJson(),
     );
   }
 
   @override
-  _GetLocalState createState() => _GetLocalState();
+  _GetLocalScreenState createState() => _GetLocalScreenState();
 }
 
-class _GetLocalState extends State<GetLocal> {
+class _GetLocalScreenState extends State<GetLocalScreen> {
   int _counter;
 
   @override
@@ -38,9 +38,22 @@ class _GetLocalState extends State<GetLocal> {
   }
 
   Future<File> _incrementCounter() async {
+    // String _cash;
     setState(() {
       _counter++;
     });
+    try {
+      String _writed;
+      String _cash = await widget.storage.loadCash();
+      await widget.storage.writeCash(_cash);
+      _writed = await widget.storage.readCash();
+      debugPrint(_writed);
+      // _cash = await widget.storage.readCash();
+    } catch (e) {
+      // _cash = 'error data';
+      debugPrint(e.toString());
+    }
+    // debugPrint(_cash);
 
     // write the variable as a string to the file
     return widget.storage.writeCounter(_counter);

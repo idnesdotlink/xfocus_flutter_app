@@ -21,6 +21,12 @@ class LocalJson {
     return data; //json.decode(data);
   }
 
+  Future<String> loadCashSingle() async {
+    var data = await rootBundle.loadString('assets/json/cash.json');
+    // rootBundle.load(key)
+    return data; //json.decode(data);
+  }
+
   Future<File> get _localFile async {
     final path = await _localPath;
     return File('$path/counter.json');

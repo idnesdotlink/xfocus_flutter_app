@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
-import 'donut.dart';
+import 'data.dart';
+import 'cash_data.dart';
+import 'donut_chart.dart';
 
 class CashScreen extends StatefulWidget {
   _CashScreenState createState() => _CashScreenState();
@@ -37,6 +39,7 @@ Widget _bottomColumn = Container(
 );
 
 class _CashScreenState extends State<CashScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,6 +64,20 @@ class _CashScreenState extends State<CashScreen> {
           _middleColumn,
           _bottomColumn,
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          try {
+            String _cash = await LocalJson().loadCashSingle();
+            print(CashData.loadJsonString(_cash).getByYearMonth(2017, 3).cash);
+            print(CashData.loadJsonString(_cash).getTotalYearCash(2017));
+          } catch(e) {
+            debugPrint(e.toString());
+          }
+        },
+        elevation: 0.0,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
       ),
     );
   }

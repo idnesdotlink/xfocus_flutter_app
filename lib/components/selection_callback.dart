@@ -1,16 +1,3 @@
-/// Timeseries chart with example of updating external state based on selection.
-///
-/// A SelectionModelConfig can be provided for each of the different
-/// [SelectionModel] (currently info and action).
-///
-/// [SelectionModelType.info] is the default selection chart exploration type
-/// initiated by some tap event. This is a different model from
-/// [SelectionModelType.action] which is typically used to select some value as
-/// an input to some other UI component. This allows dual state of exploring
-/// and selecting data via different touch events.
-///
-/// See [SelectNearest] behavior on setting the different ways of triggering
-/// [SelectionModel] updates from hover & click events.
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
