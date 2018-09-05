@@ -24,6 +24,14 @@ class CashData {
     return _data2;
   }
 
+  getMonthComparison() {
+    final double _data1 = getByYearMonth(2017, 3).cash;
+    final double _data2 = getByYearMonth(2018, 3).cash;
+    final String diff = ((_data2-_data1)/_data2).toStringAsFixed(2);
+    final diff2 = num.parse(diff)*100;
+    return diff2;
+  }
+
   double getTotalYearCash(int year) {
     var _data1 = CashModelList.fromJson(json);
     var _data2 = _data1.cashData.where((data) => data.year == year );

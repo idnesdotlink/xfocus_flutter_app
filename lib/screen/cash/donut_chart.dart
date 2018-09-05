@@ -15,6 +15,13 @@ class DonutChart extends StatefulWidget {
     );
   }
 
+  /* factory DonutChart.fromData() {
+    return new DonutChart(
+      _createSampleData(),
+      animate: false,
+    );
+  } */
+
   @override
   State<StatefulWidget> createState() => new _DonutChartState();
 
