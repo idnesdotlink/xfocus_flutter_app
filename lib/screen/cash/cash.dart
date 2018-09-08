@@ -33,7 +33,7 @@ Widget _circularChart = AnimatedCircularChart(
   ],
   chartType: CircularChartType.Radial,
   percentageValues: true,
-  holeLabel: '1/3',
+  holeLabel: 'Yearly',
   labelStyle: new TextStyle(
     color: Colors.blueGrey[600],
     fontWeight: FontWeight.bold,
@@ -41,16 +41,52 @@ Widget _circularChart = AnimatedCircularChart(
   ),
 );
 
+class CustomButton extends StatelessWidget {
+  final String title;
+  final onTap;
+  
+  CustomButton({Key key, this.title, this.onTap}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+        child: Container(
+          color: Colors.blue,
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: onTap,
+              child: Container(
+                height: 40.0,
+                child: Text(
+                  title
+                ),
+              ),
+            ),
+          ),
+        )
+    );
+  }
+}
+
 Widget _topColumn = Container(
   color: Colors.red,
-  height: 50.0,
-  child: Row(
-    mainAxisSize: MainAxisSize.max,
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: <Widget>[
-      Text('Yearly'),
-      Text('Monthly'),
-    ],
+  child: Padding(
+    padding: EdgeInsets.all(15.0),
+    child: Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        CustomButton(
+          title: 'Yearly',
+          onTap: () {}
+        ),
+        CustomButton(
+          title: 'Monthly',
+          onTap: () {},
+        ),
+      ],
+    ),
   ),
 );
 

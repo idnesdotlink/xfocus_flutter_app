@@ -10,7 +10,7 @@ class App extends StatelessWidget {
     ),
     primaryIconTheme: IconThemeData(
       color: Colors.white,
-    )
+    ),
   );
 
   @override

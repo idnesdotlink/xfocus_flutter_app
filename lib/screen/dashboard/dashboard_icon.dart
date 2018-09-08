@@ -17,15 +17,10 @@ class DashboardIcon extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Stack(
-              children: <Widget>[
-                Center(
-                    child: Icon(
-                  (this.icon == null) ? Icons.access_alarms : this.icon,
-                  color: Colors.black.withOpacity(0.3),
-                  size: 60.0,
-                )),
-              ],
+            Icon(
+              (this.icon == null) ? Icons.access_alarms : this.icon,
+              color: Colors.black.withOpacity(0.3),
+              size: 60.0,
             ),
             Text(this.title,
                 textAlign: TextAlign.center,

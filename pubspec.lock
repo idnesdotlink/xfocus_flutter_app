@@ -126,7 +126,7 @@ packages:
       name: dio
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.3"
+    version: "1.0.4"
   fluro:
     dependency: "direct main"
     description:
@@ -269,7 +269,7 @@ packages:
       name: intro_views_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.3"
+    version: "2.2.4"
   io:
     dependency: transitive
     description:
@@ -353,7 +353,7 @@ packages:
       name: numberpicker
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.6"
+    version: "0.1.7"
   package_config:
     dependency: transitive
     description:
