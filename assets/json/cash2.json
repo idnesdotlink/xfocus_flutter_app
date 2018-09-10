@@ -1,0 +1,268 @@
+{
+  "data": [
+    {
+      "year": 2017,
+      "month": 1,
+      "components": {
+        "cash": 113000000.00,
+        "petty_cash": 200000.00,
+        "bank": {
+          "bca": 12550000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 2,
+      "components": {
+        "cash": 123900000.00,
+        "petty_cash": 300000.00,
+        "bank": {
+          "bca": 13000000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 3,
+      "components": {
+        "cash": 138000000.00,
+        "petty_cash": 300000.00,
+        "bank": {
+          "bca": 14500000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 4,
+      "components": {
+        "cash": 138000000.00,
+        "petty_cash": 300000.00,
+        "bank": {
+          "bca": 13750000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 5,
+      "components": {
+        "cash": 187350000.00,
+        "petty_cash": 250000.00,
+        "bank": {
+          "bca": 13800000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 6,
+      "components": {
+        "cash": 124725000.00,
+        "petty_cash": 275000.00,
+        "bank": {
+          "bca": 22200000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 7,
+      "components": {
+        "cash": 147500000.00,
+        "petty_cash": 200000.00,
+        "bank": {
+          "bca": 22100000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 8,
+      "components": {
+        "cash": 112050000.00,
+        "petty_cash": 250000.00,
+        "bank": {
+          "bca": 23250000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 9,
+      "components": {
+        "cash": 123750000.00,
+        "petty_cash": 350000.00,
+        "bank": {
+          "bca": 24750000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 10,
+      "components": {
+        "cash": 133000000.00,
+        "petty_cash": 200000.00,
+        "bank": {
+          "bca": 24550000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 11,
+      "components": {
+        "cash": 148600000.00,
+        "petty_cash": 150000.00,
+        "bank": {
+          "bca": 24650000.00
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "month": 12,
+      "components": {
+        "cash": 125010000.00,
+        "petty_cash": 200000.00,
+        "bank": {
+          "bca": 24600000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 1,
+      "components": {
+        "cash": 123000000.00,
+        "petty_cash": 250000.00,
+        "bank": {
+          "bca": 24700000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 2,
+      "components": {
+        "cash": 133900000.00,
+        "petty_cash": 325000.00,
+        "bank": {
+          "bca": 24700000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 3,
+      "components": {
+        "cash": 143000000.00,
+        "petty_cash": 300000.00,
+        "bank": {
+          "bca": 29500000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 4,
+      "components": {
+        "cash": 136000000.00,
+        "petty_cash": 275000.00,
+        "bank": {
+          "bca": 31000000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 5,
+      "components": {
+        "cash": 190350000.00,
+        "petty_cash": 250000.00,
+        "bank": {
+          "bca": 32000000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 6,
+      "components": {
+        "cash": 131725000.00,
+        "petty_cash": 275000.00,
+        "bank": {
+          "bca": 31500000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 7,
+      "components": {
+        "cash": 145500000.00,
+        "petty_cash": 200000.00,
+        "bank": {
+          "bca": 29750000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 8,
+      "components": {
+        "cash": 121050000.00,
+        "petty_cash": 275000.00,
+        "bank": {
+          "bca": 28500000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 9,
+      "components": {
+        "cash": 137750000.00,
+        "petty_cash": 175000.00,
+        "bank": {
+          "bca": 30500000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 10,
+      "components": {
+        "cash": 144000000.00,
+        "petty_cash": 150000.00,
+        "bank": {
+          "bca": 30000000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 11,
+      "components": {
+        "cash": 158600000.00,
+        "petty_cash": 200000.00,
+        "bank": {
+          "bca": 31000000.00
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "month": 12,
+      "components": {
+        "cash": 135010000.00,
+        "petty_cash": 150000.00,
+        "bank": {
+          "bca": 31500000.00
+        }
+      }
+    }
+  ]
+}

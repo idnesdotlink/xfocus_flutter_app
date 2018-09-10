@@ -1,414 +1,206 @@
-{
-  "2017": {
-    "1": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "2": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "3": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "4": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "5": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "6": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "7": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "8": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "9": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "10": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "11": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "12": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    }
+[
+  {
+    "year": 2017,
+    "month": 1,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
   },
-  "2018": {
-    "1": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "2": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "3": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "4": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "5": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "6": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "7": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "8": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "9": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "10": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "11": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    },
-    "12": {
-      "slow": [
-        "Kacang Atom",
-        "Kit Kat",
-        "Coca Cola"
-      ],
-      "fast": [
-        "Kratingdaeng",
-        "Dua Kelinci",
-        "Mineral Water"
-      ],
-      "goods": {
-        "wip": 0.00,
-        "finished": 0.00,
-        "raw": 0.00
-      }
-    }
+  {
+    "year": 2017,
+    "month": 2,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 3,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 4,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 5,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 6,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 7,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 8,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 9,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 10,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 11,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
+  },
+  {
+    "year": 2017,
+    "month": 12,
+    "wip": 0.00,
+    "finished": 0.00,
+    "raw": 0.00,
+    "slow": [
+      "Kacang Atom",
+      "Kit Kat",
+      "Coca Cola"
+    ],
+    "fast": [
+      "Kratingdaeng",
+      "Dua Kelinci",
+      "Mineral Water"
+    ]
   }
-}
+]
