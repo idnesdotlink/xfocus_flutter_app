@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/library/ServerJson.dart' show fetchPost;
 import 'package:xfocus_mobile/model/Post.dart' show Post, PostList;
 
-class GetServer extends StatefulWidget {
-  GetServer({Key key}) : super(key: key);
+class Serverdata extends StatefulWidget {
+  Serverdata({Key key}) : super(key: key);
 
-  factory GetServer.withExample() {
-    return GetServer();
+  factory Serverdata.withExample() {
+    return Serverdata();
   }
 
-  _GetServer createState() => _GetServer();
+  _Serverdata createState() => _Serverdata();
 }
 
-class _GetServer extends State<GetServer> {
+class _Serverdata extends State<Serverdata> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

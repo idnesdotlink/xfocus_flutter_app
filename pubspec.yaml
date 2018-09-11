@@ -9,6 +9,7 @@ dependencies:
   cached_network_image: ^0.4.1+1
   camera: ^0.2.3
   charts_flutter: ^0.4.0
+  chewie: ^0.6.1
   currency_input_formatter: ^0.0.5
   device_info: ^0.2.1
   dio: ^1.0.4
@@ -45,6 +46,7 @@ dependencies:
   money: ^0.1.6
   numberpicker: ^0.1.7
   open_file: ^1.0.7
+  open_iconic_flutter: ^0.2.0
   path_provider: ^0.4.1
   pdf_viewer_plugin: ^0.0.5
   pdf: ^1.0.6
@@ -58,6 +60,7 @@ dependencies:
   sqflite: any
   sticky_headers: ^0.1.7
   tuple: ^1.0.2
+  video_player: ^0.6.5
   web_socket_channel: ^1.0.9
 
   # The following adds the Cupertino Icons font to your application.

@@ -10,8 +10,7 @@ import 'package:xfocus_mobile/screen/account_payable/account_payable.dart';
 import 'package:xfocus_mobile/screen/account_receivable/account_receivable.dart';
 import 'package:xfocus_mobile/screen/help/help.dart';
 import 'package:xfocus_mobile/screen/sales/sales.dart';
-import 'package:xfocus_mobile/screen/get_local/get_local.dart';
-import 'package:xfocus_mobile/screen/print/print.dart';
+import 'package:xfocus_mobile/screen/check/check.dart';
 import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
 
 class DashboardPage extends StatefulWidget {
@@ -117,22 +116,12 @@ class _DashboardPageState extends State<DashboardPage> {
                         ),
                   ),
                   DashboardIcon(
-                    title: 'Local Json',
-                    icon: Icons.help,
-                    onTap: () => Navigator.push(
-                          context,
-                          SlideRightRoute(
-                            widget: GetLocalScreen.withDummyData(),
-                          ),
-                        ),
-                  ),
-                  DashboardIcon(
                     title: 'Function Check',
                     icon: Icons.thumb_up,
                     onTap: () => Navigator.push(
                           context,
                           SlideRightRoute(
-                            widget: PrintScreen(),
+                            widget: CheckScreen(),
                           ),
                         ),
                   ),

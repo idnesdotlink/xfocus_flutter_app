@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
 import 'package:xfocus_mobile/animations/slide_right_route.dart';
 import 'package:xfocus_mobile/screen/intro/intro.dart';
+import 'screen/websocket.dart';
+import 'screen/socketio.dart';
+import 'screen/localdata.dart';
 
-class PrintScreenItem extends StatelessWidget {
+class CheckScreenItem extends StatelessWidget {
   final String title;
   final onTap;
   final bool bottomBorder;
@@ -15,7 +18,7 @@ class PrintScreenItem extends StatelessWidget {
       ),
     ),
   );
-  PrintScreenItem({
+  CheckScreenItem({
     Key key,
     this.title,
     this.onTap,
@@ -42,34 +45,36 @@ class PrintScreenItem extends StatelessWidget {
   }
 }
 
-class PrintScreen extends StatefulWidget{
-  _PrintScreenState createState()=>  _PrintScreenState();
+class CheckScreen extends StatefulWidget{
+  _CheckScreenState createState()=>  _CheckScreenState();
 }
 
-class _PrintScreenState extends State<PrintScreen> {
+class _CheckScreenState extends State<CheckScreen> {
+
+  void _goToScreen(context,  Widget screen) {
+    Navigator.push(
+      context,
+      SlideRightRoute(
+        widget: screen,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: VersionOne(pageTitle: 'Cek Fungsi',),
       body: ListView(
         children: <Widget>[
-          PrintScreenItem(
-            title: 'Intro Screen',
-            onTap: () => Navigator.push(
-                          context,
-                          SlideRightRoute(
-                            widget: IntroScreen(),
-                          ),
-                        ),
-          ),
-          PrintScreenItem(title: 'Hello 2', onTap: () => print('hello 2'),),
-          PrintScreenItem(title: 'Hello 3', onTap: () => print('hello 3'),),
-          PrintScreenItem(title: 'Hello 4', onTap: () => print('hello 4'),),
-          PrintScreenItem(title: 'Hello 5', onTap: () => print('hello 5'),),
-          PrintScreenItem(title: 'Hello 6', onTap: () => print('hello 6'),),
-          PrintScreenItem(title: 'Hello 7', onTap: () => print('hello 7'),),
-          PrintScreenItem(title: 'Hello 8', onTap: () => print('hello 8'),),
-          PrintScreenItem(
+          CheckScreenItem(title: 'Intro Screen', onTap: () => _goToScreen(context, IntroScreen()),),
+          CheckScreenItem(title: 'Websocket', onTap: () => _goToScreen(context, WebsocketScreen()),),
+          CheckScreenItem(title: 'Socket IO', onTap: () => _goToScreen(context, SocketioScreen()),),
+          CheckScreenItem(title: 'Local Json', onTap: () => _goToScreen(context, LocaldataScreen()),),
+          CheckScreenItem(title: 'Hello 5', onTap: () => print('hello 5'),),
+          CheckScreenItem(title: 'Hello 6', onTap: () => print('hello 6'),),
+          CheckScreenItem(title: 'Hello 7', onTap: () => print('hello 7'),),
+          CheckScreenItem(title: 'Hello 8', onTap: () => print('hello 8'),),
+          CheckScreenItem(
             title: 'Hello 9',
             onTap: () => print('hello 9'),
             bottomBorder: false,

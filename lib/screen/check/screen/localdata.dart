@@ -5,22 +5,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/library/LocalJson.dart';
 
-class GetLocalScreen extends StatefulWidget {
+class LocaldataScreen extends StatefulWidget {
   final LocalJson storage;
 
-  GetLocalScreen({Key key, this.storage}) : super(key: key);
+  LocaldataScreen({Key key, this.storage}) : super(key: key);
 
-  factory GetLocalScreen.withDummyData() {
-    return GetLocalScreen(
+  factory LocaldataScreen.withDummyData() {
+    return LocaldataScreen(
       storage: LocalJson(),
     );
   }
 
   @override
-  _GetLocalScreenState createState() => _GetLocalScreenState();
+  _LocaldataScreenState createState() => _LocaldataScreenState();
 }
 
-class _GetLocalScreenState extends State<GetLocalScreen> {
+class _LocaldataScreenState extends State<LocaldataScreen> {
   int _counter;
 
   @override

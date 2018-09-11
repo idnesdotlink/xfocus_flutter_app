@@ -4,14 +4,14 @@ import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:web_socket_channel/io.dart';
 import 'package:xfocus_mobile/config/socket_urls.dart';
 
-class GetWebsocket extends StatefulWidget {
-  GetWebsocket({Key key}) : super(key: key);
+class WebsocketScreen extends StatefulWidget {
+  WebsocketScreen({Key key}) : super(key: key);
 
   @override
-  _GetWebsocketState createState() => _GetWebsocketState();
+  _WebsocketScreenState createState() => _WebsocketScreenState();
 }
 
-class _GetWebsocketState extends State<GetWebsocket> {
+class _WebsocketScreenState extends State<WebsocketScreen> {
   dynamic rv;
   dynamic activeUrl = 1;
   bool connectionSwitch = false;
