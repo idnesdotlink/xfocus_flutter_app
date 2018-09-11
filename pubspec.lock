@@ -169,20 +169,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
-  fast_qr_reader_view:
-    dependency: "direct main"
-    description:
-      name: fast_qr_reader_view
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.2"
-  firebase_messaging:
-    dependency: "direct main"
-    description:
-      name: firebase_messaging
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0"
   fluro:
     dependency: "direct main"
     description:
@@ -223,13 +209,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.6"
-  flutter_is_emulator:
-    dependency: "direct main"
-    description:
-      name: flutter_is_emulator
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.0"
   flutter_local_notifications:
     dependency: "direct main"
     description:
@@ -474,7 +453,7 @@ packages:
     source: hosted
     version: "0.9.6+2"
   mockito:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: mockito
       url: "https://pub.dartlang.org"
@@ -516,7 +495,7 @@ packages:
     source: hosted
     version: "1.0.7"
   open_iconic_flutter:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: open_iconic_flutter
       url: "https://pub.dartlang.org"
@@ -550,27 +529,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.1"
-  pdf:
-    dependency: "direct main"
-    description:
-      name: pdf
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.6"
-  pdf_viewer_plugin:
-    dependency: "direct main"
-    description:
-      name: pdf_viewer_plugin
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.5"
-  percent_indicator:
-    dependency: "direct main"
-    description:
-      name: percent_indicator
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.9"
   platform:
     dependency: transitive
     description:
@@ -606,27 +564,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.2+2"
-  qr:
-    dependency: transitive
-    description:
-      name: qr
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
-  qr_flutter:
-    dependency: "direct main"
-    description:
-      name: qr_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.3"
-  quick_actions:
-    dependency: "direct main"
-    description:
-      name: quick_actions
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.2.1"
   quiver:
     dependency: transitive
     description:

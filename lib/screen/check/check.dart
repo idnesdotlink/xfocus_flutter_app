@@ -5,6 +5,9 @@ import 'package:xfocus_mobile/screen/intro/intro.dart';
 import 'screen/websocket.dart';
 import 'screen/socketio.dart';
 import 'screen/localdata.dart';
+import 'screen/sqlite.dart';
+import 'screen/sharedpreference.dart';
+import 'screen/deviceinfo.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -70,9 +73,9 @@ class _CheckScreenState extends State<CheckScreen> {
           CheckScreenItem(title: 'Websocket', onTap: () => _goToScreen(context, WebsocketScreen()),),
           CheckScreenItem(title: 'Socket IO', onTap: () => _goToScreen(context, SocketioScreen()),),
           CheckScreenItem(title: 'Local Json', onTap: () => _goToScreen(context, LocaldataScreen()),),
-          CheckScreenItem(title: 'Hello 5', onTap: () => print('hello 5'),),
-          CheckScreenItem(title: 'Hello 6', onTap: () => print('hello 6'),),
-          CheckScreenItem(title: 'Hello 7', onTap: () => print('hello 7'),),
+          CheckScreenItem(title: 'Sqlite', onTap: () => _goToScreen(context, SqliteScreen()),),
+          CheckScreenItem(title: 'Device Info', onTap: () => _goToScreen(context, DeviceinfoScreen()),),
+          CheckScreenItem(title: 'Shared Preference', onTap: () => _goToScreen(context, SharedpreferenceScreen()),),
           CheckScreenItem(title: 'Hello 8', onTap: () => print('hello 8'),),
           CheckScreenItem(
             title: 'Hello 9',
