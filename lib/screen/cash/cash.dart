@@ -102,7 +102,13 @@ Widget _bottomColumn = Container(
   color: Color(0xFFb74093),
   height: 200.0,
   child: Column(children: <Widget>[
-    Text('Text'),
+    Text(
+      '\u{1f600}',
+      style: TextStyle(
+        height: 1.5,
+        fontSize: 30.0,
+      ),
+    ),
   ]),
 );
 

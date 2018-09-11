@@ -34,16 +34,21 @@ class Data {
 
 class Component {
   final double receivable;
-  final double receivable_due;
-  final double discounted_receivable;
-  final double received_receivables;
-  Component({this.receivable, this.receivable_due, this.discounted_receivable, this.received_receivables});
+  final double due;
+  final double discount;
+  final double received;
+  Component({
+    this.receivable,
+    this.due,
+    this.discount,
+    this.received
+  });
   factory Component.fromJson(Map<String, dynamic> json) {
     return Component(
       receivable: json['receivable'],
-      receivable_due: json['receivable_due'],
-      discounted_receivable: json['discounted_receivable'],
-      received_receivables: json['received_receivables']
+      due: json['due'],
+      discount: json['discount'],
+      received: json['received']
     );
   }
 }

@@ -33,22 +33,5 @@ class Data {
 }
 
 class Component {
-  final double payable;
-  final double payable_due;
-  final double discounted_payable;
-  final double payment_payables;
-  Component({
-    this.payable,
-    this.payable_due,
-    this.discounted_payable,
-    this.payment_payables
-  });
-  factory Component.fromJson(Map<String, dynamic> json) {
-    return Component(
-      payable: json['payable'],
-      payable_due: json['payable_due'],
-      discounted_payable: json['discounted_payable'],
-      payment_payables: json['payment_payables']
-    );
-  }
+  Component.fromJson(String json);
 }

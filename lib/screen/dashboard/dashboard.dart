@@ -11,6 +11,7 @@ import 'package:xfocus_mobile/screen/account_receivable/account_receivable.dart'
 import 'package:xfocus_mobile/screen/help/help.dart';
 import 'package:xfocus_mobile/screen/sales/sales.dart';
 import 'package:xfocus_mobile/screen/get_local/get_local.dart';
+import 'package:xfocus_mobile/screen/print/print.dart';
 import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
 
 class DashboardPage extends StatefulWidget {
@@ -122,6 +123,16 @@ class _DashboardPageState extends State<DashboardPage> {
                           context,
                           SlideRightRoute(
                             widget: GetLocalScreen.withDummyData(),
+                          ),
+                        ),
+                  ),
+                  DashboardIcon(
+                    title: 'Function Check',
+                    icon: Icons.thumb_up,
+                    onTap: () => Navigator.push(
+                          context,
+                          SlideRightRoute(
+                            widget: PrintScreen(),
                           ),
                         ),
                   ),

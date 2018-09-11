@@ -1,9 +1,9 @@
 class Model {
-  final Set<Data> data;
+  final List<Data> data;
   Model({this.data});
   factory Model.fromJson(Map<String, dynamic> json) {
     return Model(
-      data: (json['data'] != null) ? (json['data'] as List).map((i) => Data.fromJson(i)).toSet() : null
+      data: (json['data'] != null) ? (json['data'] as List).map((i) => Data.fromJson(i)).toList() : null
     );
   }
 }
@@ -27,25 +27,28 @@ class Data {
       month: json['month'],
       day: json['day'],
       dateTime: DateTime(json['year'], json['month'], json['day']),
-      component: Component.fromJson(json['components'])
+      component: Component.fromJson(json['component'])
     );
   }
 }
 
 class Component {
-  final double sales;
+  final double payable;
+  final double due;
   final double discount;
-  final double tax;
-  final double service;
-  final double salesReturn;
-  Component({this.sales, this.discount, this.tax, this.service, this.salesReturn});
+  final double payment;
+  Component({
+    this.payable,
+    this.due,
+    this.discount,
+    this.payment
+  });
   factory Component.fromJson(Map<String, dynamic> json) {
     return Component(
-      sales: json['sales'],
+      payable: json['payable'],
+      due: json['due'],
       discount: json['discount'],
-      tax: json['tax'],
-      service: json['service'],
-      salesReturn: json['salesReturn']
+      payment: json['payment']
     );
   }
 }
