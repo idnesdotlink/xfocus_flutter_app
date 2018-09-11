@@ -46,13 +46,13 @@ dependencies:
   money: ^0.1.6
   numberpicker: ^0.1.7
   open_file: ^1.0.7
-  # open_iconic_flutter: ^0.2.0
+  open_iconic_flutter: ^0.2.0
   path_provider: ^0.4.1
   # pdf_viewer_plugin: ^0.0.5
   # pdf: ^1.0.6
-  # percent_indicator: ^1.0.9
-  # qr_flutter: ^1.1.3
-  # quick_actions: ^0.2.1
+  percent_indicator: ^1.0.9
+  qr_flutter: ^1.1.3
+  quick_actions: ^0.2.1
   redux: ^3.0.0
   rxdart: ^0.18.1
   shared_preferences: ^0.4.2
