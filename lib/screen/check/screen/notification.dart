@@ -2,6 +2,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
@@ -18,7 +19,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
     super.initState();
     // initialise the plugin. app_icon needs to be a added as a drawable resource to the Android head project
     var initializationSettingsAndroid =
-        AndroidInitializationSettings('ic_launcher');
+        AndroidInitializationSettings('@mipmap/ic_launcher');
     var initializationSettingsIOS = IOSInitializationSettings();
     var initializationSettings = InitializationSettings(
         initializationSettingsAndroid, initializationSettingsIOS);
@@ -30,8 +31,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Plugin example app'),
+        appBar: VersionOne(
+          pageTitle: 'Notification'
         ),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -481,8 +482,8 @@ class SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Screen with payload: ' + _payload),
+      appBar: VersionOne(
+        pageTitle: 'Notification'
       ),
       body: Center(
         child: RaisedButton(
