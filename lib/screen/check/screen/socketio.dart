@@ -22,7 +22,9 @@ class _SocketioScreenState extends State<SocketioScreen> {
   }
 
   _connectSocket01() {
-    socketIO = SocketIOManager().createSocketIO("http://127.0.0.1:3000", "/chat", query: "userId=21031", socketStatusCallback: _socketStatus);
+    socketIO = SocketIOManager().createSocketIO(
+        "http://127.0.0.1:3000", "/chat",
+        query: "userId=21031", socketStatusCallback: _socketStatus);
 
     //call init socket before doing anything
     socketIO.init();
@@ -35,7 +37,9 @@ class _SocketioScreenState extends State<SocketioScreen> {
   }
 
   _connectSocket02() {
-    socketIO02 = SocketIOManager().createSocketIO("http://127.0.0.1:3000", "/map", query: "userId=21031", socketStatusCallback: _socketStatus02);
+    socketIO02 = SocketIOManager().createSocketIO(
+        "http://127.0.0.1:3000", "/map",
+        query: "userId=21031", socketStatusCallback: _socketStatus02);
 
     //call init socket before doing anything
     socketIO02.init();
@@ -99,7 +103,7 @@ class _SocketioScreenState extends State<SocketioScreen> {
     if (socketIO != null) {
       /* String jsonData =
           '{"message":{"type":"Text","content": ${(msg != null && msg.isNotEmpty) ? '"${msg}"' : '"Hello SOCKET IO PLUGIN :))"'},"owner":"589f10b9bbcd694aa570988d","avatar":"img/avatar-default.png"},"sender":{"userId":"589f10b9bbcd694aa570988d","first":"Ha","last":"Test 2","location":{"lat":10.792273999999999,"long":106.6430356,"accuracy":38,"regionId":null,"vendor":"gps","verticalAccuracy":null},"name":"Ha Test 2"},"receivers":["587e1147744c6260e2d3a4af"],"conversationId":"589f116612aa254aa4fef79f","name":null,"isAnonymous":null}'; */
-  String jsonData = '''
+      String jsonData = '''
     {
       "message": {
         "type": "Text",
@@ -168,8 +172,8 @@ class _SocketioScreenState extends State<SocketioScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new RaisedButton(
-              child:
-                  const Text('CONNECT  SOCKET 01', style: TextStyle(color: Colors.white)),
+              child: const Text('CONNECT  SOCKET 01',
+                  style: TextStyle(color: Colors.white)),
               color: Theme.of(context).accentColor,
               elevation: 0.0,
               splashColor: Colors.blueGrey,
@@ -179,8 +183,8 @@ class _SocketioScreenState extends State<SocketioScreen> {
               },
             ),
             new RaisedButton(
-              child:
-              const Text('CONNECT SOCKET 02', style: TextStyle(color: Colors.white)),
+              child: const Text('CONNECT SOCKET 02',
+                  style: TextStyle(color: Colors.white)),
               color: Theme.of(context).accentColor,
               elevation: 0.0,
               splashColor: Colors.blueGrey,
@@ -190,7 +194,8 @@ class _SocketioScreenState extends State<SocketioScreen> {
               },
             ),
             new RaisedButton(
-              child: const Text('SEND MESSAGE', style: TextStyle(color: Colors.white)),
+              child: const Text('SEND MESSAGE',
+                  style: TextStyle(color: Colors.white)),
               color: Theme.of(context).accentColor,
               elevation: 0.0,
               splashColor: Colors.blueGrey,

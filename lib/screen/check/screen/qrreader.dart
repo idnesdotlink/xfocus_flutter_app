@@ -2,17 +2,17 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:qr_reader/qr_reader.dart';
+import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
 
 class QrreaderScreen extends StatefulWidget {
   QrreaderScreen({Key key, this.title}) : super(key: key);
 
   final String title;
 
-  final Map<String, dynamic> pluginParameters = {
-  };
+  final Map<String, dynamic> pluginParameters = {};
 
   @override
-  _QrreaderScreenState createState() => new _QrreaderScreenState();
+  _QrreaderScreenState createState() => _QrreaderScreenState();
 }
 
 class _QrreaderScreenState extends State<QrreaderScreen> {
@@ -20,20 +20,22 @@ class _QrreaderScreenState extends State<QrreaderScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: const Text('QR Reader'),
+    return Scaffold(
+      appBar: VersionOne(
+        pageTitle: 'QR Reader',
       ),
-      body: new Center(
-          child: new FutureBuilder<String>(
-              future: _barcodeString,
-              builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
-                return new Text(snapshot.data != null ? snapshot.data : '');
-              })),
-      floatingActionButton: new FloatingActionButton(
+      body: Center(
+        child: FutureBuilder<String>(
+          future: _barcodeString,
+          builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+            return Text(snapshot.data != null ? snapshot.data : '');
+          },
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            _barcodeString = new QRCodeReader()
+            _barcodeString = QRCodeReader()
                 .setAutoFocusIntervalInMs(200)
                 .setForceAutoFocus(true)
                 .setTorchEnabled(true)
@@ -43,7 +45,7 @@ class _QrreaderScreenState extends State<QrreaderScreen> {
           });
         },
         tooltip: 'Reader the QRCode',
-        child: new Icon(Icons.add_a_photo),
+        child: Icon(Icons.add_a_photo),
       ),
     );
   }

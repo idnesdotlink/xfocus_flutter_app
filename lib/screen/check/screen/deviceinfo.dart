@@ -95,32 +95,29 @@ class _DeviceinfoScreenState extends State<DeviceinfoScreen> {
       appBar: VersionOne(pageTitle: 'Device Info'),
       body: ListView(
         shrinkWrap: true,
-        children: _deviceData.keys.map(
-          (String property) {
-            return Row(
-              children: <Widget>[
-                Container(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    property,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+        children: _deviceData.keys.map((String property) {
+          return Row(
+            children: <Widget>[
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  property,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                Expanded(
-                    child: Container(
-                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
-                  child: Text(
-                    '${_deviceData[property]}',
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                )),
-              ],
-            );
-          }
-        )
-        .toList(),
+              ),
+              Expanded(
+                  child: Container(
+                padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+                child: Text(
+                  '${_deviceData[property]}',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              )),
+            ],
+          );
+        }).toList(),
       ),
     );
   }

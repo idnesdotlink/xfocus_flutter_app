@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intro_views_flutter/intro_views_flutter.dart';
 import 'package:intro_views_flutter/Models/page_view_model.dart';
+
 class IntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,6 @@ class IntroScreen extends StatelessWidget {
             alignment: Alignment.center,
           ),
           textStyle: TextStyle(color: Colors.white),
-          
         ),
         PageViewModel(
           pageColor: const Color(0xFF607D8B),
@@ -40,7 +40,6 @@ class IntroScreen extends StatelessWidget {
             alignment: Alignment.center,
           ),
           textStyle: TextStyle(color: Colors.white),
-          
         ),
         PageViewModel(
           pageColor: const Color(0xFF607D8B),
@@ -58,7 +57,6 @@ class IntroScreen extends StatelessWidget {
             alignment: Alignment.center,
           ),
           textStyle: TextStyle(color: Colors.white),
-          
         ),
       ],
       onTapDoneButton: () => Navigator.pop(context),

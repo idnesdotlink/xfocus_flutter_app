@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+
 class QrwriterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

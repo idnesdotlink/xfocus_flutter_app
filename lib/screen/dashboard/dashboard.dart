@@ -130,7 +130,7 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
           ],
         ),
-      ),// This trailing comma makes auto-formatting nicer for build methods.
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

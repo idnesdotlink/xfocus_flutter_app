@@ -44,28 +44,25 @@ Widget _circularChart = AnimatedCircularChart(
 class CustomButton extends StatelessWidget {
   final String title;
   final onTap;
-  
+
   CustomButton({Key key, this.title, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-          color: Colors.blue,
-          child: Material(
-            color: Colors.transparent,
-            child: InkWell(
-              onTap: onTap,
-              child: Container(
-                height: 40.0,
-                child: Text(
-                  title
-                ),
-              ),
-            ),
+      color: Colors.blue,
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onTap,
+          child: Container(
+            height: 40.0,
+            child: Text(title),
           ),
-        )
-    );
+        ),
+      ),
+    ));
   }
 }
 
@@ -77,10 +74,7 @@ Widget _topColumn = Container(
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        CustomButton(
-          title: 'Yearly',
-          onTap: () {}
-        ),
+        CustomButton(title: 'Yearly', onTap: () {}),
         CustomButton(
           title: 'Monthly',
           onTap: () {},
@@ -94,7 +88,7 @@ Widget _middleColumn = Expanded(
   child: Container(
     color: Colors.white,
     child: _circularChart, // Padding(
-        // padding: EdgeInsets.all(20.0), child: DonutChart.withSampleData()),
+    // padding: EdgeInsets.all(20.0), child: DonutChart.withSampleData()),
   ),
 );
 
@@ -113,7 +107,6 @@ Widget _bottomColumn = Container(
 );
 
 class _CashScreenState extends State<CashScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,7 +141,7 @@ class _CashScreenState extends State<CashScreen> {
             print(gbym.getByYearMonth(2018, 3).cash);
             // print((CashData.loadJsonString(_cash).getTotalYearCash(2017)/1000.0).round());
             print(CashData.loadJsonString(_cash).getMonthComparison());
-          } catch(e) {
+          } catch (e) {
             debugPrint(e.toString());
           }
         },

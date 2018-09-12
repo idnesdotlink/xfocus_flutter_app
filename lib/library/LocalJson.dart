@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
 import 'package:xfocus_mobile/config/assets_registry.dart';
+
 class LocalJson {
   Future<String> get _localPath async {
     final directory = await getApplicationDocumentsDirectory();

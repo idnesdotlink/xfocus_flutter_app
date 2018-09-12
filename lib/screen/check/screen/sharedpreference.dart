@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -9,8 +8,10 @@ class SharedpreferenceScreen extends StatefulWidget {
   SharedpreferenceScreen({Key key}) : super(key: key);
 
   @override
-  _SharedpreferenceScreenState createState() => new _SharedpreferenceScreenState();
+  _SharedpreferenceScreenState createState() =>
+      new _SharedpreferenceScreenState();
 }
+
 class _SharedpreferenceScreenState extends State<SharedpreferenceScreen> {
   Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   Future<int> _counter;
@@ -50,7 +51,7 @@ class _SharedpreferenceScreenState extends State<SharedpreferenceScreen> {
                       return new Text('Error: ${snapshot.error}');
                     else
                       return new Text(
-                        'Button tapped ${snapshot.data} time${ snapshot.data == 1 ? '' : 's' }.\n\n'
+                        'Button tapped ${snapshot.data} time${snapshot.data == 1 ? '' : 's'}.\n\n'
                             'This should persist across restarts.',
                       );
                 }

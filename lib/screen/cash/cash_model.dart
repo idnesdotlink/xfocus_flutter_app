@@ -16,15 +16,19 @@ class CashModel {
   }
 
   get(String props) {
-    switch(props) {
-      case 'year': return year;
-      break;
-      case 'month': return month;
-      break;
-      case 'cash': return cash;
-      break;
-      case 'pettyCash': return pettyCash;
-      break;
+    switch (props) {
+      case 'year':
+        return year;
+        break;
+      case 'month':
+        return month;
+        break;
+      case 'cash':
+        return cash;
+        break;
+      case 'pettyCash':
+        return pettyCash;
+        break;
     }
   }
 }

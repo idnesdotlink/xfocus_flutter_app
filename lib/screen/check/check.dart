@@ -10,6 +10,7 @@ import 'screen/sharedpreference.dart';
 import 'screen/deviceinfo.dart';
 import 'screen/qrreader.dart';
 import 'screen/qrwriter.dart';
+import 'screen/badge.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -17,9 +18,9 @@ class CheckScreenItem extends StatelessWidget {
   final bool bottomBorder;
   final decoration = BoxDecoration(
     border: BorderDirectional(
-    bottom: BorderSide(
-      width: 0.5,
-      color: Colors.grey.withOpacity(0.5),
+      bottom: BorderSide(
+        width: 0.5,
+        color: Colors.grey.withOpacity(0.5),
       ),
     ),
   );
@@ -50,13 +51,12 @@ class CheckScreenItem extends StatelessWidget {
   }
 }
 
-class CheckScreen extends StatefulWidget{
-  _CheckScreenState createState()=>  _CheckScreenState();
+class CheckScreen extends StatefulWidget {
+  _CheckScreenState createState() => _CheckScreenState();
 }
 
 class _CheckScreenState extends State<CheckScreen> {
-
-  void _goToScreen(context,  Widget screen) {
+  void _goToScreen(context, Widget screen) {
     Navigator.push(
       context,
       SlideRightRoute(
@@ -66,50 +66,54 @@ class _CheckScreenState extends State<CheckScreen> {
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(pageTitle: 'Cek Fungsi',),
-      body: ListView(
-        children: <Widget>[
-          CheckScreenItem(
-            title: 'Intro Screen',
-            onTap: () => _goToScreen(context, IntroScreen()),
-          ),
-          CheckScreenItem(
-            title: 'Websocket',
-            onTap: () => _goToScreen(context, WebsocketScreen()),
-          ),
-          CheckScreenItem(
-            title: 'Socket IO',
-            onTap: () => _goToScreen(context, SocketioScreen()),
-          ),
-          CheckScreenItem(
-            title: 'Local Json',
-            onTap: () => _goToScreen(context, LocaldataScreen()),
-          ),
-          CheckScreenItem(
-            title: 'Sqlite',
-            onTap: () => _goToScreen(context, SqliteScreen()),
-          ),
-          CheckScreenItem(
-            title: 'Device Info',
-            onTap: () => _goToScreen(context, DeviceinfoScreen()),
-          ),
-          CheckScreenItem(
-            title: 'Shared Preference',
-            onTap: () => _goToScreen(context, SharedpreferenceScreen()),
-          ),
-          CheckScreenItem(
-            title: 'QR Reader',
-            onTap: () => _goToScreen(context, QrreaderScreen()),
-          ),
-          CheckScreenItem(
-            title: 'QR Writer',
-            onTap: () => _goToScreen(context, QrwriterScreen()),
-            bottomBorder: false,
-          ),
-        ]
+      appBar: VersionOne(
+        pageTitle: 'Cek Fungsi',
       ),
+      body: ListView(children: <Widget>[
+        CheckScreenItem(
+          title: 'Intro Screen',
+          onTap: () => _goToScreen(context, IntroScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Websocket',
+          onTap: () => _goToScreen(context, WebsocketScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Socket IO',
+          onTap: () => _goToScreen(context, SocketioScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Local Json',
+          onTap: () => _goToScreen(context, LocaldataScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Sqlite',
+          onTap: () => _goToScreen(context, SqliteScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Device Info',
+          onTap: () => _goToScreen(context, DeviceinfoScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Shared Preference',
+          onTap: () => _goToScreen(context, SharedpreferenceScreen()),
+        ),
+        CheckScreenItem(
+          title: 'QR Reader',
+          onTap: () => _goToScreen(context, QrreaderScreen()),
+        ),
+        CheckScreenItem(
+          title: 'QR Writer',
+          onTap: () => _goToScreen(context, QrwriterScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Badge',
+          onTap: () => _goToScreen(context, BadgeScreen()),
+          bottomBorder: false,
+        ),
+      ]),
     );
   }
 }

@@ -3,8 +3,9 @@ class Model {
   Model({this.data});
   factory Model.fromJson(Map<String, dynamic> json) {
     return Model(
-      data: (json['data'] != null) ? (json['data'] as List).map((i) => Data.fromJson(i)).toSet() : null
-    );
+        data: (json['data'] != null)
+            ? (json['data'] as List).map((i) => Data.fromJson(i)).toSet()
+            : null);
   }
 }
 
@@ -17,12 +18,11 @@ class Data {
   Data({this.year, this.month, this.day, this.dateTime, this.component});
   factory Data.fromJson(Map<String, dynamic> json) {
     return Data(
-      year: json['year'],
-      month: json['month'],
-      day: json['day'],
-      dateTime: DateTime(json['year'], json['month'], json['day']),
-      component: Component.fromJson(json['component'])
-    );
+        year: json['year'],
+        month: json['month'],
+        day: json['day'],
+        dateTime: DateTime(json['year'], json['month'], json['day']),
+        component: Component.fromJson(json['component']));
   }
 }
 
@@ -30,9 +30,7 @@ class Component {
   final Movement movement;
   Component({this.movement});
   factory Component.fromJson(Map<String, dynamic> json) {
-    return Component(
-      movement: Movement.fromJson(json['movement'])
-    );
+    return Component(movement: Movement.fromJson(json['movement']));
   }
 }
 
@@ -42,9 +40,12 @@ class Movement {
   Movement({this.slow, this.fast});
   factory Movement.fromJson(Map<String, dynamic> json) {
     return Movement(
-      slow: (json['slow'] != null) ? (json['slow'] as List).map((i) => Item.fromJson(i)).toList() : null,
-      fast: (json['fast'] != null) ? (json['fast'] as List).map((i) => Item.fromJson(i)).toList() : null
-    );
+        slow: (json['slow'] != null)
+            ? (json['slow'] as List).map((i) => Item.fromJson(i)).toList()
+            : null,
+        fast: (json['fast'] != null)
+            ? (json['fast'] as List).map((i) => Item.fromJson(i)).toList()
+            : null);
   }
 }
 
@@ -53,9 +54,6 @@ class Item {
   final double ammount;
   Item({this.title, this.ammount});
   factory Item.fromJson(Map<String, dynamic> json) {
-    return Item(
-      title: json['title'],
-      ammount: json['ammount']
-    );
+    return Item(title: json['title'], ammount: json['ammount']);
   }
 }

@@ -1,18 +1,18 @@
 class Formater {
   final String inputVar;
 
-  Formater({ this.inputVar });
+  Formater({this.inputVar});
 
   factory Formater.input(String string) {
     return Formater(inputVar: string);
   }
 
-  void toThousand () {
+  void toThousand() {
     print('toThousand');
     print(this.inputVar);
   }
 
-  void toBillion () {
+  void toBillion() {
     print('toBillion');
     print(this.inputVar);
   }
