@@ -12,6 +12,7 @@ import 'screen/qrreader.dart';
 import 'screen/qrwriter.dart';
 import 'screen/badge.dart';
 import 'screen/notification.dart';
+import 'screen/crossanimation.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -113,6 +114,10 @@ class _CheckScreenState extends State<CheckScreen> {
           title: 'Badge',
           onTap: () => _goToScreen(context, BadgeScreen()),
           bottomBorder: false,
+        ),
+        CheckScreenItem(
+          title: 'Cross Screen Animation',
+          onTap: () => _goToScreen(context, CrossanimationScreen()),
         ),
         CheckScreenItem(
           title: 'Notification',
