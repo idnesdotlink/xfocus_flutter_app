@@ -4,7 +4,7 @@ import 'package:flutter_app_badger/flutter_app_badger.dart';
 
 class BadgeScreen extends StatefulWidget {
   @override
-  _BadgeScreenState createState() => new _BadgeScreenState();
+  _BadgeScreenState createState() => _BadgeScreenState();
 }
 
 class _BadgeScreenState extends State<BadgeScreen> {
@@ -41,30 +41,28 @@ class _BadgeScreenState extends State<BadgeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Plugin example app'),
-        ),
-        body: new SizedBox.expand(
-          child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              new Text('Badge supported: $_appBadgeSupported\n'),
-              new RaisedButton(
-                child: new Text('Add badge'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Plugin example app'),
+      ),
+      body: SizedBox.expand(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Text('Badge supported: $_appBadgeSupported\n'),
+            RaisedButton(
+              child: Text('Add badge'),
+              onPressed: () {
+                _addBadge();
+              },
+            ),
+            RaisedButton(
+                child: Text('Remove badge'),
                 onPressed: () {
-                  _addBadge();
-                },
-              ),
-              new RaisedButton(
-                  child: new Text('Remove badge'),
-                  onPressed: () {
-                    _removeBadge();
-                  }),
-            ],
-          ),
+                  _removeBadge();
+                }),
+          ],
         ),
       ),
     );
