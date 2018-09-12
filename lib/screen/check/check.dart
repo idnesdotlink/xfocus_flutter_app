@@ -9,6 +9,7 @@ import 'screen/sqlite.dart';
 import 'screen/sharedpreference.dart';
 import 'screen/deviceinfo.dart';
 import 'screen/qrreader.dart';
+import 'screen/qrwriter.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -70,17 +71,41 @@ class _CheckScreenState extends State<CheckScreen> {
       appBar: VersionOne(pageTitle: 'Cek Fungsi',),
       body: ListView(
         children: <Widget>[
-          CheckScreenItem(title: 'Intro Screen', onTap: () => _goToScreen(context, IntroScreen()),),
-          CheckScreenItem(title: 'Websocket', onTap: () => _goToScreen(context, WebsocketScreen()),),
-          CheckScreenItem(title: 'Socket IO', onTap: () => _goToScreen(context, SocketioScreen()),),
-          CheckScreenItem(title: 'Local Json', onTap: () => _goToScreen(context, LocaldataScreen()),),
-          CheckScreenItem(title: 'Sqlite', onTap: () => _goToScreen(context, SqliteScreen()),),
-          CheckScreenItem(title: 'Device Info', onTap: () => _goToScreen(context, DeviceinfoScreen()),),
-          CheckScreenItem(title: 'Shared Preference', onTap: () => _goToScreen(context, SharedpreferenceScreen()),),
-          CheckScreenItem(title: 'QR Reader', onTap: () => _goToScreen(context, QrreaderScreen()),),
           CheckScreenItem(
-            title: 'Hello 9',
-            onTap: () => print('hello 9'),
+            title: 'Intro Screen',
+            onTap: () => _goToScreen(context, IntroScreen()),
+          ),
+          CheckScreenItem(
+            title: 'Websocket',
+            onTap: () => _goToScreen(context, WebsocketScreen()),
+          ),
+          CheckScreenItem(
+            title: 'Socket IO',
+            onTap: () => _goToScreen(context, SocketioScreen()),
+          ),
+          CheckScreenItem(
+            title: 'Local Json',
+            onTap: () => _goToScreen(context, LocaldataScreen()),
+          ),
+          CheckScreenItem(
+            title: 'Sqlite',
+            onTap: () => _goToScreen(context, SqliteScreen()),
+          ),
+          CheckScreenItem(
+            title: 'Device Info',
+            onTap: () => _goToScreen(context, DeviceinfoScreen()),
+          ),
+          CheckScreenItem(
+            title: 'Shared Preference',
+            onTap: () => _goToScreen(context, SharedpreferenceScreen()),
+          ),
+          CheckScreenItem(
+            title: 'QR Reader',
+            onTap: () => _goToScreen(context, QrreaderScreen()),
+          ),
+          CheckScreenItem(
+            title: 'QR Writer',
+            onTap: () => _goToScreen(context, QrwriterScreen()),
             bottomBorder: false,
           ),
         ]
