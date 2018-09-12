@@ -113,7 +113,6 @@ class _CheckScreenState extends State<CheckScreen> {
         CheckScreenItem(
           title: 'Badge',
           onTap: () => _goToScreen(context, BadgeScreen()),
-          bottomBorder: false,
         ),
         CheckScreenItem(
           title: 'Cross Screen Animation',
