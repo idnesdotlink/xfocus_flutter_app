@@ -11,6 +11,7 @@ import 'screen/deviceinfo.dart';
 import 'screen/qrreader.dart';
 import 'screen/qrwriter.dart';
 import 'screen/badge.dart';
+import 'screen/notification.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -111,6 +112,11 @@ class _CheckScreenState extends State<CheckScreen> {
         CheckScreenItem(
           title: 'Badge',
           onTap: () => _goToScreen(context, BadgeScreen()),
+          bottomBorder: false,
+        ),
+        CheckScreenItem(
+          title: 'Notification',
+          onTap: () => _goToScreen(context, NotificationScreen()),
           bottomBorder: false,
         ),
       ]),

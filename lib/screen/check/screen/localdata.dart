@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/library/LocalJson.dart';
+import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
 
 class LocaldataScreen extends StatefulWidget {
   final LocalJson storage;
@@ -62,7 +63,9 @@ class _LocaldataScreenState extends State<LocaldataScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Reading and Writing Files')),
+      appBar: VersionOne(
+        pageTitle: 'Data Lokal',
+      ),
       body: Center(
         child: Text(
           'Button tapped $_counter time${_counter == 1 ? '' : 's'}.',
