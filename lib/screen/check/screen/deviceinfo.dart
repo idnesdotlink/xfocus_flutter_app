@@ -16,7 +16,6 @@ class _DeviceinfoScreenState extends State<DeviceinfoScreen> {
 
   @override
   void initState() {
-    print('init state');
     super.initState();
     initPlatformState();
   }
@@ -26,11 +25,9 @@ class _DeviceinfoScreenState extends State<DeviceinfoScreen> {
 
     try {
       if (Platform.isAndroid) {
-        print('is android');
-        deviceData = _readAndroidBuildData();
-        // deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
+        deviceData = _readAndroidBuildData(await deviceInfoPlugin.androidInfo);
       } else if (Platform.isIOS) {
-        // deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
+        deviceData = _readIosDeviceInfo(await deviceInfoPlugin.iosInfo);
       }
     } on PlatformException {
       deviceData = <String, dynamic>{
@@ -45,34 +42,33 @@ class _DeviceinfoScreenState extends State<DeviceinfoScreen> {
     });
   }
 
-  Map<String, dynamic> _readAndroidBuildData(/*AndroidDeviceInfo build*/) {
+  Map<String, dynamic> _readAndroidBuildData(AndroidDeviceInfo build) {
     return <String, dynamic>{
-      'a': 'b'
-      // 'version.securityPatch': build.version.securityPatch,
-      // 'version.sdkInt': build.version.sdkInt,
-      // 'version.release': build.version.release,
-      // 'version.previewSdkInt': build.version.previewSdkInt,
-      // 'version.incremental': build.version.incremental,
-      // 'version.codename': build.version.codename,
-      // 'version.baseOS': build.version.baseOS,
-      // 'board': build.board,
-      // 'bootloader': build.bootloader,
-      // 'brand': build.brand,
-      // 'device': build.device,
-      // 'display': build.display,
-      // 'fingerprint': build.fingerprint,
-      // 'hardware': build.hardware,
-      // 'host': build.host,
-      // 'id': build.id,
-      // 'manufacturer': build.manufacturer,
-      // 'model': build.model,
-      // 'product': build.product,
-      // 'supported32BitAbis': build.supported32BitAbis,
-      // 'supported64BitAbis': build.supported64BitAbis,
-      // 'supportedAbis': build.supportedAbis,
-      // 'tags': build.tags,
-      // 'type': build.type,
-      // 'isPhysicalDevice': build.isPhysicalDevice,
+      'version.securityPatch': build.version.securityPatch,
+      'version.sdkInt': build.version.sdkInt,
+      'version.release': build.version.release,
+      'version.previewSdkInt': build.version.previewSdkInt,
+      'version.incremental': build.version.incremental,
+      'version.codename': build.version.codename,
+      'version.baseOS': build.version.baseOS,
+      'board': build.board,
+      'bootloader': build.bootloader,
+      'brand': build.brand,
+      'device': build.device,
+      'display': build.display,
+      'fingerprint': build.fingerprint,
+      'hardware': build.hardware,
+      'host': build.host,
+      'id': build.id,
+      'manufacturer': build.manufacturer,
+      'model': build.model,
+      'product': build.product,
+      'supported32BitAbis': build.supported32BitAbis,
+      'supported64BitAbis': build.supported64BitAbis,
+      'supportedAbis': build.supportedAbis,
+      'tags': build.tags,
+      'type': build.type,
+      'isPhysicalDevice': build.isPhysicalDevice,
     };
   }
 

@@ -8,6 +8,7 @@ import 'screen/localdata.dart';
 import 'screen/sqlite.dart';
 import 'screen/sharedpreference.dart';
 import 'screen/deviceinfo.dart';
+import 'screen/qrreader.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -76,7 +77,7 @@ class _CheckScreenState extends State<CheckScreen> {
           CheckScreenItem(title: 'Sqlite', onTap: () => _goToScreen(context, SqliteScreen()),),
           CheckScreenItem(title: 'Device Info', onTap: () => _goToScreen(context, DeviceinfoScreen()),),
           CheckScreenItem(title: 'Shared Preference', onTap: () => _goToScreen(context, SharedpreferenceScreen()),),
-          CheckScreenItem(title: 'Hello 8', onTap: () => print('hello 8'),),
+          CheckScreenItem(title: 'QR Reader', onTap: () => _goToScreen(context, QrreaderScreen()),),
           CheckScreenItem(
             title: 'Hello 9',
             onTap: () => print('hello 9'),
