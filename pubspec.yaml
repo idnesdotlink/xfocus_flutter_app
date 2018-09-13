@@ -28,7 +28,7 @@ dependencies:
   flutter_picker: ^0.0.6
   flutter_redux: ^0.5.2
   flutter_search_bar: ^2.0.6
-  # lutter_sequence_animation: ^2.0.1
+  flutter_sequence_animation: ^2.0.1
   # flutter_slidable: ^0.4.6
   flutter_socket_io: ^0.4.0
   flutter_sparkline: ^0.0.4
