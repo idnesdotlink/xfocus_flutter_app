@@ -8,9 +8,8 @@ class SequencePage extends StatefulWidget {
   _SequencePageState createState() => new _SequencePageState();
 }
 
-class _SequencePageState extends State<SequencePage> with SingleTickerProviderStateMixin{
-
-
+class _SequencePageState extends State<SequencePage>
+    with SingleTickerProviderStateMixin {
   AnimationController controller;
   SequenceAnimation sequenceAnimation;
 
@@ -22,29 +21,28 @@ class _SequencePageState extends State<SequencePage> with SingleTickerProviderSt
     controller = new AnimationController(vsync: this);
 
     sequenceAnimation = new SequenceAnimationBuilder()
-      .addAnimatable(
-          animatable: new ColorTween(begin: Colors.red, end: Colors.yellow),
-          from:  const Duration(seconds: 0),
-          to: const Duration(seconds: 2),
-          tag: "color"
-        ).addAnimatable(
-          animatable: new ColorTween(begin: Colors.yellow, end: Colors.blueAccent),
-          from:  const Duration(seconds: 2),
-          to: const Duration(seconds: 4),
-          tag: "color",
-          curve: Curves.easeOut
-        ).addAnimatable(
-          animatable: new ColorTween(begin: Colors.blueAccent, end: Colors.pink),
-          //  animatable: new Tween<double>(begin: 200.0, end: 40.0),
-          from:  const Duration(seconds: 5),
-          to: const Duration(seconds: 6),
-          tag: "color",
-          curve: Curves.fastOutSlowIn
-        ).animate(controller);
-
-
+        .addAnimatable(
+            animatable: new ColorTween(begin: Colors.red, end: Colors.yellow),
+            from: const Duration(seconds: 0),
+            to: const Duration(seconds: 2),
+            tag: "color")
+        .addAnimatable(
+            animatable:
+                new ColorTween(begin: Colors.yellow, end: Colors.blueAccent),
+            from: const Duration(seconds: 2),
+            to: const Duration(seconds: 4),
+            tag: "color",
+            curve: Curves.easeOut)
+        .addAnimatable(
+            animatable:
+                new ColorTween(begin: Colors.blueAccent, end: Colors.pink),
+            //  animatable: new Tween<double>(begin: 200.0, end: 40.0),
+            from: const Duration(seconds: 5),
+            to: const Duration(seconds: 6),
+            tag: "color",
+            curve: Curves.fastOutSlowIn)
+        .animate(controller);
   }
-
 
   Future<Null> _playAnimation() async {
     try {
@@ -87,5 +85,4 @@ class _SequencePageState extends State<SequencePage> with SingleTickerProviderSt
       ),
     );
   }
-
 }

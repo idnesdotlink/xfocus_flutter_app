@@ -7,7 +7,8 @@ import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
 
 class SequenceanimationScreen extends StatefulWidget {
   @override
-  _SequenceanimationScreenState createState() => _SequenceanimationScreenState();
+  _SequenceanimationScreenState createState() =>
+      _SequenceanimationScreenState();
 }
 
 class _SequenceanimationScreenState extends State<SequenceanimationScreen> {
@@ -19,22 +20,31 @@ class _SequenceanimationScreenState extends State<SequenceanimationScreen> {
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(
-        pageTitle: 'Anim'
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            RaisedButton(onPressed: () => _goToScreen(context, SequencePage()), child: Text("Sequence"),),
-            RaisedButton(onPressed: () => _goToScreen(context, StaggeredAnimationReplication()), child: Text("StaggeredAnimationReplication"),),
-            RaisedButton(onPressed: () => _goToScreen(context, SameVariableAnimationPage()), child: Text("SameVariableAnimationPage"),),
-          ],
-        ),
-      )
-    );
+        appBar: VersionOne(pageTitle: 'Anim'),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              RaisedButton(
+                onPressed: () => _goToScreen(context, SequencePage()),
+                child: Text("Sequence"),
+              ),
+              RaisedButton(
+                onPressed: () =>
+                    _goToScreen(context, StaggeredAnimationReplication()),
+                child: Text("StaggeredAnimationReplication"),
+              ),
+              RaisedButton(
+                onPressed: () =>
+                    _goToScreen(context, SameVariableAnimationPage()),
+                child: Text("SameVariableAnimationPage"),
+              ),
+            ],
+          ),
+        ));
   }
 }

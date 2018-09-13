@@ -206,90 +206,90 @@ class _OnesignalScreenState extends State<OnesignalScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          appBar: VersionOne(
-            pageTitle: 'One Signal',
+      appBar: VersionOne(
+        pageTitle: 'One Signal',
+      ),
+      body: Container(
+        padding: EdgeInsets.all(10.0),
+        child: SingleChildScrollView(
+          child: Table(
+            children: [
+              TableRow(children: [
+                OneSignalButton(
+                    'Get Tags', _handleGetTags, !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                OneSignalButton(
+                    'Send Tags', _handleSendTags, !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                OneSignalButton('Prompt for Push Permission',
+                    _handlePromptForPushPermission, !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                OneSignalButton(
+                    'Print Permission Subscription State',
+                    _handleGetPermissionSubscriptionState,
+                    !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                TextField(
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                      hintText: 'Email Address',
+                      labelStyle: TextStyle(
+                        color: Color.fromARGB(255, 212, 86, 83),
+                      )),
+                  onChanged: (text) {
+                    this.setState(() {
+                      _emailAddress = text == '' ? null : text;
+                    });
+                  },
+                )
+              ]),
+              TableRow(children: [
+                Container(
+                  height: 8.0,
+                )
+              ]),
+              TableRow(children: [
+                OneSignalButton(
+                    'Set Email', _handleSetEmail, !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                OneSignalButton(
+                    'Logout Email', _handleLogoutEmail, !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                OneSignalButton('Provide GDPR Consent', _handleConsent,
+                    _enableConsentButton)
+              ]),
+              TableRow(children: [
+                OneSignalButton('Set Location Shared', _handleSetLocationShared,
+                    !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                OneSignalButton(
+                    'Delete Tag', _handleDeleteTag, !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                OneSignalButton('Post Notification', _handleSendNotification,
+                    !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                OneSignalButton('Post Silent Notification',
+                    _handleSendSilentNotification, !_enableConsentButton)
+              ]),
+              TableRow(children: [
+                Container(
+                  child: Text(_debugLabelString),
+                  alignment: Alignment.center,
+                )
+              ])
+            ],
           ),
-          body: Container(
-            padding: EdgeInsets.all(10.0),
-            child: SingleChildScrollView(
-              child: Table(
-                children: [
-                  TableRow(children: [
-                    OneSignalButton(
-                        'Get Tags', _handleGetTags, !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton(
-                        'Send Tags', _handleSendTags, !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton('Prompt for Push Permission',
-                        _handlePromptForPushPermission, !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton(
-                        'Print Permission Subscription State',
-                        _handleGetPermissionSubscriptionState,
-                        !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    TextField(
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                          hintText: 'Email Address',
-                          labelStyle: TextStyle(
-                            color: Color.fromARGB(255, 212, 86, 83),
-                          )),
-                      onChanged: (text) {
-                        this.setState(() {
-                          _emailAddress = text == '' ? null : text;
-                        });
-                      },
-                    )
-                  ]),
-                  TableRow(children: [
-                    Container(
-                      height: 8.0,
-                    )
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton(
-                        'Set Email', _handleSetEmail, !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton('Logout Email', _handleLogoutEmail,
-                        !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton('Provide GDPR Consent', _handleConsent,
-                        _enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton('Set Location Shared',
-                        _handleSetLocationShared, !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton(
-                        'Delete Tag', _handleDeleteTag, !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton('Post Notification',
-                        _handleSendNotification, !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton('Post Silent Notification',
-                        _handleSendSilentNotification, !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    Container(
-                      child: Text(_debugLabelString),
-                      alignment: Alignment.center,
-                    )
-                  ])
-                ],
-              ),
-            ),
-          ),
+        ),
+      ),
     );
   }
 }

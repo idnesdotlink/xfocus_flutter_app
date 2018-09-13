@@ -5,10 +5,9 @@ import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:path_provider/path_provider.dart';
 
-class MarkdownScreen extends StatefulWidget{
-  _MarkdownScreenState createState()=>  _MarkdownScreenState();
+class MarkdownScreen extends StatefulWidget {
+  _MarkdownScreenState createState() => _MarkdownScreenState();
 }
-
 
 class _MarkdownScreenState extends State<MarkdownScreen> {
   Directory appDocDir;
@@ -23,20 +22,15 @@ class _MarkdownScreenState extends State<MarkdownScreen> {
   void _setAppDocDir() async {
     appDocDir = await getApplicationDocumentsDirectory();
     appDocPath = appDocDir.path;
-    setState(() {
-          
-    });
+    setState(() {});
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(
-        pageTitle: 'MarkDown'
-      ),
+      appBar: VersionOne(pageTitle: 'MarkDown'),
       body: Container(
-        child: Markdown(
-        data: '''
+        child: Markdown(data: '''
 # Petunjuk Penggunaan
 
 ## Secondary Title
@@ -53,8 +47,8 @@ class _MarkdownScreenState extends State<MarkdownScreen> {
 
   $appDocPath
 
-        '''
+        '''),
       ),
-    ),);
+    );
   }
 }

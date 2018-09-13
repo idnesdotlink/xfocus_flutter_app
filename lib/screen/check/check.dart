@@ -16,6 +16,7 @@ import 'screen/crossanimation.dart';
 import 'screen/markdown.dart';
 import 'screen/onesignal.dart';
 import 'screen/sequenceanimation.dart';
+// import 'screen/firebasesmsauth.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -133,6 +134,12 @@ class _CheckScreenState extends State<CheckScreen> {
           title: 'Animation',
           onTap: () => _goToScreen(context, SequenceanimationScreen()),
         ),
+        // CheckScreenItem(
+        //   title: 'Google Sign in',
+        //   onTap: () => _goToScreen(context, FirebasesmsauthScreen(
+        //     title: 'Firebase Title',
+        //   )),
+        // ),
         CheckScreenItem(
           title: 'One Signal',
           onTap: () => _goToScreen(context, OnesignalScreen()),

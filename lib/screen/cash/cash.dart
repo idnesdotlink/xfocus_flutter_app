@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
     return Expanded(
       child: Container(
         padding: EdgeInsets.all(10.0),
-      child: Container(
+        child: Container(
           child: Material(
             borderRadius: BorderRadius.all(
               Radius.circular(60.0),
@@ -40,7 +40,7 @@ class CustomButton extends StatelessWidget {
                     ),
                     borderRadius: BorderRadius.all(
                       Radius.circular(60.0),
-                    ),                    
+                    ),
                   ),
                   child: Center(
                     child: Text(
@@ -55,7 +55,7 @@ class CustomButton extends StatelessWidget {
               ),
             ),
           ),
-      ),
+        ),
       ),
     );
   }
@@ -80,9 +80,7 @@ class _CashScreenState extends State<CashScreen> {
 
   void _setChart(String type) {
     _chartType = type;
-    setState(() {
-          
-    });
+    setState(() {});
   }
 
   @override
@@ -109,14 +107,14 @@ class _CashScreenState extends State<CashScreen> {
             child: DecoratedBox(
               position: DecorationPosition.background,
               decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 0.0,
-                      style: BorderStyle.none,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(60.0),
-                    ),                    
-                  ),
+                border: Border.all(
+                  width: 0.0,
+                  style: BorderStyle.none,
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(60.0),
+                ),
+              ),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -134,39 +132,39 @@ class _CashScreenState extends State<CashScreen> {
             ),
           ),
           Expanded(
-  child: Container(
-    color: Colors.white,
-    child: AnimatedCircularChart(
-  // ey: _chartKey,
-  size: Size(250.0, 250.0),
-  initialChartData: <CircularStackEntry>[
-    new CircularStackEntry(
-      <CircularSegmentEntry>[
-        new CircularSegmentEntry(
-          33.33,
-          Colors.blue[400],
-          rankKey: 'completed',
-        ),
-        new CircularSegmentEntry(
-          66.67,
-          Colors.blueGrey[600],
-          rankKey: 'remaining',
-        ),
-      ],
-      rankKey: 'progress',
-    ),
-  ],
-  chartType: CircularChartType.Radial,
-  percentageValues: true,
-  holeLabel: _chartType,
-  labelStyle: new TextStyle(
-    color: Colors.blueGrey[600],
-    fontWeight: FontWeight.bold,
-    fontSize: 24.0,
-  ),
-), // Padding(
-    // padding: EdgeInsets.all(20.0), child: DonutChart.withSampleData()),
-  ),
+            child: Container(
+              color: Colors.white,
+              child: AnimatedCircularChart(
+                // ey: _chartKey,
+                size: Size(250.0, 250.0),
+                initialChartData: <CircularStackEntry>[
+                  new CircularStackEntry(
+                    <CircularSegmentEntry>[
+                      new CircularSegmentEntry(
+                        33.33,
+                        Colors.blue[400],
+                        rankKey: 'completed',
+                      ),
+                      new CircularSegmentEntry(
+                        66.67,
+                        Colors.blueGrey[600],
+                        rankKey: 'remaining',
+                      ),
+                    ],
+                    rankKey: 'progress',
+                  ),
+                ],
+                chartType: CircularChartType.Radial,
+                percentageValues: true,
+                holeLabel: _chartType,
+                labelStyle: new TextStyle(
+                  color: Colors.blueGrey[600],
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24.0,
+                ),
+              ), // Padding(
+              // padding: EdgeInsets.all(20.0), child: DonutChart.withSampleData()),
+            ),
           ),
           _bottomColumn,
         ],

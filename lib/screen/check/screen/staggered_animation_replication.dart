@@ -5,11 +5,13 @@ import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
 
 class StaggeredAnimationReplication extends StatefulWidget {
   @override
-  _StaggeredAnimationReplicationState createState() => new _StaggeredAnimationReplicationState();
+  _StaggeredAnimationReplicationState createState() =>
+      new _StaggeredAnimationReplicationState();
 }
 
-class _StaggeredAnimationReplicationState extends State<StaggeredAnimationReplication> with SingleTickerProviderStateMixin{
-
+class _StaggeredAnimationReplicationState
+    extends State<StaggeredAnimationReplication>
+    with SingleTickerProviderStateMixin {
   AnimationController controller;
   SequenceAnimation sequenceAnimation;
 
@@ -19,43 +21,52 @@ class _StaggeredAnimationReplicationState extends State<StaggeredAnimationReplic
     controller = new AnimationController(vsync: this);
 
     sequenceAnimation = new SequenceAnimationBuilder()
-     .addAnimatable(
-        animatable: new Tween<double>(begin: 0.0, end: 1.0),
-        from: Duration.zero,
-        to: const Duration(milliseconds: 200),
-        curve: Curves.ease,
-        tag: "opacity"
-    ).addAnimatable(
-        animatable: new Tween<double>(begin: 50.0, end: 150.0),
-        from: const Duration(milliseconds: 250),
-        to: const Duration(milliseconds: 500),
-        curve: Curves.ease,
-        tag: "width"
-    ).addAnimatable(
-        animatable: new Tween<double>(begin: 50.0, end: 150.0),
-        from: const Duration(milliseconds: 500),
-        to: const Duration(milliseconds: 750),
-        curve: Curves.ease,
-        tag: "height"
-    ).addAnimatable(
-        animatable: new EdgeInsetsTween(begin: const EdgeInsets.only(bottom: 16.0), end: const EdgeInsets.only(bottom: 75.0),),
-        from: const Duration(milliseconds: 500),
-        to: const Duration(milliseconds: 750),
-        curve: Curves.ease,
-        tag: "padding"
-    ).addAnimatable(
-        animatable: new BorderRadiusTween(begin: new BorderRadius.circular(4.0), end: new BorderRadius.circular(75.0),),
-        from: const Duration(milliseconds: 750),
-        to: const Duration(milliseconds: 1000),
-        curve: Curves.ease,
-        tag: "borderRadius"
-    ).addAnimatable(
-        animatable: new ColorTween(begin: Colors.indigo[100], end: Colors.orange[400],),
-        from: const Duration(milliseconds: 1000),
-        to: const Duration(milliseconds: 1500),
-        curve: Curves.ease,
-        tag: "color"
-    ).animate(controller);
+        .addAnimatable(
+            animatable: new Tween<double>(begin: 0.0, end: 1.0),
+            from: Duration.zero,
+            to: const Duration(milliseconds: 200),
+            curve: Curves.ease,
+            tag: "opacity")
+        .addAnimatable(
+            animatable: new Tween<double>(begin: 50.0, end: 150.0),
+            from: const Duration(milliseconds: 250),
+            to: const Duration(milliseconds: 500),
+            curve: Curves.ease,
+            tag: "width")
+        .addAnimatable(
+            animatable: new Tween<double>(begin: 50.0, end: 150.0),
+            from: const Duration(milliseconds: 500),
+            to: const Duration(milliseconds: 750),
+            curve: Curves.ease,
+            tag: "height")
+        .addAnimatable(
+            animatable: new EdgeInsetsTween(
+              begin: const EdgeInsets.only(bottom: 16.0),
+              end: const EdgeInsets.only(bottom: 75.0),
+            ),
+            from: const Duration(milliseconds: 500),
+            to: const Duration(milliseconds: 750),
+            curve: Curves.ease,
+            tag: "padding")
+        .addAnimatable(
+            animatable: new BorderRadiusTween(
+              begin: new BorderRadius.circular(4.0),
+              end: new BorderRadius.circular(75.0),
+            ),
+            from: const Duration(milliseconds: 750),
+            to: const Duration(milliseconds: 1000),
+            curve: Curves.ease,
+            tag: "borderRadius")
+        .addAnimatable(
+            animatable: new ColorTween(
+              begin: Colors.indigo[100],
+              end: Colors.orange[400],
+            ),
+            from: const Duration(milliseconds: 1000),
+            to: const Duration(milliseconds: 1500),
+            curve: Curves.ease,
+            tag: "color")
+        .animate(controller);
   }
 
   @override
@@ -117,9 +128,7 @@ class _StaggeredAnimationReplicationState extends State<StaggeredAnimationReplic
               ),
             ),
             child: new AnimatedBuilder(
-                animation: controller,
-                builder: _buildAnimation
-            ),
+                animation: controller, builder: _buildAnimation),
           ),
         ),
       ),
