@@ -13,6 +13,7 @@ import 'screen/qrwriter.dart';
 import 'screen/badge.dart';
 import 'screen/notification.dart';
 import 'screen/crossanimation.dart';
+import 'screen/markdown.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -121,6 +122,10 @@ class _CheckScreenState extends State<CheckScreen> {
         CheckScreenItem(
           title: 'Notification',
           onTap: () => _goToScreen(context, NotificationScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Markdown',
+          onTap: () => _goToScreen(context, MarkdownScreen()),
           bottomBorder: false,
         ),
       ]),

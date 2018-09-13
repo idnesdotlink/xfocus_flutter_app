@@ -50,39 +50,46 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-        child: Container(
-      color: Colors.blue,
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: onTap,
-          child: Container(
-            height: 40.0,
-            child: Text(title),
+      child: Container(
+        padding: EdgeInsets.all(10.0),
+      child: Container(
+          child: Material(
+            borderRadius: BorderRadius.all(
+              Radius.circular(60.0),
+            ),
+            color: Colors.blue.withOpacity(0.7),
+            child: InkWell(
+              onTap: onTap,
+              child: Container(
+                height: 40.0,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 0.0,
+                      style: BorderStyle.none,
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(60.0),
+                    ),                    
+                  ),
+                  child: Center(
+                    child: Text(
+                      '$title',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
-        ),
       ),
-    ));
+      ),
+    );
   }
 }
-
-Widget _topColumn = Container(
-  color: Colors.red,
-  child: Padding(
-    padding: EdgeInsets.all(15.0),
-    child: Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget>[
-        CustomButton(title: 'Yearly', onTap: () {}),
-        CustomButton(
-          title: 'Monthly',
-          onTap: () {},
-        ),
-      ],
-    ),
-  ),
-);
 
 Widget _middleColumn = Expanded(
   child: Container(
@@ -127,7 +134,33 @@ class _CashScreenState extends State<CashScreen> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          _topColumn,
+          Container(
+            child: DecoratedBox(
+              position: DecorationPosition.background,
+              decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 0.0,
+                      style: BorderStyle.none,
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(60.0),
+                    ),                    
+                  ),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  CustomButton(
+                    title: 'Yearly',
+                    onTap: () {}),
+                  CustomButton(
+                    title: 'Monthly',
+                    onTap: () {},
+                  ),
+                ],
+              ),
+            ),
+          ),
           _middleColumn,
           _bottomColumn,
         ],
