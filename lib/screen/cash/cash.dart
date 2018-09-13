@@ -11,36 +11,6 @@ class CashScreen extends StatefulWidget {
   _CashScreenState createState() => _CashScreenState();
 }
 
-Widget _circularChart = AnimatedCircularChart(
-  // ey: _chartKey,
-  size: Size(250.0, 250.0),
-  initialChartData: <CircularStackEntry>[
-    new CircularStackEntry(
-      <CircularSegmentEntry>[
-        new CircularSegmentEntry(
-          33.33,
-          Colors.blue[400],
-          rankKey: 'completed',
-        ),
-        new CircularSegmentEntry(
-          66.67,
-          Colors.blueGrey[600],
-          rankKey: 'remaining',
-        ),
-      ],
-      rankKey: 'progress',
-    ),
-  ],
-  chartType: CircularChartType.Radial,
-  percentageValues: true,
-  holeLabel: 'Yearly',
-  labelStyle: new TextStyle(
-    color: Colors.blueGrey[600],
-    fontWeight: FontWeight.bold,
-    fontSize: 24.0,
-  ),
-);
-
 class CustomButton extends StatelessWidget {
   final String title;
   final onTap;
@@ -91,20 +61,12 @@ class CustomButton extends StatelessWidget {
   }
 }
 
-Widget _middleColumn = Expanded(
-  child: Container(
-    color: Colors.white,
-    child: _circularChart, // Padding(
-    // padding: EdgeInsets.all(20.0), child: DonutChart.withSampleData()),
-  ),
-);
-
 Widget _bottomColumn = Container(
   color: Color(0xFFb74093),
   height: 200.0,
   child: Column(children: <Widget>[
     Text(
-      '\u{1f600}',
+      '',
       style: TextStyle(
         height: 1.5,
         fontSize: 30.0,
@@ -114,6 +76,15 @@ Widget _bottomColumn = Container(
 );
 
 class _CashScreenState extends State<CashScreen> {
+  String _chartType = 'monthly';
+
+  void _setChart(String type) {
+    _chartType = type;
+    setState(() {
+          
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -152,16 +123,51 @@ class _CashScreenState extends State<CashScreen> {
                 children: <Widget>[
                   CustomButton(
                     title: 'Yearly',
-                    onTap: () {}),
+                    onTap: () => _setChart('yearly'),
+                  ),
                   CustomButton(
                     title: 'Monthly',
-                    onTap: () {},
+                    onTap: () => _setChart('monthly'),
                   ),
                 ],
               ),
             ),
           ),
-          _middleColumn,
+          Expanded(
+  child: Container(
+    color: Colors.white,
+    child: AnimatedCircularChart(
+  // ey: _chartKey,
+  size: Size(250.0, 250.0),
+  initialChartData: <CircularStackEntry>[
+    new CircularStackEntry(
+      <CircularSegmentEntry>[
+        new CircularSegmentEntry(
+          33.33,
+          Colors.blue[400],
+          rankKey: 'completed',
+        ),
+        new CircularSegmentEntry(
+          66.67,
+          Colors.blueGrey[600],
+          rankKey: 'remaining',
+        ),
+      ],
+      rankKey: 'progress',
+    ),
+  ],
+  chartType: CircularChartType.Radial,
+  percentageValues: true,
+  holeLabel: _chartType,
+  labelStyle: new TextStyle(
+    color: Colors.blueGrey[600],
+    fontWeight: FontWeight.bold,
+    fontSize: 24.0,
+  ),
+), // Padding(
+    // padding: EdgeInsets.all(20.0), child: DonutChart.withSampleData()),
+  ),
+          ),
           _bottomColumn,
         ],
       ),

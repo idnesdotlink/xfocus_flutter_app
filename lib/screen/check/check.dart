@@ -14,6 +14,8 @@ import 'screen/badge.dart';
 import 'screen/notification.dart';
 import 'screen/crossanimation.dart';
 import 'screen/markdown.dart';
+import 'screen/onesignal.dart';
+/// import 'screen/anim.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -126,6 +128,14 @@ class _CheckScreenState extends State<CheckScreen> {
         CheckScreenItem(
           title: 'Markdown',
           onTap: () => _goToScreen(context, MarkdownScreen()),
+        ),
+        // CheckScreenItem(
+        //   title: 'Animation',
+        //   onTap: () => _goToScreen(context, MyApp()),
+        // ),
+        CheckScreenItem(
+          title: 'One Signal',
+          onTap: () => _goToScreen(context, OnesignalScreen()),
           bottomBorder: false,
         ),
       ]),
