@@ -19,7 +19,8 @@ class App extends StatelessWidget {
       title: title,
       theme: themeData,
       initialRoute: '/',
-      routes: appRoutes, // package:xfocus_mobile/config/app_routes.dart
+      routes: appRoutes,
+      debugShowCheckedModeBanner: false, // package:xfocus_mobile/config/app_routes.dart
     );
   }
 }

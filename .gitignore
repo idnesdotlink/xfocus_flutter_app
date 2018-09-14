@@ -6,3 +6,4 @@
 lib/example
 build/
 .flutter-plugins
+android/key.properties
