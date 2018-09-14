@@ -2,20 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
 import 'package:xfocus_mobile/animations/slide_right_route.dart';
 import 'package:xfocus_mobile/screen/intro/intro.dart';
-import 'screen/websocket.dart';
-import 'screen/socketio.dart';
-import 'screen/localdata.dart';
-import 'screen/sqlite.dart';
-import 'screen/sharedpreference.dart';
-import 'screen/deviceinfo.dart';
-import 'screen/qrreader.dart';
-import 'screen/qrwriter.dart';
-import 'screen/badge.dart';
-import 'screen/notification.dart';
-import 'screen/crossanimation.dart';
-import 'screen/markdown.dart';
-import 'screen/onesignal.dart';
-import 'screen/sequenceanimation.dart';
+import 'screen/deviceinfo/deviceinfo.dart';
+import 'screen/heroanimation/heroanimation.dart';
+import 'screen/localjson/localdata.dart';
+import 'screen/markdown/markdown.dart';
+import 'screen/notification/notification.dart';
+import 'screen/onesignal/onesignal.dart';
+import 'screen/qr/qr.dart';
+import 'screen/sequenceanimation/sequenceanimation.dart';
+import 'screen/preference/preference.dart';
+import 'screen/socketio/socketio.dart';
+import 'screen/sqflite/sqflite.dart';
+import 'screen/websocket/websocket.dart';
+import 'screen/badge/badge.dart';
 // import 'screen/firebasesmsauth.dart';
 
 class CheckScreenItem extends StatelessWidget {
@@ -95,24 +94,20 @@ class _CheckScreenState extends State<CheckScreen> {
           onTap: () => _goToScreen(context, LocaldataScreen()),
         ),
         CheckScreenItem(
-          title: 'Sqlite',
-          onTap: () => _goToScreen(context, SqliteScreen()),
+          title: 'Sqflite',
+          onTap: () => _goToScreen(context, SqfliteScreen()),
         ),
         CheckScreenItem(
           title: 'Device Info',
           onTap: () => _goToScreen(context, DeviceinfoScreen()),
         ),
         CheckScreenItem(
-          title: 'Shared Preference',
-          onTap: () => _goToScreen(context, SharedpreferenceScreen()),
+          title: 'Preference',
+          onTap: () => _goToScreen(context, PreferenceScreen()),
         ),
         CheckScreenItem(
-          title: 'QR Reader',
-          onTap: () => _goToScreen(context, QrreaderScreen()),
-        ),
-        CheckScreenItem(
-          title: 'QR Writer',
-          onTap: () => _goToScreen(context, QrwriterScreen()),
+          title: 'QR',
+          onTap: () => _goToScreen(context, QrScreen()),
         ),
         CheckScreenItem(
           title: 'Badge',
@@ -120,7 +115,7 @@ class _CheckScreenState extends State<CheckScreen> {
         ),
         CheckScreenItem(
           title: 'Cross Screen Animation',
-          onTap: () => _goToScreen(context, CrossanimationScreen()),
+          onTap: () => _goToScreen(context, HeroanimationScreen()),
         ),
         CheckScreenItem(
           title: 'Notification',
@@ -140,6 +135,14 @@ class _CheckScreenState extends State<CheckScreen> {
         //     title: 'Firebase Title',
         //   )),
         // ),
+        CheckScreenItem(
+          title: 'Simple Auth',
+          onTap: () => {},
+        ),
+        CheckScreenItem(
+          title: 'Firebase Auth',
+          onTap: () => {},
+        ),
         CheckScreenItem(
           title: 'One Signal',
           onTap: () => _goToScreen(context, OnesignalScreen()),
