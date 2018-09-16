@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:flutter/services.dart';
 import 'package:device_info/device_info.dart';
 
@@ -92,7 +92,7 @@ class _DeviceinfoScreenState extends State<DeviceinfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(pageTitle: 'Device Info'),
+      appBar: PrimaryAppBar(primaryAppBarTitle: 'Device Info'),
       body: ListView(
         shrinkWrap: true,
         children: _deviceData.keys.map((String property) {

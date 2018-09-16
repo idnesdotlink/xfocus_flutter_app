@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
@@ -33,16 +33,12 @@ class _NotificationScreenState extends State<NotificationScreen> {
   Future<Null> initPlatformState() async {
     try {
       if (Platform.isAndroid) {
-      } else if (Platform.isIOS) {
-      }
-    } on PlatformException {
-
-    }
+      } else if (Platform.isIOS) {}
+    } on PlatformException {}
 
     if (!mounted) return;
 
-    setState(() {
-    });
+    setState(() {});
   }
 
   Widget _button(title, action) {
@@ -54,13 +50,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
           await action;
         },
       ),
-    );    
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(pageTitle: 'Notification'),
+      appBar: PrimaryAppBar(primaryAppBarTitle: 'Notification'),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
@@ -73,9 +69,12 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   child: Text(
                       'Tap on a notification when it appears to trigger navigation'),
                 ),
-                _button('Show plain notification with payload', _showNotification()),
+                _button('Show plain notification with payload',
+                    _showNotification()),
                 _button('Cancel notification', _cancelNotification()),
-                _button('Schedule notification to appear in 5 seconds, custom sound, red colour, large icon', _scheduleNotification()),
+                _button(
+                    'Schedule notification to appear in 5 seconds, custom sound, red colour, large icon',
+                    _scheduleNotification()),
                 Padding(
                   padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 8.0),
                   child: RaisedButton(
@@ -382,7 +381,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
     await Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => NotificationdetailScreen(payload)),
+      MaterialPageRoute(
+          builder: (context) => NotificationdetailScreen(payload)),
     );
   }
 

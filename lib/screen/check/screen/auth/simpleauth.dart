@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_auth/simple_auth.dart' as simpleAuth;
 import 'package:simple_auth_flutter/simple_auth_flutter.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class SimpleauthScreen extends StatefulWidget {
   SimpleauthScreen({Key key, this.title}) : super(key: key);
@@ -46,8 +46,8 @@ class _SimpleauthScreenState extends State<SimpleauthScreen> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: VersionOne(
-        pageTitle: 'Otentifikasi',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Otentifikasi',
       ),
       body: ListView(
         children: <Widget>[

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class HelpScreen extends StatefulWidget {
   _HelpScreenState createState() => _HelpScreenState();
@@ -11,8 +11,8 @@ class _HelpScreenState extends State<HelpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: VersionOne(
-        pageTitle: 'Bantuan',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Bantuan',
         /* leading: IconButton(
           icon: Icon(
             Icons.menu,

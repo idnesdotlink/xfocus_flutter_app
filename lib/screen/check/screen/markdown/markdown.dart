@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -24,13 +24,12 @@ class _MarkdownScreenState extends State<MarkdownScreen> {
     setState(() {});
   }
 
-  void _getMdFile() async {
-  }
+  void _getMdFile() async {}
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(pageTitle: 'MarkDown'),
+      appBar: PrimaryAppBar(primaryAppBarTitle: 'MarkDown'),
       body: Container(
         child: Markdown(data: '''
 # __Petunjuk Penggunaan__

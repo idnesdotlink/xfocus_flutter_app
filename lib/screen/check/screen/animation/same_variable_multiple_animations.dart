@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
 
 class SameVariableAnimationPage extends StatefulWidget {
@@ -19,8 +20,8 @@ class _SameVariableAnimationPageState extends State<SameVariableAnimationPage>
   @override
   void initState() {
     super.initState();
-    controller = AnimationController(
-        vsync: this, duration: const Duration(seconds: 5));
+    controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 5));
 
     sequenceAnimation = SequenceAnimationBuilder()
         .addAnimatable(
@@ -73,8 +74,8 @@ class _SameVariableAnimationPageState extends State<SameVariableAnimationPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Sequence"),
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Same Variable'
       ),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,

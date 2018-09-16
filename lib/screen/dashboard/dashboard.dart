@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:xfocus_mobile/components/app_drawer.dart';
 import 'dashboard_icon.dart';
 import 'package:xfocus_mobile/animations/slide_right_route.dart';
 import 'package:xfocus_mobile/screen/cash/cash.dart';
@@ -11,7 +10,7 @@ import 'package:xfocus_mobile/screen/account_receivable/account_receivable.dart'
 import 'package:xfocus_mobile/screen/help/help.dart';
 import 'package:xfocus_mobile/screen/sales/sales.dart';
 import 'package:xfocus_mobile/screen/check/check.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class DashboardPage extends StatefulWidget {
   final String title;
@@ -30,8 +29,9 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: Colors.grey.shade300,
-      appBar: VersionOne(
-        pageTitle: 'XFocus Mobile',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'XFocus Mobile',
+        primaryAppBarAutomaticallyImplyLeading: false,
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -43,7 +43,6 @@ class _DashboardPageState extends State<DashboardPage> {
           ),
         ],
       ),
-      drawer: AppDrawer(),
       body: Container(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -117,7 +116,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   ),
                   DashboardIcon(
                     title: 'Function Check',
-                    icon: Icons.thumb_up,
+                    icon: Icons.developer_board,
                     onTap: () => Navigator.push(
                           context,
                           SlideRightRoute(

@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/library/LocalJson.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class LocaldataScreen extends StatefulWidget {
   final LocalJson storage;
@@ -63,8 +63,8 @@ class _LocaldataScreenState extends State<LocaldataScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(
-        pageTitle: 'Data Lokal',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Data Lokal',
       ),
       body: Center(
         child: Text(

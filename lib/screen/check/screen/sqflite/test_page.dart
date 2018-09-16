@@ -186,8 +186,8 @@ class _TestPageState extends State<TestPage> with Group {
             onPressed: _run,
           ),
         ]),
-        body: ListView.builder(
-            itemBuilder: _itemBuilder, itemCount: _itemCount));
+        body:
+            ListView.builder(itemBuilder: _itemBuilder, itemCount: _itemCount));
   }
 
   Widget _itemBuilder(BuildContext context, int index) {

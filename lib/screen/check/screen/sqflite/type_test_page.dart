@@ -57,14 +57,12 @@ class TypeTestPage extends TestPage {
       int value = pow(2, 63) - 1;
       id = await insertValue(value);
       //devPrint("${value} ${await getValue(id)}");
-      expect(await getValue(id), value,
-          reason: "${value} ${await getValue(id)}");
+      expect(await getValue(id), value, reason: "$value ${await getValue(id)}");
 
       value = -(pow(2, 63)).round();
       id = await insertValue(value);
       //devPrint("${value} ${await getValue(id)}");
-      expect(await getValue(id), value,
-          reason: "${value} ${await getValue(id)}");
+      expect(await getValue(id), value, reason: "$value ${await getValue(id)}");
       /*
       id = await insertValue(pow(2, 63));
       devPrint("2^63: ${pow(2, 63)} ${await getValue(id)}");
@@ -214,8 +212,7 @@ class TypeTestPage extends TestPage {
       try {
         bool failed = false;
         try {
-          await insertValue(
-              DateTime.fromMillisecondsSinceEpoch(1234567890));
+          await insertValue(DateTime.fromMillisecondsSinceEpoch(1234567890));
         } on ArgumentError catch (_) {
           failed = true;
         }

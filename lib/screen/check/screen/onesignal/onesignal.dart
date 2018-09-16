@@ -3,7 +3,7 @@ import 'dart:async';
 
 // package import
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:onesignal/onesignal.dart';
 
 // local import
@@ -71,8 +71,7 @@ class _OnesignalScreenState extends State<OnesignalScreen> {
     });
 
     // NOTE: Replace with your own app ID from https://www.onesignal.com
-    await OneSignal.shared
-        .init(config.appId, iOSSettings: settings);
+    await OneSignal.shared.init(config.appId, iOSSettings: settings);
 
     OneSignal.shared
         .setInFocusDisplayType(OSNotificationDisplayType.notification);
@@ -212,8 +211,8 @@ class _OnesignalScreenState extends State<OnesignalScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(
-        pageTitle: 'One Signal',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'One Signal',
       ),
       body: Container(
         padding: EdgeInsets.all(10.0),

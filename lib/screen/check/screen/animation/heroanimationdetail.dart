@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart';
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class HeroanimationdetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(pageTitle: 'Cross Animation Detail'),
+      appBar: PrimaryAppBar(primaryAppBarTitle: 'Cross Animation Detail'),
       body: GestureDetector(
         child: Center(
           child: Hero(

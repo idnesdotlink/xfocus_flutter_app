@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class NotificationdetailScreen extends StatefulWidget {
   final String payload;
@@ -19,7 +19,7 @@ class _NotificationdetailScreenState extends State<NotificationdetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(pageTitle: 'Notification'),
+      appBar: PrimaryAppBar(primaryAppBarTitle: 'Notification'),
       body: Center(
         child: RaisedButton(
           onPressed: () {

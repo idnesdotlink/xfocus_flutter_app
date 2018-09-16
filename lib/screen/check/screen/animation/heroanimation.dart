@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'heroanimationdetail.dart';
 
 // Widget _hero = ;
@@ -8,7 +8,7 @@ class HeroanimationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(pageTitle: 'Cross Animation'),
+      appBar: PrimaryAppBar(primaryAppBarTitle: 'Cross Animation'),
       body: GestureDetector(
         child: Hero(
           tag: 'imageHero',
@@ -35,5 +35,3 @@ class HeroanimationScreen extends StatelessWidget {
     );
   }
 }
-
-

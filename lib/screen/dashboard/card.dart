@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/line-chart.dart';
+import 'package:xfocus_mobile/components/chart/line-chart.dart';
 
 class MyCard extends StatelessWidget {
   @override

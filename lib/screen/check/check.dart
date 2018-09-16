@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:xfocus_mobile/animations/slide_right_route.dart';
 import 'package:xfocus_mobile/screen/intro/intro.dart';
 import 'screen/deviceinfo/deviceinfo.dart';
-import 'screen/heroanimation/heroanimation.dart';
 import 'screen/localjson/localdata.dart';
 import 'screen/markdown/markdown.dart';
 import 'screen/notification/notification.dart';
 import 'screen/onesignal/onesignal.dart';
 import 'screen/qr/qr.dart';
-import 'screen/sequenceanimation/sequenceanimation.dart';
+import 'screen/animation/animation.dart';
 import 'screen/preference/preference.dart';
 import 'screen/socketio/socketio.dart';
 import 'screen/sqflite/sqflite.dart';
@@ -73,8 +72,8 @@ class _CheckScreenState extends State<CheckScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(
-        pageTitle: 'Cek Fungsi',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Cek Fungsi',
       ),
       body: ListView(children: <Widget>[
         CheckScreenItem(
@@ -114,10 +113,6 @@ class _CheckScreenState extends State<CheckScreen> {
           onTap: () => _goToScreen(context, BadgeScreen()),
         ),
         CheckScreenItem(
-          title: 'Cross Screen Animation',
-          onTap: () => _goToScreen(context, HeroanimationScreen()),
-        ),
-        CheckScreenItem(
           title: 'Notification',
           onTap: () => _goToScreen(context, NotificationScreen()),
         ),
@@ -127,7 +122,7 @@ class _CheckScreenState extends State<CheckScreen> {
         ),
         CheckScreenItem(
           title: 'Animation',
-          onTap: () => _goToScreen(context, SequenceanimationScreen()),
+          onTap: () => _goToScreen(context, AnimationScreen()),
         ),
         // CheckScreenItem(
         //   title: 'Google Sign in',

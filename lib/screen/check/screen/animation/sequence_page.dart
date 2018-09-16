@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class SequencePage extends StatefulWidget {
   @override
@@ -34,8 +35,7 @@ class _SequencePageState extends State<SequencePage>
             tag: "color",
             curve: Curves.easeOut)
         .addAnimatable(
-            animatable:
-                ColorTween(begin: Colors.blueAccent, end: Colors.pink),
+            animatable: ColorTween(begin: Colors.blueAccent, end: Colors.pink),
             //  animatable: Tween<double>(begin: 200.0, end: 40.0),
             from: const Duration(seconds: 5),
             to: const Duration(seconds: 6),
@@ -62,8 +62,8 @@ class _SequencePageState extends State<SequencePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Sequence"),
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Sequence',
       ),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,

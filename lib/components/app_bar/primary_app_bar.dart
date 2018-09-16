@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 
-class VersionOne extends AppBar {
+class PrimaryAppBar extends AppBar {
   final List<Widget> actions;
-  final String pageTitle;
+  final bool primaryAppBarAutomaticallyImplyLeading;
+  final String primaryAppBarTitle;
   final Widget leading;
-  VersionOne({
+  final Color backgroundColor;
+  PrimaryAppBar({
     Key key,
     this.actions,
-    this.pageTitle,
+    this.primaryAppBarTitle,
     this.leading,
+    this.backgroundColor,
+    this.primaryAppBarAutomaticallyImplyLeading
   }) : super(
           key: key,
-          automaticallyImplyLeading: true,
+          automaticallyImplyLeading: primaryAppBarAutomaticallyImplyLeading != null ? primaryAppBarAutomaticallyImplyLeading : true,
           leading: leading,
           actions: actions,
           elevation: 0.0,
           title: Text(
-            pageTitle,
+            primaryAppBarTitle != null ? primaryAppBarTitle : '',
             style: TextStyle(
               color: Colors.black.withOpacity(0.5),
             ),

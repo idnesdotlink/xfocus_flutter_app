@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class StaggeredAnimationReplication extends StatefulWidget {
   @override
@@ -109,8 +110,8 @@ class _StaggeredAnimationReplicationState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Staggered Animation"),
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Staggered Animation',
       ),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,

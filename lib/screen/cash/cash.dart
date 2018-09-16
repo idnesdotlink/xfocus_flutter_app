@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:flutter_circular_chart/flutter_circular_chart.dart';
 import 'data.dart';
 import 'cash_model.dart';
@@ -87,8 +87,8 @@ class _CashScreenState extends State<CashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey, // Color.fromRGBO(9, 28, 79, 1.0),
-      appBar: VersionOne(
-        pageTitle: 'Kas Bank',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Kas Bank',
         actions: <Widget>[
           IconButton(
             icon: Icon(

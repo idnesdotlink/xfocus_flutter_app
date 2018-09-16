@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:xfocus_mobile/animations/slide_right_route.dart';
 import 'reader.dart';
 import 'writer.dart';
@@ -9,19 +9,19 @@ class QrScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VersionOne(
-        pageTitle: 'QR',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'QR',
         actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.settings,
             ),
             onPressed: () => Navigator.push(
-      context,
-      SlideRightRoute(
-        widget: qrPreference.PreferenceScreen(),
-      ),
-    ),
+                  context,
+                  SlideRightRoute(
+                    widget: qrPreference.PreferenceScreen(),
+                  ),
+                ),
           ),
         ],
       ),

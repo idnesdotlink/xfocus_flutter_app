@@ -6,16 +6,20 @@ class Qrwriter extends StatefulWidget {
 }
 
 class _QrwriterState extends State<Qrwriter> {
-  String _qrData;
+  String _qrData = '123456';
+
+  _displayQr() {
+    return QrImage(
+        data: _qrData,
+        size: 200.0,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: QrImage(
-          data: '1234567890',
-          size: 200.0,
-        )
+        child: _displayQr(),
       ),
     );
   }

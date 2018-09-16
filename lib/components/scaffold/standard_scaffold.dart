@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/components/app_bar.dart';
+import '../app_bar/primary_app_bar.dart';
 
 class CustomScaffold extends Scaffold {
   final Key key;
@@ -8,7 +8,7 @@ class CustomScaffold extends Scaffold {
   CustomScaffold({this.key, this.appBar}) : super(key: key);
   factory CustomScaffold.versionOne() {
     return CustomScaffold(
-      appBar: VersionOne(),
+      appBar: PrimaryAppBar(),
     );
   }
 }

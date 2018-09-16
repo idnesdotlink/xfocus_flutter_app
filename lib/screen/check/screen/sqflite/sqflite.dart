@@ -12,6 +12,10 @@ import 'src/main_item_widget.dart';
 import 'type_test_page.dart';
 import 'todo_test_page.dart';
 
+import 'package:xfocus_mobile/animations/slide_right_route.dart';
+import 'package:xfocus_mobile/screen/check/check.dart';
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
+
 class SqfliteScreen extends StatefulWidget {
   // This widget is the root of your application.
 
@@ -43,12 +47,15 @@ class _SqfliteScreenState extends State<SqfliteScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Sqflite Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: MyHomePage(title: 'Sqflite Demo Home Page'),
-        routes: routes);
+      title: 'Sqflite Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(
+        title: 'Sqflite Demo Home Page',
+      ),
+      routes: routes,
+    );
   }
 }
 
@@ -56,8 +63,8 @@ class MyHomePage extends StatefulWidget {
   final List<MainItem> items = [];
 
   MyHomePage({Key key, this.title}) : super(key: key) {
-    items.add(MainItem("Raw tests", "Raw SQLite operations",
-        route: testRawRoute));
+    items.add(
+        MainItem("Raw tests", "Raw SQLite operations", route: testRawRoute));
     items.add(MainItem("Open tests", "Open onCreate/onUpgrade/onDowngrade",
         route: testOpenRoute));
     items.add(
@@ -121,12 +128,17 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Center(
-              child: Text('Sqflite demo', textAlign: TextAlign.center)),
+        appBar: PrimaryAppBar(
+          primaryAppBarTitle: 'SQFLite',
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+            ),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
         ),
-        body: ListView.builder(
-            itemBuilder: _itemBuilder, itemCount: _itemCount));
+        body:
+            ListView.builder(itemBuilder: _itemBuilder, itemCount: _itemCount));
   }
 
   //Center(child: Text('Running on: $_platformVersion\n')),

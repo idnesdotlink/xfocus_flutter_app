@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_socket_io/flutter_socket_io.dart';
 import 'package:flutter_socket_io/socket_io_manager.dart';
-import 'package:xfocus_mobile/components/app_bar.dart' show VersionOne;
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class SocketioScreen extends StatefulWidget {
   SocketioScreen({Key key, this.title}) : super(key: key);
@@ -169,8 +169,8 @@ class _SocketioScreenState extends State<SocketioScreen> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: VersionOne(
-        pageTitle: 'Socket.IO',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Socket.IO',
       ),
       body: Center(
         child: Column(

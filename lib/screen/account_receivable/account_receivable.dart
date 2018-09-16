@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:xfocus_mobile/components/app_bar.dart';
+import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class AccountReceivableScreen extends StatefulWidget {
   _AccountReceivableScreenState createState() =>
@@ -12,8 +12,8 @@ class _AccountReceivableScreenState extends State<AccountReceivableScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: VersionOne(
-        pageTitle: 'Piutang',
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Piutang',
         actions: <Widget>[
           IconButton(
             icon: Icon(
