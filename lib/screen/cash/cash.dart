@@ -8,6 +8,7 @@ import 'selector.dart';
 // import 'cash_data.dart';
 import 'donut_chart.dart';
 import 'line_chart.dart';
+import 'line_daily.dart';
 import 'line_yearly_sales.dart';
 
 class CashScreen extends StatefulWidget {
@@ -39,6 +40,10 @@ class _CashScreenState extends State<CashScreen> {
   Widget _selector() { 
     return Selector(
       data: [
+        {
+          'title': 'Mingguan',
+          'onTap': () => _setChart('weekly')
+        },
         {
           'title': 'Bulanan',
           'onTap': () => _setChart('monthly')
@@ -114,6 +119,10 @@ class _CashScreenState extends State<CashScreen> {
     return LineYearlySales.withSampleData();
   }
 
+  Widget _linechart3() {
+    return LineDaily.withSampleData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,7 +147,7 @@ class _CashScreenState extends State<CashScreen> {
           Expanded(
             child: Container(
               color: Colors.orange,
-              child: _linechart2(),
+              child: _linechart3(),
             ),
           ),
           _bottomColumn,

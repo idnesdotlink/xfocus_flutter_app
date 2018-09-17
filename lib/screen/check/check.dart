@@ -14,6 +14,8 @@ import 'screen/socketio/socketio.dart';
 import 'screen/sqflite/sqflite.dart';
 import 'screen/websocket/websocket.dart';
 import 'screen/badge/badge.dart';
+import 'screen/calendar/calendar.dart';
+import 'screen/rangeslider/rangeslider.dart';
 // import 'screen/firebasesmsauth.dart';
 
 class CheckScreenItem extends StatelessWidget {
@@ -141,6 +143,14 @@ class _CheckScreenState extends State<CheckScreen> {
         CheckScreenItem(
           title: 'One Signal',
           onTap: () => _goToScreen(context, OnesignalScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Range Slider',
+          onTap: () => _goToScreen(context, RangesliderScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Calendar',
+          onTap: () => _goToScreen(context, CalendarScreen()),
           bottomBorder: false,
         ),
       ]),

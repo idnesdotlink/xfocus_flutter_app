@@ -3,14 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
-class LineYearlySales extends StatelessWidget {
+class LineDaily extends StatelessWidget {
   final List<charts.Series> seriesList;
   final bool animate;
 
-  LineYearlySales(this.seriesList, {this.animate});
+  LineDaily(this.seriesList, {this.animate});
 
-  factory LineYearlySales.withSampleData() {
-    return new LineYearlySales(
+  factory LineDaily.withSampleData() {
+    return LineDaily(
       _createSampleData(),
       // Disable animations for image tests.
       animate: false,
@@ -19,16 +19,16 @@ class LineYearlySales extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new charts.OrdinalComboChart(
+    return charts.OrdinalComboChart(
       seriesList,
       animate: animate,
       // Configure the default renderer as a bar renderer.
-      defaultRenderer: new charts.LineRendererConfig(),
+      defaultRenderer: charts.LineRendererConfig(),
       // Custom renderer configuration for the line series. This will be used for
       // any series that does not define a rendererIdKey.
       behaviors: [
-        new charts.SeriesLegend(),
-        new charts.LinePointHighlighter(
+        charts.SeriesLegend(),
+        charts.LinePointHighlighter(
             showHorizontalFollowLine:
                 charts.LinePointHighlighterFollowLineType.none,
             showVerticalFollowLine:
@@ -40,43 +40,63 @@ class LineYearlySales extends StatelessWidget {
   /// Create series list with multiple series
   static List<charts.Series<OrdinalSales, String>> _createSampleData() {
     final tableSalesData = [
-      new OrdinalSales('Jan', 5),
-      new OrdinalSales('Feb', 25),
-      new OrdinalSales('Mar', 100),
-      new OrdinalSales('Apr', 75),
-      new OrdinalSales('May', 75),
-      new OrdinalSales('Jun', 85),
-      new OrdinalSales('Jul', 75),
-      new OrdinalSales('Ags', 65),
-      new OrdinalSales('Sep', 75),
-      new OrdinalSales('Okt', 85),
-      new OrdinalSales('Nov', 45),
-      new OrdinalSales('Des', 35),
+      OrdinalSales('1', 5),
+      OrdinalSales('2', 25),
+      OrdinalSales('3', 100),
+      OrdinalSales('4', 75),
+      OrdinalSales('5', 75),
+      OrdinalSales('6', 85),
+      OrdinalSales('7', 75),
+      OrdinalSales('8', 65),
+      OrdinalSales('9', 75),
+      OrdinalSales('10', 85),
+      OrdinalSales('11', 45),
+      OrdinalSales('12', 35),
+      OrdinalSales('13', 100),
+      OrdinalSales('14', 75),
+      OrdinalSales('15', 75),
+      OrdinalSales('16', 85),
+      OrdinalSales('17', 75),
+      OrdinalSales('18', 65),
+      OrdinalSales('19', 75),
+      OrdinalSales('20', 85),
+      OrdinalSales('21', 45),
+      OrdinalSales('22', 35),
     ];
 
     final mobileSalesData = [
-      new OrdinalSales('Jan', 15),
-      new OrdinalSales('Feb', 25),
-      new OrdinalSales('Mar', 80),
-      new OrdinalSales('Apr', 70),
-      new OrdinalSales('May', -5),
-      new OrdinalSales('Jun', 95),
-      new OrdinalSales('Jul', 65),
-      new OrdinalSales('Ags', 65),
-      new OrdinalSales('Sep', 85),
-      new OrdinalSales('Okt', 85),
-      new OrdinalSales('Nov', 55),
-      new OrdinalSales('Des', 55),
+      OrdinalSales('1', 15),
+      OrdinalSales('2', 25),
+      OrdinalSales('3', 80),
+      OrdinalSales('4', 70),
+      OrdinalSales('5', -5),
+      OrdinalSales('6', 95),
+      OrdinalSales('7', 65),
+      OrdinalSales('8', 65),
+      OrdinalSales('9', 85),
+      OrdinalSales('10', 85),
+      OrdinalSales('11', 55),
+      OrdinalSales('12', 55),
+      OrdinalSales('13', 80),
+      OrdinalSales('14', 70),
+      OrdinalSales('15', -5),
+      OrdinalSales('16', 95),
+      OrdinalSales('17', 65),
+      OrdinalSales('18', 65),
+      OrdinalSales('19', 85),
+      OrdinalSales('20', 85),
+      OrdinalSales('21', 55),
+      OrdinalSales('22', 55),
     ];
 
     return [
-      new charts.Series<OrdinalSales, String>(
+      charts.Series<OrdinalSales, String>(
           id: '2016-2017',
           colorFn: (_, __) => charts.MaterialPalette.red.shadeDefault,
           domainFn: (OrdinalSales sales, _) => sales.year,
           measureFn: (OrdinalSales sales, _) => sales.sales,
           data: tableSalesData),
-      new charts.Series<OrdinalSales, String>(
+      charts.Series<OrdinalSales, String>(
           id: '2017-2018 ',
           colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
           domainFn: (OrdinalSales sales, _) => sales.year,
