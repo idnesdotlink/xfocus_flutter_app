@@ -24,7 +24,7 @@ class _MarkdownScreenState extends State<MarkdownScreen> {
     setState(() {});
   }
 
-  void _getMdFile() async {}
+  // void _getMdFile() async {}
 
   @override
   Widget build(BuildContext context) {

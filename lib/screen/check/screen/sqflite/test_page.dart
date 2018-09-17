@@ -17,13 +17,13 @@ class TestPage extends StatefulWidget {
     tests.add(Test(name, fn));
   }
 
-  @Deprecated("SOLO_TEST - On purpose to remove before checkin")
-  void solo_test(String name, FutureOr fn()) {
+  @Deprecated("soloTest - On purpose to remove before checkin")
+  void soloTest(String name, FutureOr fn()) {
     tests.add(Test(name, fn, solo: true));
   }
 
-  @Deprecated("SKIP_TEST - On purpose to remove before checkin")
-  void skip_test(String name, FutureOr fn()) {
+  @Deprecated("skipTest - On purpose to remove before checkin")
+  void skipTest(String name, FutureOr fn()) {
     tests.add(Test(name, fn, skip: true));
   }
 
@@ -32,7 +32,7 @@ class TestPage extends StatefulWidget {
     throw Exception(message ?? "should fail");
   }
 
-  TestPage(this.title) {}
+  TestPage(this.title);
 
   @override
   _TestPageState createState() => _TestPageState();

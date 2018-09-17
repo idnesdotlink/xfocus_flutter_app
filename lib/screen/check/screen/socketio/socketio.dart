@@ -11,14 +11,12 @@ class SocketioScreen extends StatefulWidget {
 }
 
 class _SocketioScreenState extends State<SocketioScreen> {
-  int _counter = 0;
   var mTextMessageController = TextEditingController();
   SocketIO socketIO;
   SocketIO socketIO02;
 
   @override
   void initState() {
-    _counter = 0;
     super.initState();
   }
 
@@ -150,24 +148,25 @@ class _SocketioScreenState extends State<SocketioScreen> {
     print('Message from UFO: ' + message);
   }
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   void _showToast() {
     _sendChatMessage(mTextMessageController.text);
   }
 
+  Widget _button(text, onPressed) {
+    return RaisedButton(
+      child: Text(
+        text,
+        style: TextStyle(color: Colors.white)
+      ),
+      color: Theme.of(context).accentColor,
+      elevation: 0.0,
+      splashColor: Colors.blueGrey,
+      onPressed: onPressed,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: PrimaryAppBar(
         primaryAppBarTitle: 'Socket.IO',
@@ -176,50 +175,10 @@ class _SocketioScreenState extends State<SocketioScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(
-              child: const Text('CONNECT  SOCKET 01',
-                  style: TextStyle(color: Colors.white)),
-              color: Theme.of(context).accentColor,
-              elevation: 0.0,
-              splashColor: Colors.blueGrey,
-              onPressed: () {
-                _connectSocket01();
-//                _sendChatMessage(mTextMessageController.text);
-              },
-            ),
-            RaisedButton(
-              child: const Text('CONNECT SOCKET 02',
-                  style: TextStyle(color: Colors.white)),
-              color: Theme.of(context).accentColor,
-              elevation: 0.0,
-              splashColor: Colors.blueGrey,
-              onPressed: () {
-                _connectSocket02();
-//                _sendChatMessage(mTextMessageController.text);
-              },
-            ),
-            RaisedButton(
-              child: const Text('SEND MESSAGE',
-                  style: TextStyle(color: Colors.white)),
-              color: Theme.of(context).accentColor,
-              elevation: 0.0,
-              splashColor: Colors.blueGrey,
-              onPressed: () {
-                _showToast();
-//                _sendChatMessage(mTextMessageController.text);
-              },
-            ),
-            RaisedButton(
-              child: const Text('SUBSCRIBES',
-                  style: TextStyle(color: Colors.white)),
-              color: Theme.of(context).accentColor,
-              elevation: 0.0,
-              splashColor: Colors.blueGrey,
-              onPressed: () {
-                _subscribes();
-//                _sendChatMessage(mTextMessageController.text);
-              },
-            ),
+            _button('Connect Socket 01', _connectSocket01),
+            _button('Connect Socket 02', _connectSocket02),
+            _button('Send Message', _showToast),
+            _button('Subscribe', _subscribes),
             RaisedButton(
               child: const Text('UNSUBSCRIBES',
                   style: TextStyle(color: Colors.white)),
@@ -242,35 +201,10 @@ class _SocketioScreenState extends State<SocketioScreen> {
 //                _sendChatMessage(mTextMessageController.text);
               },
             ),
-            RaisedButton(
-              child: const Text('DISCONNECT',
-                  style: TextStyle(color: Colors.white)),
-              color: Theme.of(context).accentColor,
-              elevation: 0.0,
-              splashColor: Colors.blueGrey,
-              onPressed: () {
-                _disconnectSocket();
-//                _sendChatMessage(mTextMessageController.text);
-              },
-            ),
-            RaisedButton(
-              child:
-                  const Text('DESTROY', style: TextStyle(color: Colors.white)),
-              color: Theme.of(context).accentColor,
-              elevation: 0.0,
-              splashColor: Colors.blueGrey,
-              onPressed: () {
-                _destroySocket();
-//                _sendChatMessage(mTextMessageController.text);
-              },
-            ),
+            _button('Disconnect', _disconnectSocket),
+            _button('Destroy', _destroySocket),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

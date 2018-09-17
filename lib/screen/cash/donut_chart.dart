@@ -53,7 +53,7 @@ class _DonutChartState extends State<DonutChart> {
         ),
       ],
       defaultRenderer: new charts.ArcRendererConfig(
-        arcWidth: 100,
+        arcWidth: 50,
         arcRendererDecorators: [
           charts.ArcLabelDecorator(),
         ],

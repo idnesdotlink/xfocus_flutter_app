@@ -15,8 +15,8 @@ class DashboardIcon extends StatelessWidget {
   
   Widget _icon() {
     return SizedBox(
-      height: 90.0,
-      width: 90.0,
+      height: 70.0,
+      width: 70.0,
       child: Icon(
         (this.icon == null) ? Icons.access_alarms : this.icon,
         color: Colors.black.withOpacity(0.3),

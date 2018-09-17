@@ -200,7 +200,7 @@ class OpenTestPage extends TestPage {
       verify(onUpgrade);
 
       expect(
-          await await database
+          await database
               .insert("Test", <String, dynamic>{'id': 1, 'name': 'test'}),
           1);
       await database.close();

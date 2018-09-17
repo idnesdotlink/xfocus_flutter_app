@@ -12,8 +12,8 @@ import 'src/main_item_widget.dart';
 import 'type_test_page.dart';
 import 'todo_test_page.dart';
 
-import 'package:xfocus_mobile/animations/slide_right_route.dart';
-import 'package:xfocus_mobile/screen/check/check.dart';
+// import 'package:xfocus_mobile/animations/slide_right_route.dart';
+// import 'package:xfocus_mobile/screen/check/check.dart';
 import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class SqfliteScreen extends StatefulWidget {
