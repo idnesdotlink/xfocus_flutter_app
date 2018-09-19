@@ -139,15 +139,15 @@ class _FirebasemessagingScreenState extends State<FirebasemessagingScreen> {
     super.initState();
     _firebaseMessaging.configure(
       onMessage: (Map<String, dynamic> message) async {
-        print("onMessage: $message");
+        print('onMessage: $message');
         _showItemDialog(message);
       },
       onLaunch: (Map<String, dynamic> message) async {
-        print("onLaunch: $message");
+        print('onLaunch: $message');
         _navigateToItemDetail(message);
       },
       onResume: (Map<String, dynamic> message) async {
-        print("onResume: $message");
+        print('onResume: $message');
         _navigateToItemDetail(message);
       },
     );
@@ -155,12 +155,12 @@ class _FirebasemessagingScreenState extends State<FirebasemessagingScreen> {
         const IosNotificationSettings(sound: true, badge: true, alert: true));
     _firebaseMessaging.onIosSettingsRegistered
         .listen((IosNotificationSettings settings) {
-      print("Settings registered: $settings");
+      print('Settings registered: $settings');
     });
     _firebaseMessaging.getToken().then((String token) {
       assert(token != null);
       setState(() {
-        _homeScreenText = "Push Messaging token: $token";
+        _homeScreenText = 'Push Messaging token: $token';
       });
       print(_homeScreenText);
     });
