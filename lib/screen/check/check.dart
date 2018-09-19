@@ -6,7 +6,7 @@ import 'screen/deviceinfo/deviceinfo.dart';
 import 'screen/localjson/localdata.dart';
 import 'screen/markdown/markdown.dart';
 import 'screen/notification/notification.dart';
-import 'screen/onesignal/onesignal.dart';
+// import 'screen/onesignal/onesignal.dart';
 import 'screen/qr/qr.dart';
 import 'screen/animation/animation.dart';
 import 'screen/preference/preference.dart';
@@ -16,6 +16,8 @@ import 'screen/websocket/websocket.dart';
 import 'screen/badge/badge.dart';
 import 'screen/calendar/calendar.dart';
 import 'screen/rangeslider/rangeslider.dart';
+import 'screen/googlesignin/googlesignin.dart';
+import 'screen/firebasemessaging/firebasemessaging.dart';
 // import 'screen/firebasesmsauth.dart';
 
 class CheckScreenItem extends StatelessWidget {
@@ -140,13 +142,21 @@ class _CheckScreenState extends State<CheckScreen> {
           title: 'Firebase Auth',
           onTap: () => {},
         ),
-        CheckScreenItem(
+        /* CheckScreenItem(
           title: 'One Signal',
           onTap: () => _goToScreen(context, OnesignalScreen()),
-        ),
+        ), */
         CheckScreenItem(
           title: 'Range Slider',
           onTap: () => _goToScreen(context, RangesliderScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Sign In',
+          onTap: () => _goToScreen(context, GooglesigninScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Firebase Messagin',
+          onTap: () => _goToScreen(context, FirebasemessagingScreen()),
         ),
         CheckScreenItem(
           title: 'Calendar',

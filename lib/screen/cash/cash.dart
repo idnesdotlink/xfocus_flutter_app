@@ -37,6 +37,72 @@ class _CashScreenState extends State<CashScreen> {
     setState(() {});
   }
 
+  _buildMenu(BuildContext context) {
+    return <PopupMenuItem>[
+      PopupMenuItem(
+        child: Text('satu')
+      ),
+      PopupMenuItem(
+        child: Text('satu')
+      ),
+      PopupMenuItem(
+        child: Text('satu')
+      ),
+      PopupMenuItem(
+        child: Text('satu')
+      ),
+      PopupMenuItem(
+        child: Text('satu')
+      ),
+      PopupMenuItem(
+        child: Text('satu')
+      ),
+      PopupMenuItem(
+        child: Text('satu')
+      ),
+      PopupMenuItem(
+        child: Text('satu')
+      ),
+      PopupMenuItem(
+        child: Text('satu')
+      ),
+    ];
+  }
+
+  void _select(dynamic val) {
+    print(val);
+  }
+
+  List<Widget> _act() {
+    return <Widget>[
+          PopupMenuButton(
+            onSelected: _select,
+            itemBuilder: (BuildContext context) {
+              return <PopupMenuItem>[
+                PopupMenuItem(
+                  value: 1,
+                  child: Text('satu')
+                ),
+                PopupMenuItem(
+                  value: 2,
+                  child: Text('dua')
+                ),
+              ];
+            },
+            icon: Icon(
+              Icons.android
+            ),
+
+          ),
+          IconButton(
+            icon: Icon(
+              FontAwesomeIcons.bell,
+            ),
+            onPressed: () => {},
+          ),
+        ];
+  }
+
   Widget _selector() { 
     return Selector(
       data: [
@@ -129,14 +195,7 @@ class _CashScreenState extends State<CashScreen> {
       backgroundColor: Colors.grey, // Color.fromRGBO(9, 28, 79, 1.0),
       appBar: PrimaryAppBar(
         primaryAppBarTitle: 'Kas Bank',
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.bell,
-            ),
-            onPressed: () => {},
-          ),
-        ],
+        actions: _act(),
       ),
       body: Column(
         mainAxisSize: MainAxisSize.max,
