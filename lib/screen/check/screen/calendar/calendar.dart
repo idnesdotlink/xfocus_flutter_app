@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart' show CalendarCarousel;
+import 'package:xfocus_mobile/src/flutter_calendar_carousel.dart' show CalendarCarousel;
 import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class CalendarScreen extends StatefulWidget {

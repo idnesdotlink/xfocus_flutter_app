@@ -8,7 +8,7 @@ import 'screen/markdown/markdown.dart';
 import 'screen/notification/notification.dart';
 // import 'screen/onesignal/onesignal.dart';
 import 'screen/qr/qr.dart';
-import 'screen/animation/animation.dart';
+// import 'screen/animation/animation.dart';
 import 'screen/preference/preference.dart';
 import 'screen/socketio/socketio.dart';
 import 'screen/sqflite/sqflite.dart';
@@ -124,10 +124,10 @@ class _CheckScreenState extends State<CheckScreen> {
           title: 'Markdown',
           onTap: () => _goToScreen(context, MarkdownScreen()),
         ),
-        CheckScreenItem(
+        /* CheckScreenItem(
           title: 'Animation',
           onTap: () => _goToScreen(context, AnimationScreen()),
-        ),
+        ), */
         // CheckScreenItem(
         //   title: 'Google Sign in',
         //   onTap: () => _goToScreen(context, FirebasesmsauthScreen(

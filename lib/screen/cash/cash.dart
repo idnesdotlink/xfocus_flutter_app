@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
-import 'package:flutter_circular_chart/flutter_circular_chart.dart';
+import 'package:xfocus_mobile/src/circular_chart/flutter_circular_chart.dart';
 import 'selector.dart';
 // import 'data.dart';
 // import 'cash_model.dart';
