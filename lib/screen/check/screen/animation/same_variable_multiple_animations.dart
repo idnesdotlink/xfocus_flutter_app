@@ -6,12 +6,12 @@ import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
 
 class SameVariableAnimationPage extends StatefulWidget {
   @override
-  _SameVariableAnimationPageState createState() =>
-      _SameVariableAnimationPageState();
+  _SameVariableAnimationPageState createState() => new _SameVariableAnimationPageState();
 }
 
-class _SameVariableAnimationPageState extends State<SameVariableAnimationPage>
-    with SingleTickerProviderStateMixin {
+class _SameVariableAnimationPageState extends State<SameVariableAnimationPage> with SingleTickerProviderStateMixin{
+
+
   AnimationController controller;
   SequenceAnimation sequenceAnimation;
 
@@ -20,40 +20,41 @@ class _SameVariableAnimationPageState extends State<SameVariableAnimationPage>
   @override
   void initState() {
     super.initState();
-    controller =
-        AnimationController(vsync: this, duration: const Duration(seconds: 5));
+    controller = new AnimationController(vsync: this, duration: const Duration(seconds: 5));
 
-    sequenceAnimation = SequenceAnimationBuilder()
-        .addAnimatable(
-            animatable: ColorTween(begin: Colors.red, end: Colors.yellow),
-            from: const Duration(seconds: 0),
+    sequenceAnimation = new SequenceAnimationBuilder()
+      .addAnimatable(
+            animatable: new ColorTween(begin: Colors.red, end: Colors.yellow),
+            from:  const Duration(seconds: 0),
             to: const Duration(seconds: 4),
-            tag: "color")
-        .addAnimatable(
-            animatable: Tween<double>(begin: 50.0, end: 300.0),
-            from: const Duration(seconds: 0),
+            tag: "color"
+        ).addAnimatable(
+            animatable: new Tween<double>(begin: 50.0, end: 300.0),
+            from:  const Duration(seconds: 0),
             to: const Duration(milliseconds: 3000),
             tag: "width",
-            curve: Curves.easeIn)
-        .addAnimatable(
-            animatable: Tween<double>(begin: 300.0, end: 100.0),
-            from: const Duration(milliseconds: 3000),
+            curve: Curves.easeIn
+        ).addAnimatable(
+            animatable: new Tween<double>(begin: 300.0, end: 100.0),
+            from:  const Duration(milliseconds: 3000),
             to: const Duration(milliseconds: 3700),
             tag: "width",
-            curve: Curves.decelerate)
-        .addAnimatable(
-            animatable: Tween<double>(begin: 50.0, end: 300.0),
-            from: const Duration(seconds: 0),
+            curve: Curves.decelerate
+        ).addAnimatable(
+            animatable: new Tween<double>(begin: 50.0, end: 300.0),
+            from:  const Duration(seconds: 0),
             to: const Duration(milliseconds: 3000),
             tag: "height",
-            curve: Curves.ease)
-        .addAnimatable(
-            animatable: Tween<double>(begin: 300.0, end: 450.0),
-            from: const Duration(milliseconds: 3000),
+            curve: Curves.ease
+        ).addAnimatable(
+            animatable: new Tween<double>(begin: 300.0, end: 450.0),
+            from:  const Duration(milliseconds: 3000),
             to: const Duration(milliseconds: 3800),
             tag: "height",
-            curve: Curves.decelerate)
-        .animate(controller);
+            curve: Curves.decelerate
+         ).animate(controller);
+
+
   }
 
   Future<Null> _playAnimation() async {
@@ -73,19 +74,19 @@ class _SameVariableAnimationPageState extends State<SameVariableAnimationPage>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new Scaffold(
       appBar: PrimaryAppBar(
-        primaryAppBarTitle: 'Same Variable'
+        primaryAppBarTitle: 'Sequence',
       ),
-      body: GestureDetector(
+      body: new GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () {
           _playAnimation();
         },
-        child: AnimatedBuilder(
+        child: new AnimatedBuilder(
           builder: (context, child) {
-            return Center(
-              child: Container(
+            return new Center(
+              child: new Container(
                 color: sequenceAnimation["color"].value,
                 height: sequenceAnimation["height"].value,
                 width: sequenceAnimation["width"].value,

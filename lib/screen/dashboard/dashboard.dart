@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dashboard_icon.dart';
 import 'package:xfocus_mobile/animations/slide_right_route.dart';
-// import 'package:xfocus_mobile/screen/cash/cash.dart';
+import 'package:xfocus_mobile/screen/cash/cash.dart';
 import 'package:xfocus_mobile/screen/inventory/inventory.dart';
 import 'package:xfocus_mobile/screen/account_payable/account_payable.dart';
 import 'package:xfocus_mobile/screen/account_receivable/account_receivable.dart';
@@ -54,7 +54,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 crossAxisCount: 3,
                 shrinkWrap: true,
                 children: <Widget>[
-                  /* DashboardIcon(
+                  DashboardIcon(
                     title: 'Kas Bank',
                     icon: Icons.account_balance_wallet,
                     onTap: () => Navigator.push(
@@ -63,7 +63,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             widget: CashScreen(),
                           ),
                         ),
-                  ), */
+                  ),
                   DashboardIcon(
                     title: 'Persediaan',
                     icon: FontAwesomeIcons.phabricator,

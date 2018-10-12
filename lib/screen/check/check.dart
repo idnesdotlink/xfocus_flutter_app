@@ -8,13 +8,14 @@ import 'screen/markdown/markdown.dart';
 import 'screen/notification/notification.dart';
 // import 'screen/onesignal/onesignal.dart';
 import 'screen/qr/qr.dart';
-// import 'screen/animation/animation.dart';
+import 'screen/animation/animation.dart';
 import 'screen/preference/preference.dart';
 import 'screen/socketio/socketio.dart';
 import 'screen/sqflite/sqflite.dart';
 import 'screen/websocket/websocket.dart';
 import 'screen/badge/badge.dart';
 import 'screen/calendar/calendar.dart';
+import 'screen/calendar/calendar2.dart';
 import 'screen/rangeslider/rangeslider.dart';
 import 'screen/googlesignin/googlesignin.dart';
 import 'screen/firebasemessaging/firebasemessaging.dart';
@@ -124,10 +125,10 @@ class _CheckScreenState extends State<CheckScreen> {
           title: 'Markdown',
           onTap: () => _goToScreen(context, MarkdownScreen()),
         ),
-        /* CheckScreenItem(
+        CheckScreenItem(
           title: 'Animation',
           onTap: () => _goToScreen(context, AnimationScreen()),
-        ), */
+        ),
         // CheckScreenItem(
         //   title: 'Google Sign in',
         //   onTap: () => _goToScreen(context, FirebasesmsauthScreen(
@@ -161,6 +162,11 @@ class _CheckScreenState extends State<CheckScreen> {
         CheckScreenItem(
           title: 'Calendar',
           onTap: () => _goToScreen(context, CalendarScreen()),
+          bottomBorder: false,
+        ),
+        CheckScreenItem(
+          title: 'Calendar2',
+          onTap: () => _goToScreen(context, CalendarScreen2()),
           bottomBorder: false,
         ),
       ]),
