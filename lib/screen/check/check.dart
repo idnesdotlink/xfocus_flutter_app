@@ -20,6 +20,8 @@ import 'screen/rangeslider/rangeslider.dart';
 import 'screen/googlesignin/googlesignin.dart';
 import 'screen/firebasemessaging/firebasemessaging.dart';
 // import 'screen/firebasesmsauth.dart';
+// import 'screen/dio/dio.dart';
+import 'screen/admob/admob.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -159,10 +161,17 @@ class _CheckScreenState extends State<CheckScreen> {
           title: 'Firebase Messagin',
           onTap: () => _goToScreen(context, FirebasemessagingScreen()),
         ),
+        /* CheckScreenItem(
+          title: 'Dio',
+          onTap: () => _goToScreen(context, FirebasemessagingScreen()),
+        ), */
+        CheckScreenItem(
+          title: 'Admob',
+          onTap: () => _goToScreen(context, AdmobExampleScreen()),
+        ),
         CheckScreenItem(
           title: 'Calendar',
           onTap: () => _goToScreen(context, CalendarScreen()),
-          bottomBorder: false,
         ),
         CheckScreenItem(
           title: 'Calendar2',

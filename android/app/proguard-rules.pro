@@ -31,3 +31,6 @@
 -keep class android.icu.util.Freezable
 -keep class android.icu.util.TimeZone
 -keep class android.support.transition.GhostViewApi14$Creator
+
+# -keep class com.google.android.gms.** { *; }
+# -dontwarn com.google.android.gms.**
