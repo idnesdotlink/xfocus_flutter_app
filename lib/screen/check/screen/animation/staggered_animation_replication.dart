@@ -6,7 +6,7 @@ import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class StaggeredAnimationReplication extends StatefulWidget {
   @override
-  _StaggeredAnimationReplicationState createState() => new _StaggeredAnimationReplicationState();
+  _StaggeredAnimationReplicationState createState() => _StaggeredAnimationReplicationState();
 }
 
 class _StaggeredAnimationReplicationState extends State<StaggeredAnimationReplication> with SingleTickerProviderStateMixin{
@@ -17,41 +17,41 @@ class _StaggeredAnimationReplicationState extends State<StaggeredAnimationReplic
   @override
   void initState() {
     super.initState();
-    controller = new AnimationController(vsync: this);
+    controller = AnimationController(vsync: this);
 
-    sequenceAnimation = new SequenceAnimationBuilder()
+    sequenceAnimation = SequenceAnimationBuilder()
      .addAnimatable(
-        animatable: new Tween<double>(begin: 0.0, end: 1.0),
+        animatable: Tween<double>(begin: 0.0, end: 1.0),
         from: Duration.zero,
         to: const Duration(milliseconds: 200),
         curve: Curves.ease,
         tag: "opacity"
     ).addAnimatable(
-        animatable: new Tween<double>(begin: 50.0, end: 150.0),
+        animatable: Tween<double>(begin: 50.0, end: 150.0),
         from: const Duration(milliseconds: 250),
         to: const Duration(milliseconds: 500),
         curve: Curves.ease,
         tag: "width"
     ).addAnimatable(
-        animatable: new Tween<double>(begin: 50.0, end: 150.0),
+        animatable: Tween<double>(begin: 50.0, end: 150.0),
         from: const Duration(milliseconds: 500),
         to: const Duration(milliseconds: 750),
         curve: Curves.ease,
         tag: "height"
     ).addAnimatable(
-        animatable: new EdgeInsetsTween(begin: const EdgeInsets.only(bottom: 16.0), end: const EdgeInsets.only(bottom: 75.0),),
+        animatable: EdgeInsetsTween(begin: const EdgeInsets.only(bottom: 16.0), end: const EdgeInsets.only(bottom: 75.0),),
         from: const Duration(milliseconds: 500),
         to: const Duration(milliseconds: 750),
         curve: Curves.ease,
         tag: "padding"
     ).addAnimatable(
-        animatable: new BorderRadiusTween(begin: new BorderRadius.circular(4.0), end: new BorderRadius.circular(75.0),),
+        animatable: BorderRadiusTween(begin: BorderRadius.circular(4.0), end: BorderRadius.circular(75.0),),
         from: const Duration(milliseconds: 750),
         to: const Duration(milliseconds: 1000),
         curve: Curves.ease,
         tag: "borderRadius"
     ).addAnimatable(
-        animatable: new ColorTween(begin: Colors.indigo[100], end: Colors.orange[400],),
+        animatable: ColorTween(begin: Colors.indigo[100], end: Colors.orange[400],),
         from: const Duration(milliseconds: 1000),
         to: const Duration(milliseconds: 1500),
         curve: Curves.ease,
@@ -66,17 +66,17 @@ class _StaggeredAnimationReplicationState extends State<StaggeredAnimationReplic
   }
 
   Widget _buildAnimation(BuildContext context, Widget child) {
-    return new Container(
+    return Container(
       padding: sequenceAnimation["padding"].value,
       alignment: Alignment.bottomCenter,
-      child: new Opacity(
+      child: Opacity(
         opacity: sequenceAnimation["opacity"].value,
-        child: new Container(
+        child: Container(
           width: sequenceAnimation["width"].value,
           height: sequenceAnimation["height"].value,
-          decoration: new BoxDecoration(
+          decoration: BoxDecoration(
             color: sequenceAnimation["color"].value,
-            border: new Border.all(
+            border: Border.all(
               color: Colors.indigo[300],
               width: 3.0,
             ),
@@ -102,22 +102,22 @@ class _StaggeredAnimationReplicationState extends State<StaggeredAnimationReplic
       appBar: PrimaryAppBar(
         primaryAppBarTitle: 'Staggered Animation',
       ),
-      body: new GestureDetector(
+      body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () {
           _playAnimation();
         },
-        child: new Center(
-          child: new Container(
+        child: Center(
+          child: Container(
             width: 300.0,
             height: 300.0,
-            decoration: new BoxDecoration(
+            decoration: BoxDecoration(
               color: Colors.black.withOpacity(0.1),
-              border: new Border.all(
+              border: Border.all(
                 color: Colors.black.withOpacity(0.5),
               ),
             ),
-            child: new AnimatedBuilder(
+            child: AnimatedBuilder(
                 animation: controller,
                 builder: _buildAnimation
             ),

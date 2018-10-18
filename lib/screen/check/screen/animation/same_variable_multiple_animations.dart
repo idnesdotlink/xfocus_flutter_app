@@ -6,7 +6,7 @@ import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
 
 class SameVariableAnimationPage extends StatefulWidget {
   @override
-  _SameVariableAnimationPageState createState() => new _SameVariableAnimationPageState();
+  _SameVariableAnimationPageState createState() => _SameVariableAnimationPageState();
 }
 
 class _SameVariableAnimationPageState extends State<SameVariableAnimationPage> with SingleTickerProviderStateMixin{
@@ -20,34 +20,34 @@ class _SameVariableAnimationPageState extends State<SameVariableAnimationPage> w
   @override
   void initState() {
     super.initState();
-    controller = new AnimationController(vsync: this, duration: const Duration(seconds: 5));
+    controller = AnimationController(vsync: this, duration: const Duration(seconds: 5));
 
-    sequenceAnimation = new SequenceAnimationBuilder()
+    sequenceAnimation = SequenceAnimationBuilder()
       .addAnimatable(
-            animatable: new ColorTween(begin: Colors.red, end: Colors.yellow),
+            animatable: ColorTween(begin: Colors.red, end: Colors.yellow),
             from:  const Duration(seconds: 0),
             to: const Duration(seconds: 4),
             tag: "color"
         ).addAnimatable(
-            animatable: new Tween<double>(begin: 50.0, end: 300.0),
+            animatable: Tween<double>(begin: 50.0, end: 300.0),
             from:  const Duration(seconds: 0),
             to: const Duration(milliseconds: 3000),
             tag: "width",
             curve: Curves.easeIn
         ).addAnimatable(
-            animatable: new Tween<double>(begin: 300.0, end: 100.0),
+            animatable: Tween<double>(begin: 300.0, end: 100.0),
             from:  const Duration(milliseconds: 3000),
             to: const Duration(milliseconds: 3700),
             tag: "width",
             curve: Curves.decelerate
         ).addAnimatable(
-            animatable: new Tween<double>(begin: 50.0, end: 300.0),
+            animatable: Tween<double>(begin: 50.0, end: 300.0),
             from:  const Duration(seconds: 0),
             to: const Duration(milliseconds: 3000),
             tag: "height",
             curve: Curves.ease
         ).addAnimatable(
-            animatable: new Tween<double>(begin: 300.0, end: 450.0),
+            animatable: Tween<double>(begin: 300.0, end: 450.0),
             from:  const Duration(milliseconds: 3000),
             to: const Duration(milliseconds: 3800),
             tag: "height",
@@ -74,19 +74,19 @@ class _SameVariableAnimationPageState extends State<SameVariableAnimationPage> w
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: PrimaryAppBar(
         primaryAppBarTitle: 'Sequence',
       ),
-      body: new GestureDetector(
+      body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () {
           _playAnimation();
         },
-        child: new AnimatedBuilder(
+        child: AnimatedBuilder(
           builder: (context, child) {
-            return new Center(
-              child: new Container(
+            return Center(
+              child: Container(
                 color: sequenceAnimation["color"].value,
                 height: sequenceAnimation["height"].value,
                 width: sequenceAnimation["width"].value,

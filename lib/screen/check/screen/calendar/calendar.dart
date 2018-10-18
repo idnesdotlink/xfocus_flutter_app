@@ -21,21 +21,21 @@ class _CalendarScreenState extends State<CalendarScreen> {
       ),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 16.0),
-        child: new MaterialButton(
+        child: MaterialButton(
     color: Colors.deepOrangeAccent,
     onPressed: () async {
       final List<DateTime> picked = await DateRangePicker.showDatePicker(
           context: context,
-          initialFirstDate: new DateTime.now(),
-          initialLastDate: (new DateTime.now()).add(new Duration(days: 7)),
-          firstDate: new DateTime(2015),
-          lastDate: new DateTime(2020)
+          initialFirstDate: DateTime.now(),
+          initialLastDate: (DateTime.now()).add(Duration(days: 7)),
+          firstDate: DateTime(2015),
+          lastDate: DateTime(2020)
       );
       if (picked != null && picked.length == 2) {
           print(picked);
       }
     },
-    child: new Text("Pick date range")
+    child: Text("Pick date range")
 ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

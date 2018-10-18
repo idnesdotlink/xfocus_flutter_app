@@ -8,7 +8,7 @@ import 'home.dart';
 import 'user.dart';
 
 class GooglesigninScreen extends StatefulWidget {
-  _GooglesigninScreenState createState() => new _GooglesigninScreenState();
+  _GooglesigninScreenState createState() => _GooglesigninScreenState();
 }
 
 class _GooglesigninScreenState extends State<GooglesigninScreen> {
@@ -20,7 +20,7 @@ class _GooglesigninScreenState extends State<GooglesigninScreen> {
   @override
   void initState() {
     super.initState();
-    userPage = new Home(
+    userPage = Home(
       onSignin: () {
         _signin();
         print("Sign");
@@ -32,11 +32,11 @@ class _GooglesigninScreenState extends State<GooglesigninScreen> {
 
   Future<FirebaseUser> _signin() async {
     setState(() {
-      userPage = new Home(onSignin: null, onLogout: _logout, showLoading: true);
+      userPage = Home(onSignin: null, onLogout: _logout, showLoading: true);
     });
     FirebaseAuth _auth = FirebaseAuth.instance;
     try {
-      googleSignIn = new GoogleSignIn();
+      googleSignIn = GoogleSignIn();
       GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
       GoogleSignInAuthentication gauth =
           await googleSignInAccount.authentication;
@@ -47,7 +47,7 @@ class _GooglesigninScreenState extends State<GooglesigninScreen> {
 
       setState(() {
         _username = user.displayName;
-        userPage = new User(
+        userPage = User(
           onLogout: _logout,
           user: user,
         );
@@ -63,7 +63,7 @@ class _GooglesigninScreenState extends State<GooglesigninScreen> {
   void _logout() async {
     await googleSignIn.signOut();
     setState(() {
-      userPage = new Home(
+      userPage = Home(
         onSignin: () {
           _signin();
           print("Sign");
@@ -78,7 +78,7 @@ class _GooglesigninScreenState extends State<GooglesigninScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       home: userPage,
     );
   }

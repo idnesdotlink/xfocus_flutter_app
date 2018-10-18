@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 
 
 main() async {
-  var dio = new Dio();
+  var dio = Dio();
   dio.options.baseUrl = "http://www.dtworkroom.com/doris/1/2.0.0/";
   dio.options.connectTimeout = 5000; //5s
   dio.options.receiveTimeout=5000;
@@ -12,7 +12,7 @@ main() async {
     'common-header': 'xx'
   };
 
-  var u=new Uri(scheme: "https", host: "www.baidu.com", queryParameters: {
+  var u=Uri(scheme: "https", host: "www.baidu.com", queryParameters: {
     "xx":"xx",
     "yy":"dd"
   });
@@ -21,8 +21,8 @@ main() async {
 
   // Add request interceptor
   dio.interceptor.request.onSend = (Options options) async {
-    // return ds.resolve(new Response(data:"xxx"));
-    // return ds.reject(new DioError(message: "eh"));
+    // return ds.resolve(Response(data:"xxx"));
+    // return ds.reject(DioError(message: "eh"));
     return options;
   };
 
@@ -36,10 +36,10 @@ main() async {
   });
 
   // Create a FormData
-  FormData formData = new FormData.from({
+  FormData formData = FormData.from({
     "name": "wendux",
     "age": 25,
-    "file": new UploadFileInfo(new File("./example/upload.txt"), "upload.txt")
+    "file": UploadFileInfo(File("./example/upload.txt"), "upload.txt")
   });
 
   // Send FormData
@@ -55,7 +55,7 @@ main() async {
       }
     },
     // Send data with "application/x-www-form-urlencoded" format
-    options: new Options(
+    options: Options(
         contentType: ContentType.parse("application/x-www-form-urlencoded")),
   );
   print(response.data);

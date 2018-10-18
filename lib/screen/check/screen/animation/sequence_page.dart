@@ -6,7 +6,7 @@ import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class SequencePage extends StatefulWidget {
   @override
-  _SequencePageState createState() => new _SequencePageState();
+  _SequencePageState createState() => _SequencePageState();
 }
 
 class _SequencePageState extends State<SequencePage> with SingleTickerProviderStateMixin{
@@ -20,23 +20,23 @@ class _SequencePageState extends State<SequencePage> with SingleTickerProviderSt
   @override
   void initState() {
     super.initState();
-    controller = new AnimationController(vsync: this);
+    controller = AnimationController(vsync: this);
 
-    sequenceAnimation = new SequenceAnimationBuilder()
+    sequenceAnimation = SequenceAnimationBuilder()
       .addAnimatable(
-          animatable: new ColorTween(begin: Colors.red, end: Colors.yellow),
+          animatable: ColorTween(begin: Colors.red, end: Colors.yellow),
           from:  const Duration(seconds: 0),
           to: const Duration(seconds: 2),
           tag: "color"
         ).addAnimatable(
-          animatable: new ColorTween(begin: Colors.yellow, end: Colors.blueAccent),
+          animatable: ColorTween(begin: Colors.yellow, end: Colors.blueAccent),
           from:  const Duration(seconds: 2),
           to: const Duration(seconds: 4),
           tag: "color",
           curve: Curves.easeOut
         ).addAnimatable(
-          animatable: new ColorTween(begin: Colors.blueAccent, end: Colors.pink),
-          //  animatable: new Tween<double>(begin: 200.0, end: 40.0),
+          animatable: ColorTween(begin: Colors.blueAccent, end: Colors.pink),
+          //  animatable: Tween<double>(begin: 200.0, end: 40.0),
           from:  const Duration(seconds: 5),
           to: const Duration(seconds: 6),
           tag: "color",
@@ -64,19 +64,19 @@ class _SequencePageState extends State<SequencePage> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: PrimaryAppBar(
         primaryAppBarTitle: 'Sequence',
       ),
-      body: new GestureDetector(
+      body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () {
           _playAnimation();
         },
-        child: new AnimatedBuilder(
+        child: AnimatedBuilder(
           builder: (context, child) {
-            return new Center(
-              child: new Container(
+            return Center(
+              child: Container(
                 color: sequenceAnimation["color"].value,
                 height: 200.0,
                 width: 200.0,
