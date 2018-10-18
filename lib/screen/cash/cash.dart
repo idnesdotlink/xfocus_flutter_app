@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
-import 'package:xfocus_mobile/src/circular_chart/flutter_circular_chart.dart';
+// import 'package:xfocus_mobile/src/circular_chart/flutter_circular_chart.dart';
 import 'selector.dart';
 // import 'data.dart';
 // import 'cash_model.dart';
 // import 'cash_data.dart';
-import 'donut_chart.dart';
-import 'line_chart.dart';
+// import 'donut_chart.dart';
+// import 'line_chart.dart';
 import 'line_daily.dart';
-import 'line_yearly_sales.dart';
+// import 'line_yearly_sales.dart';
 
 class CashScreen extends StatefulWidget {
   _CashScreenState createState() => _CashScreenState();
@@ -37,7 +37,7 @@ class _CashScreenState extends State<CashScreen> {
     setState(() {});
   }
 
-  _buildMenu(BuildContext context) {
+  /* _buildMenu(BuildContext context) {
     return <PopupMenuItem>[
       PopupMenuItem(
         child: Text('satu')
@@ -67,7 +67,7 @@ class _CashScreenState extends State<CashScreen> {
         child: Text('satu')
       ),
     ];
-  }
+  } */
 
   void _select(dynamic val) {
     print(val);
@@ -122,7 +122,7 @@ class _CashScreenState extends State<CashScreen> {
     );
   }
 
-  Widget _donutChart () {
+  /* Widget _donutChart () {
     return AnimatedCircularChart(
                 // ey: _chartKey,
                 size: Size(300.0, 300.0),
@@ -158,9 +158,9 @@ class _CashScreenState extends State<CashScreen> {
                   fontSize: 24.0,
                 ),
               );
-  }
+  } */
 
-  Widget _donutChart2 () {
+  /* Widget _donutChart2 () {
     return Padding(
       padding: EdgeInsets.all(20.0),
       child: Container(
@@ -175,15 +175,15 @@ class _CashScreenState extends State<CashScreen> {
         ),
       ),
     );
-  }
+  } */
 
-  Widget _linechart() {
+  /* Widget _linechart() {
     return DateTimeComboLinePointChart.withSampleData();
-  }
+  } */
 
-  Widget _linechart2() {
+  /* Widget _linechart2() {
     return LineYearlySales.withSampleData();
-  }
+  } */
 
   Widget _linechart3() {
     return LineDaily.withSampleData();

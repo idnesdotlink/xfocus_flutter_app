@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
 
   final VoidCallback onSignin;
   final VoidCallback onLogout;
-  bool showLoading = false;
+  final bool showLoading;
 
   @override
   Widget build(BuildContext context) {

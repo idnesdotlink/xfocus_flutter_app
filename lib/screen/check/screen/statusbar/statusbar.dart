@@ -4,19 +4,19 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter_statusbar_manager/flutter_statusbar_manager.dart';
 
-class MyApp extends StatefulWidget {
-  MyApp();
+class StatusbarScreen extends StatefulWidget {
+  StatusbarScreen();
 
-  factory MyApp.forDesignTime() {
+  factory StatusbarScreen.forDesignTime() {
     // TODO: add arguments
-    return new MyApp();
+    return StatusbarScreen();
   }
 
   @override
-  _MyAppState createState() => new _MyAppState();
+  _StatusbarScreenState createState() => _StatusbarScreenState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _StatusbarScreenState extends State<StatusbarScreen> {
   double _statusBarHeight = 0.0;
   bool _statusBarColorAnimated = false;
   Color _statusBarColor = Colors.black;
@@ -106,14 +106,13 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
+    return Scaffold(
+        appBar: AppBar(
           title: const Text('Statusbar Manager example'),
         ),
-        body: new Container(
-          child: new Scrollbar(
-            child: new ListView(
+        body: Container(
+          child: Scrollbar(
+            child: ListView(
               padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
               children: <Widget>[
                 renderTitle("Status Bar Height: $_statusBarHeight"),
@@ -121,7 +120,7 @@ class _MyAppState extends State<MyApp> {
                 renderTitle("Status Bar Color:"),
                 SwitchListTile(
                   value: _statusBarColorAnimated,
-                  title: new Text("Animated:"),
+                  title: Text("Animated:"),
                   onChanged: (bool value) {
                     this.setState(() {
                       _statusBarColorAnimated = value;
@@ -168,7 +167,7 @@ class _MyAppState extends State<MyApp> {
                 Divider(height: 25.0),
                 renderTitle("Status Bar Hidden:"),
                 SwitchListTile(
-                  title: new Text("Hidden:"),
+                  title: Text("Hidden:"),
                   value: _statusBarHidden,
                   onChanged: (bool val) {
                     this.setState(() {
@@ -220,7 +219,7 @@ class _MyAppState extends State<MyApp> {
                 Divider(height: 25.0),
                 renderTitle("Status Bar Translucent:"),
                 SwitchListTile(
-                  title: new Text("Translucent:"),
+                  title: Text("Translucent:"),
                   value: _statusBarTranslucent,
                   onChanged: (bool val) {
                     this.setState(() {
@@ -233,7 +232,7 @@ class _MyAppState extends State<MyApp> {
                 Divider(height: 25.0),
                 renderTitle("Status Bar Activity Indicator:"),
                 SwitchListTile(
-                  title: new Text("Indicator:"),
+                  title: Text("Indicator:"),
                   value: _loadingIndicator,
                   onChanged: (bool val) {
                     this.setState(() {
@@ -247,7 +246,7 @@ class _MyAppState extends State<MyApp> {
                 renderTitle("Navigation Bar Color:"),
                 SwitchListTile(
                   value: _navBarColorAnimated,
-                  title: new Text("Animated:"),
+                  title: Text("Animated:"),
                   onChanged: (bool value) {
                     this.setState(() {
                       _navBarColorAnimated = value;
@@ -302,7 +301,7 @@ class _MyAppState extends State<MyApp> {
                 Divider(height: 25.0),
                 renderTitle("Fullscreen mode:"),
                 SwitchListTile(
-                  title: new Text("Fullscreen:"),
+                  title: Text("Fullscreen:"),
                   value: _fullscreenMode,
                   onChanged: (bool val) {
                     this.setState(() {
@@ -315,7 +314,6 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

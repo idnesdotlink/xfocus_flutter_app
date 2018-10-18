@@ -6,7 +6,6 @@ import 'screen/deviceinfo/deviceinfo.dart';
 import 'screen/localjson/localdata.dart';
 import 'screen/markdown/markdown.dart';
 import 'screen/notification/notification.dart';
-// import 'screen/onesignal/onesignal.dart';
 import 'screen/qr/qr.dart';
 import 'screen/animation/animation.dart';
 import 'screen/preference/preference.dart';
@@ -19,8 +18,8 @@ import 'screen/calendar/calendar2.dart';
 import 'screen/rangeslider/rangeslider.dart';
 import 'screen/googlesignin/googlesignin.dart';
 import 'screen/firebasemessaging/firebasemessaging.dart';
-// import 'screen/firebasesmsauth.dart';
-// import 'screen/dio/dio.dart';
+import 'screen/statusbar/statusbar.dart';
+import 'screen/slideable/slideable.dart';
 import 'screen/admob/admob.dart';
 
 class CheckScreenItem extends StatelessWidget {
@@ -131,12 +130,6 @@ class _CheckScreenState extends State<CheckScreen> {
           title: 'Animation',
           onTap: () => _goToScreen(context, AnimationScreen()),
         ),
-        // CheckScreenItem(
-        //   title: 'Google Sign in',
-        //   onTap: () => _goToScreen(context, FirebasesmsauthScreen(
-        //     title: 'Firebase Title',
-        //   )),
-        // ),
         CheckScreenItem(
           title: 'Simple Auth',
           onTap: () => {},
@@ -145,10 +138,6 @@ class _CheckScreenState extends State<CheckScreen> {
           title: 'Firebase Auth',
           onTap: () => {},
         ),
-        /* CheckScreenItem(
-          title: 'One Signal',
-          onTap: () => _goToScreen(context, OnesignalScreen()),
-        ), */
         CheckScreenItem(
           title: 'Range Slider',
           onTap: () => _goToScreen(context, RangesliderScreen()),
@@ -158,13 +147,17 @@ class _CheckScreenState extends State<CheckScreen> {
           onTap: () => _goToScreen(context, GooglesigninScreen()),
         ),
         CheckScreenItem(
-          title: 'Firebase Messagin',
+          title: 'Status Bar',
+          onTap: () => _goToScreen(context, StatusbarScreen()),
+        ),
+        CheckScreenItem(
+          title: 'Firebase Messaging',
           onTap: () => _goToScreen(context, FirebasemessagingScreen()),
         ),
-        /* CheckScreenItem(
-          title: 'Dio',
-          onTap: () => _goToScreen(context, FirebasemessagingScreen()),
-        ), */
+        CheckScreenItem(
+          title: 'Slideable',
+          onTap: () => _goToScreen(context, SlideableScreen()),
+        ),
         CheckScreenItem(
           title: 'Admob',
           onTap: () => _goToScreen(context, AdmobExampleScreen()),
