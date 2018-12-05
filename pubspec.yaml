@@ -26,9 +26,9 @@ dependencies:
   flutter_cache_manager: ^0.1.1
   # flutter_calendar_carousel: ^1.1.0
   # flutter_circular_chart: ^0.0.3
-  flutter_cupertino_date_picker: ^0.0.6
+  # flutter_cupertino_date_picker: ^0.0.6
   # flutter_is_emulator: ^1.0.0
-  flutter_local_notifications: ^0.4.0
+  flutter_local_notifications: 0.4.0
   flutter_markdown: ^0.2.0
   flutter_picker: ^0.0.6
   flutter_range_slider: ^1.0.1

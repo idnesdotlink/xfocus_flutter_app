@@ -25,6 +25,17 @@
 -keep class android.arch.lifecycle.Lifecycle$State
 -keep class android.support.v4.app.FragmentManager
 
+# -keep class com.google.android.gms.** { *; }
+# -dontwarn com.google.android.gms.**
+-keep class com.google.android.gms.internal.stable.zza
+-dontwarn com.google.android.gms.internal.stable.zza
+-keep class com.google.android.gms.internal.stable.zzb
+-dontwarn com.google.android.gms.internal.stable.zzb
+-keep class com.google.android.gms.internal.stable.zzc
+-dontwarn com.google.android.gms.internal.stable.zzc
+-keep class com.google.android.gms.dynamite.DynamiteModule.** { *; }
+-dontwarn com.google.android.gms.dynamite.DynamiteModule
+
 -keep class android.icu.text.RuleBasedCollator
 -keep class android.icu.text.TimeZoneFormat
 -keep class android.icu.text.UnicodeSet
