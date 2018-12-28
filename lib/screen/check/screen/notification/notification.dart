@@ -27,7 +27,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
         initializationSettingsAndroid, initializationSettingsIOS);
     flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
     flutterLocalNotificationsPlugin.initialize(initializationSettings,
-        selectNotification: onSelectNotification);
+        onSelectNotification: onSelectNotification);
   }
 
   Future<Null> initPlatformState() async {
