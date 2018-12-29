@@ -15,6 +15,7 @@ import 'screen/websocket/websocket.dart';
 import 'screen/badge/badge.dart';
 import 'screen/calendar/calendar.dart';
 import 'screen/calendar/calendar2.dart';
+import 'screen/calendar/calendar3.dart';
 import 'screen/rangeslider/rangeslider.dart';
 import 'screen/googlesignin/googlesignin.dart';
 import 'screen/firebasemessaging/firebasemessaging.dart';
@@ -96,7 +97,7 @@ class _CheckScreenState extends State<CheckScreen> {
         ),
         CheckScreenItem(
           title: 'Local Json',
-          onTap: () => _goToScreen(context, LocaldataScreen()),
+          onTap: () => _goToScreen(context, LocaldataScreen.withDummyData()),
         ),
         CheckScreenItem(
           title: 'Sqflite',
@@ -169,6 +170,10 @@ class _CheckScreenState extends State<CheckScreen> {
         CheckScreenItem(
           title: 'Calendar2',
           onTap: () => _goToScreen(context, CalendarScreen2()),
+        ),
+        CheckScreenItem(
+          title: 'Calendar3',
+          onTap: () => _goToScreen(context, CalendarScreen3()),
           bottomBorder: false,
         ),
       ]),
