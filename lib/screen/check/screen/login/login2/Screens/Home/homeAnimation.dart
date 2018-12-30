@@ -6,15 +6,13 @@ class StaggerAnimation extends StatelessWidget {
       : buttonZoomOutAnimation = Tween(
           begin: 60.0,
           end: 1000.0,
-        )
-            .animate(
+        ).animate(
           CurvedAnimation(parent: buttonController, curve: Curves.easeOut),
         ),
         buttonBottomtoCenterAnimation = AlignmentTween(
           begin: Alignment.bottomRight,
           end: Alignment.center,
-        )
-            .animate(
+        ).animate(
           CurvedAnimation(
             parent: buttonController,
             curve: Interval(

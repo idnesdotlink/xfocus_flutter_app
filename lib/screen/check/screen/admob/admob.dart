@@ -77,66 +77,66 @@ class _AdmobExampleScreenState extends State<AdmobExampleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: PrimaryAppBar(
-          primaryAppBarTitle: 'Admob',
-        ),
-        body: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                RaisedButton(
-                    child: const Text('SHOW BANNER'),
-                    onPressed: () {
-                      _bannerAd ??= createBannerAd();
-                      _bannerAd
-                        ..load()
-                        ..show();
-                    }),
-                RaisedButton(
-                    child: const Text('REMOVE BANNER'),
-                    onPressed: () {
-                      _bannerAd?.dispose();
-                      _bannerAd = null;
-                    }),
-                RaisedButton(
-                  child: const Text('LOAD INTERSTITIAL'),
+      appBar: PrimaryAppBar(
+        primaryAppBarTitle: 'Admob',
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              RaisedButton(
+                  child: const Text('SHOW BANNER'),
                   onPressed: () {
-                    _interstitialAd?.dispose();
-                    _interstitialAd = createInterstitialAd()..load();
-                  },
-                ),
-                RaisedButton(
-                  child: const Text('SHOW INTERSTITIAL'),
+                    _bannerAd ??= createBannerAd();
+                    _bannerAd
+                      ..load()
+                      ..show();
+                  }),
+              RaisedButton(
+                  child: const Text('REMOVE BANNER'),
                   onPressed: () {
-                    _interstitialAd?.show();
-                  },
-                ),
-                RaisedButton(
-                  child: const Text('LOAD REWARDED VIDEO'),
-                  onPressed: () {
-                    RewardedVideoAd.instance.load(
-                        adUnitId: RewardedVideoAd.testAdUnitId,
-                        targetingInfo: targetingInfo);
-                  },
-                ),
-                RaisedButton(
-                  child: const Text('SHOW REWARDED VIDEO'),
-                  onPressed: () {
-                    RewardedVideoAd.instance.show();
-                  },
-                ),
-                Text("You have $_coins coins."),
-              ].map((Widget button) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: button,
-                );
-              }).toList(),
-            ),
+                    _bannerAd?.dispose();
+                    _bannerAd = null;
+                  }),
+              RaisedButton(
+                child: const Text('LOAD INTERSTITIAL'),
+                onPressed: () {
+                  _interstitialAd?.dispose();
+                  _interstitialAd = createInterstitialAd()..load();
+                },
+              ),
+              RaisedButton(
+                child: const Text('SHOW INTERSTITIAL'),
+                onPressed: () {
+                  _interstitialAd?.show();
+                },
+              ),
+              RaisedButton(
+                child: const Text('LOAD REWARDED VIDEO'),
+                onPressed: () {
+                  RewardedVideoAd.instance.load(
+                      adUnitId: RewardedVideoAd.testAdUnitId,
+                      targetingInfo: targetingInfo);
+                },
+              ),
+              RaisedButton(
+                child: const Text('SHOW REWARDED VIDEO'),
+                onPressed: () {
+                  RewardedVideoAd.instance.show();
+                },
+              ),
+              Text("You have $_coins coins."),
+            ].map((Widget button) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: button,
+              );
+            }).toList(),
           ),
         ),
-      );
+      ),
+    );
   }
 }

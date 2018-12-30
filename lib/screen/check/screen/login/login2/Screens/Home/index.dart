@@ -75,8 +75,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     fadeScreenAnimation = ColorTween(
       begin: const Color.fromRGBO(247, 64, 106, 1.0),
       end: const Color.fromRGBO(247, 64, 106, 0.0),
-    )
-        .animate(
+    ).animate(
       CurvedAnimation(
         parent: _screenController,
         curve: Curves.ease,
@@ -99,8 +98,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     listTileWidth = Tween<double>(
       begin: 1000.0,
       end: 600.0,
-    )
-        .animate(
+    ).animate(
       CurvedAnimation(
         parent: _screenController,
         curve: Interval(
@@ -114,8 +112,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     listSlideAnimation = AlignmentTween(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
-    )
-        .animate(
+    ).animate(
       CurvedAnimation(
         parent: _screenController,
         curve: Interval(
@@ -128,8 +125,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     buttonSwingAnimation = AlignmentTween(
       begin: Alignment.topCenter,
       end: Alignment.bottomRight,
-    )
-        .animate(
+    ).animate(
       CurvedAnimation(
         parent: _screenController,
         curve: Interval(
@@ -142,8 +138,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     listSlidePosition = EdgeInsetsTween(
       begin: const EdgeInsets.only(bottom: 16.0),
       end: const EdgeInsets.only(bottom: 80.0),
-    )
-        .animate(
+    ).animate(
       CurvedAnimation(
         parent: _screenController,
         curve: Interval(
@@ -225,8 +220,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           child: AddButton(
                             buttonGrowAnimation: buttonGrowAnimation,
                           )))
-                  : StaggerAnimation(
-                      buttonController: _buttonController.view),
+                  : StaggerAnimation(buttonController: _buttonController.view),
             ],
           ),
         ),

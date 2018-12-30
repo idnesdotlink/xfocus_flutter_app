@@ -33,8 +33,8 @@ class CalenderCell extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     day,
-                    style: TextStyle(
-                        fontSize: 12.0, fontWeight: FontWeight.w400),
+                    style:
+                        TextStyle(fontSize: 12.0, fontWeight: FontWeight.w400),
                   ),
                   today
                       ? Container(

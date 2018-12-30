@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xfocus_mobile/src/flutter_calendar_carousel.dart' show CalendarCarousel;
+import 'package:xfocus_mobile/src/flutter_calendar_carousel.dart'
+    show CalendarCarousel;
 import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class CalendarScreen2 extends StatefulWidget {
@@ -38,7 +39,9 @@ class _CalendarScreen2State extends State<CalendarScreen2> {
           markedDates: _markedDate,
           height: 420.0,
           selectedDateTime: _currentDate,
-          daysHaveCircularBorder: false, /// null for not rendering any border, true for circular border, false for rectangular border
+          daysHaveCircularBorder: false,
+
+          /// null for not rendering any border, true for circular border, false for rectangular border
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

@@ -154,10 +154,7 @@ class _SocketioScreenState extends State<SocketioScreen> {
 
   Widget _button(text, onPressed) {
     return RaisedButton(
-      child: Text(
-        text,
-        style: TextStyle(color: Colors.white)
-      ),
+      child: Text(text, style: TextStyle(color: Colors.white)),
       color: Theme.of(context).accentColor,
       elevation: 0.0,
       splashColor: Colors.blueGrey,

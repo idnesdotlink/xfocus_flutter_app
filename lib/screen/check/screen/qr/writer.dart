@@ -10,8 +10,8 @@ class _QrwriterState extends State<Qrwriter> {
 
   _displayQr() {
     return QrImage(
-        data: _qrData,
-        size: 200.0,
+      data: _qrData,
+      size: 200.0,
     );
   }
 

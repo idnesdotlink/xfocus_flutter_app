@@ -30,15 +30,15 @@ class SelectorButton extends StatelessWidget {
               child: Container(
                 height: 30.0,
                 child: Center(
-                    child: Text(
-                      '$title',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16.0,
-                        // fontWeight: FontWeight.bold,
-                      ),
+                  child: Text(
+                    '$title',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
+                      // fontWeight: FontWeight.bold,
                     ),
                   ),
+                ),
               ),
             ),
           ),
@@ -50,13 +50,12 @@ class SelectorButton extends StatelessWidget {
 
 class Selector extends StatefulWidget {
   final List data;
-  Selector({ Key key, this.data }) : super();
+  Selector({Key key, this.data}) : super();
 
   _SelectorState createState() => _SelectorState();
 }
 
 class _SelectorState extends State<Selector> {
-
   // List<Widget> _widgetChildren;
   dynamic _active;
 
@@ -75,17 +74,17 @@ class _SelectorState extends State<Selector> {
   }
 
   _createButton() {
-    var widgetChildren = widget.data.map(    
-      (button) {
-        var title = button['title'];
-        var onTap = button['onTap'];
-        return SelectorButton(
+    var widgetChildren = widget.data.map((button) {
+      var title = button['title'];
+      var onTap = button['onTap'];
+      return SelectorButton(
           title: title,
-          onTap: () => _setActive(title, onTap,),
-          active: _active == title
-        );
-      }
-    ).toList();
+          onTap: () => _setActive(
+                title,
+                onTap,
+              ),
+          active: _active == title);
+    }).toList();
     return widgetChildren;
   }
 

@@ -8,8 +8,7 @@ import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class AnimationScreen extends StatefulWidget {
   @override
-  _AnimationScreenState createState() =>
-      _AnimationScreenState();
+  _AnimationScreenState createState() => _AnimationScreenState();
 }
 
 class _AnimationScreenState extends State<AnimationScreen> {
@@ -45,8 +44,7 @@ class _AnimationScreenState extends State<AnimationScreen> {
                 child: Text("SameVariableAnimationPage"),
               ),
               RaisedButton(
-                onPressed: () =>
-                    _goToScreen(context, HeroanimationScreen()),
+                onPressed: () => _goToScreen(context, HeroanimationScreen()),
                 child: Text("Hero Animation"),
               ),
             ],

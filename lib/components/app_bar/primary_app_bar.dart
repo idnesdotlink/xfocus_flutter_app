@@ -6,16 +6,19 @@ class PrimaryAppBar extends AppBar {
   final String primaryAppBarTitle;
   final Widget leading;
   final Color backgroundColor;
-  PrimaryAppBar({
-    Key key,
-    this.actions,
-    this.primaryAppBarTitle,
-    this.leading,
-    this.backgroundColor,
-    this.primaryAppBarAutomaticallyImplyLeading
-  }) : super(
+  PrimaryAppBar(
+      {Key key,
+      this.actions,
+      this.primaryAppBarTitle,
+      this.leading,
+      this.backgroundColor,
+      this.primaryAppBarAutomaticallyImplyLeading})
+      : super(
           key: key,
-          automaticallyImplyLeading: primaryAppBarAutomaticallyImplyLeading != null ? primaryAppBarAutomaticallyImplyLeading : true,
+          automaticallyImplyLeading:
+              primaryAppBarAutomaticallyImplyLeading != null
+                  ? primaryAppBarAutomaticallyImplyLeading
+                  : true,
           leading: leading,
           actions: actions,
           elevation: 0.0,

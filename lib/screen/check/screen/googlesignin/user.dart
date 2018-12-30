@@ -18,8 +18,7 @@ class User extends StatelessWidget {
       appBar: AppBar(
         title: Text("Welcome"),
         actions: <Widget>[
-          IconButton(
-              icon: Icon(Icons.exit_to_app), onPressed: this.onLogout)
+          IconButton(icon: Icon(Icons.exit_to_app), onPressed: this.onLogout)
         ],
       ),
       body: Container(

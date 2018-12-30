@@ -79,7 +79,8 @@ class _DetailPageState extends State<DetailPage> {
 
 class FirebasemessagingScreen extends StatefulWidget {
   @override
-  _FirebasemessagingScreenState createState() => _FirebasemessagingScreenState();
+  _FirebasemessagingScreenState createState() =>
+      _FirebasemessagingScreenState();
 }
 
 class _FirebasemessagingScreenState extends State<FirebasemessagingScreen> {

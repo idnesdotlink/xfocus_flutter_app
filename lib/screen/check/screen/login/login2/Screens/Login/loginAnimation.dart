@@ -6,8 +6,7 @@ class StaggerAnimation extends StatelessWidget {
       : buttonSqueezeanimation = Tween(
           begin: 320.0,
           end: 70.0,
-        )
-            .animate(
+        ).animate(
           CurvedAnimation(
             parent: buttonController,
             curve: Interval(
@@ -19,8 +18,7 @@ class StaggerAnimation extends StatelessWidget {
         buttomZoomOut = Tween(
           begin: 70.0,
           end: 1000.0,
-        )
-            .animate(
+        ).animate(
           CurvedAnimation(
             parent: buttonController,
             curve: Interval(
@@ -33,8 +31,7 @@ class StaggerAnimation extends StatelessWidget {
         containerCircleAnimation = EdgeInsetsTween(
           begin: const EdgeInsets.only(bottom: 50.0),
           end: const EdgeInsets.only(bottom: 0.0),
-        )
-            .animate(
+        ).animate(
           CurvedAnimation(
             parent: buttonController,
             curve: Interval(
@@ -97,8 +94,8 @@ class StaggerAnimation extends StatelessWidget {
                             ? CircularProgressIndicator(
                                 value: null,
                                 strokeWidth: 1.0,
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                    Colors.white),
+                                valueColor:
+                                    AlwaysStoppedAnimation<Color>(Colors.white),
                               )
                             : null)
                 : Container(

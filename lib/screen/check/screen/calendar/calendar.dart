@@ -12,7 +12,6 @@ class CalendarScreen extends StatefulWidget {
 }
 
 class _CalendarScreenState extends State<CalendarScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,21 +21,20 @@ class _CalendarScreenState extends State<CalendarScreen> {
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 16.0),
         child: MaterialButton(
-    color: Colors.deepOrangeAccent,
-    onPressed: () async {
-      final List<DateTime> picked = await DateRangePicker.showDatePicker(
-          context: context,
-          initialFirstDate: DateTime.now(),
-          initialLastDate: (DateTime.now()).add(Duration(days: 7)),
-          firstDate: DateTime(2015),
-          lastDate: DateTime(2020)
-      );
-      if (picked != null && picked.length == 2) {
-          print(picked);
-      }
-    },
-    child: Text("Pick date range")
-),
+            color: Colors.deepOrangeAccent,
+            onPressed: () async {
+              final List<DateTime> picked =
+                  await DateRangePicker.showDatePicker(
+                      context: context,
+                      initialFirstDate: DateTime.now(),
+                      initialLastDate: (DateTime.now()).add(Duration(days: 7)),
+                      firstDate: DateTime(2015),
+                      lastDate: DateTime(2020));
+              if (picked != null && picked.length == 2) {
+                print(picked);
+              }
+            },
+            child: Text("Pick date range")),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

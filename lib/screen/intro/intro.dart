@@ -3,7 +3,6 @@ import 'package:intro_views_flutter/intro_views_flutter.dart';
 import 'package:intro_views_flutter/Models/page_view_model.dart';
 
 class IntroScreen extends StatelessWidget {
-
   final pages = [
     PageViewModel(
         pageColor: const Color(0xFF03A9F4),
@@ -58,13 +57,13 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntroViewsFlutter(
       pages,
-        onTapDoneButton: () => Navigator.pop(context),
-        doneText: Text('Selesai'),
-        showSkipButton: false,//Whether you want to show the skip button or not.
-        pageButtonTextStyles: TextStyle(
-          color: Colors.white,
-          fontSize: 18.0,
-        ),
+      onTapDoneButton: () => Navigator.pop(context),
+      doneText: Text('Selesai'),
+      showSkipButton: false, //Whether you want to show the skip button or not.
+      pageButtonTextStyles: TextStyle(
+        color: Colors.white,
+        fontSize: 18.0,
+      ),
 /*       <PageViewModel>[
         PageViewModel(
           pageColor: const Color(0xFF607D8B),

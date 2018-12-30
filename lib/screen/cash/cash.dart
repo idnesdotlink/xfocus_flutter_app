@@ -75,49 +75,31 @@ class _CashScreenState extends State<CashScreen> {
 
   List<Widget> _act() {
     return <Widget>[
-          PopupMenuButton(
-            onSelected: _select,
-            itemBuilder: (BuildContext context) {
-              return <PopupMenuItem>[
-                PopupMenuItem(
-                  value: 1,
-                  child: Text('satu')
-                ),
-                PopupMenuItem(
-                  value: 2,
-                  child: Text('dua')
-                ),
-              ];
-            },
-            icon: Icon(
-              Icons.android
-            ),
-
-          ),
-          IconButton(
-            icon: Icon(
-              FontAwesomeIcons.bell,
-            ),
-            onPressed: () => {},
-          ),
-        ];
+      PopupMenuButton(
+        onSelected: _select,
+        itemBuilder: (BuildContext context) {
+          return <PopupMenuItem>[
+            PopupMenuItem(value: 1, child: Text('satu')),
+            PopupMenuItem(value: 2, child: Text('dua')),
+          ];
+        },
+        icon: Icon(Icons.android),
+      ),
+      IconButton(
+        icon: Icon(
+          FontAwesomeIcons.bell,
+        ),
+        onPressed: () => {},
+      ),
+    ];
   }
 
-  Widget _selector() { 
+  Widget _selector() {
     return Selector(
       data: [
-        {
-          'title': 'Mingguan',
-          'onTap': () => _setChart('weekly')
-        },
-        {
-          'title': 'Bulanan',
-          'onTap': () => _setChart('monthly')
-        },
-        {
-          'title': 'Tahunan',
-          'onTap': () => _setChart('yearly')
-        },
+        {'title': 'Mingguan', 'onTap': () => _setChart('weekly')},
+        {'title': 'Bulanan', 'onTap': () => _setChart('monthly')},
+        {'title': 'Tahunan', 'onTap': () => _setChart('yearly')},
       ],
     );
   }

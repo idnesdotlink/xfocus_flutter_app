@@ -29,15 +29,13 @@ class ListData extends StatelessWidget {
                   left: 20.0, top: 10.0, bottom: 10.0, right: 20.0),
               width: 60.0,
               height: 60.0,
-              decoration:
-                  BoxDecoration(shape: BoxShape.circle, image: image)),
+              decoration: BoxDecoration(shape: BoxShape.circle, image: image)),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
                 title,
-                style:
-                    TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 5.0),
