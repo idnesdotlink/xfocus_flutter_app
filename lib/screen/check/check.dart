@@ -22,6 +22,7 @@ import 'screen/firebasemessaging/firebasemessaging.dart';
 import 'screen/statusbar/statusbar.dart';
 import 'screen/slideable/slideable.dart';
 import 'screen/admob/admob.dart';
+import 'screen/simple_auth/simple_auth.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -133,7 +134,7 @@ class _CheckScreenState extends State<CheckScreen> {
         ),
         CheckScreenItem(
           title: 'Simple Auth',
-          onTap: () => {},
+          onTap: () => _goToScreen(context, SimpleAuthScreen()),
         ),
         CheckScreenItem(
           title: 'Firebase Auth',

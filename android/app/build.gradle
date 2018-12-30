@@ -43,12 +43,20 @@ android {
             signingConfig signingConfigs.debug
         }
 
-        debug {
+        /* debug {
             signingConfig signingConfigs.debug
             minifyEnabled true
             shrinkResources false
             useProguard true 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        } */
+
+        debug {
+            signingConfig signingConfigs.debug
+            // minifyEnabled true
+            shrinkResources false
+            // useProguard true 
+            // proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
     }

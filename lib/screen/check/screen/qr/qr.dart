@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:xfocus_mobile/animations/slide_right_route.dart';
-// import 'reader.dart';
-// import 'writer.dart';
+import 'reader.dart';
+import 'writer.dart';
 import 'preference.dart' as qrPreference;
 
 class QrScreen extends StatelessWidget {
@@ -20,6 +20,39 @@ class QrScreen extends StatelessWidget {
                   context,
                   SlideRightRoute(
                     widget: qrPreference.PreferenceScreen(),
+                  ),
+                ),
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.settings,
+            ),
+            onPressed: () => Navigator.push(
+                  context,
+                  SlideRightRoute(
+                    widget: QrreaderScreen(),
+                  ),
+                ),
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.settings,
+            ),
+            onPressed: () => Navigator.push(
+                  context,
+                  SlideRightRoute(
+                    widget: Qrwriter(),
+                  ),
+                ),
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.settings,
+            ),
+            onPressed: () => Navigator.push(
+                  context,
+                  SlideRightRoute(
+                    widget: Qrwriter(),
                   ),
                 ),
           ),
