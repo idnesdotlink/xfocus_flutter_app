@@ -23,6 +23,7 @@ import 'screen/statusbar/statusbar.dart';
 import 'screen/slideable/slideable.dart';
 import 'screen/admob/admob.dart';
 import 'screen/simple_auth/simple_auth.dart';
+import 'screen/camera/camera.dart';
 
 class CheckScreenItem extends StatelessWidget {
   final String title;
@@ -175,6 +176,10 @@ class _CheckScreenState extends State<CheckScreen> {
         CheckScreenItem(
           title: 'Calendar3',
           onTap: () => _goToScreen(context, CalendarScreen3()),
+        ),
+        CheckScreenItem(
+          title: 'Camera',
+          onTap: () => _goToScreen(context, CameraScreen.withCameraList()),
           bottomBorder: false,
         ),
       ]),
