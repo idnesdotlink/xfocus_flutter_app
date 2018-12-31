@@ -100,14 +100,18 @@ flutter:
   uses-material-design: true
 
   assets:
+    # svg
+    - assets/svg/autodrive.svg
+    # png
+    - assets/png/logo.png
+    - assets/png/logo-50.png
+    # json
     - assets/json/cash.json
     - assets/json/inventory.json
     - assets/json/account_receivable.json
     - assets/json/account_payable.json
     - assets/json/sales.json
     - assets/json/counter.json
-    - assets/png/logo.png
-    - assets/png/logo-50.png
     # dribble
     - assets/example/dribble/login.jpg
     - assets/example/dribble/home.jpeg
@@ -125,6 +129,8 @@ flutter:
     - assets/example/bookreader/images/book2.gif
     - assets/example/bookreader/images/book3.gif
     - assets/example/bookreader/images/book4.gif
+    # georgeous_login
+    - assets/example/georgeous_login/img/login_logo.png
   
   fonts:
     # georgeous_login

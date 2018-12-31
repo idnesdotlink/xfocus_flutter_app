@@ -10,6 +10,7 @@ import 'package:xfocus_mobile/screen/account_receivable/account_receivable.dart'
 import 'package:xfocus_mobile/screen/help/help.dart';
 import 'package:xfocus_mobile/screen/sales/sales.dart';
 import 'package:xfocus_mobile/screen/check/check.dart';
+import 'package:xfocus_mobile/example/example.dart';
 import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -121,6 +122,16 @@ class _DashboardPageState extends State<DashboardPage> {
                           context,
                           SlideRightRoute(
                             widget: CheckScreen(),
+                          ),
+                        ),
+                  ),
+                  DashboardIcon(
+                    title: 'Example',
+                    icon: Icons.developer_board,
+                    onTap: () => Navigator.push(
+                          context,
+                          SlideRightRoute(
+                            widget: ExampleScreen(),
                           ),
                         ),
                   ),

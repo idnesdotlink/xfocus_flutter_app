@@ -40,6 +40,12 @@ class _CameraScreen2State extends State<CameraScreen2> {
   CameraController controller;
   String imagePath;
 
+  @override
+  void dispose() {
+    controller?.dispose();
+    super.dispose();
+  }
+
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
