@@ -7,7 +7,6 @@ class LoginScreen3 extends StatefulWidget {
 
 class _LoginScreen3State extends State<LoginScreen3>
     with TickerProviderStateMixin {
-
   //The code is commented because instead of manual scrolling with animation,
   //Now PageView is being used
 
@@ -478,7 +477,7 @@ class _LoginScreen3State extends State<LoginScreen3>
                                 children: <Widget>[
                                   new Expanded(
                                     child: new FlatButton(
-                                      onPressed: ()=>{},
+                                      onPressed: () => {},
                                       padding: EdgeInsets.only(
                                         top: 20.0,
                                         bottom: 20.0,
@@ -532,7 +531,7 @@ class _LoginScreen3State extends State<LoginScreen3>
                                 children: <Widget>[
                                   new Expanded(
                                     child: new FlatButton(
-                                      onPressed: ()=>{},
+                                      onPressed: () => {},
                                       padding: EdgeInsets.only(
                                         top: 20.0,
                                         bottom: 20.0,
@@ -833,7 +832,8 @@ class _LoginScreen3State extends State<LoginScreen3>
     );
   }
 
-  PageController _controller = new PageController(initialPage: 1, viewportFraction: 1.0);
+  PageController _controller =
+      new PageController(initialPage: 1, viewportFraction: 1.0);
 
   @override
   Widget build(BuildContext context) {

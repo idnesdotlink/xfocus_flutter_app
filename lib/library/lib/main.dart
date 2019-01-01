@@ -39,71 +39,72 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Container(
-        child: new Column(
-          children: <Widget>[
-            Divider(
-              height: 50.0,
-              color: Colors.white,
-            ),
-            ColorLoader(colors: colors, duration: Duration(milliseconds: 1200)),
-            Divider(
-              height: 20.0,
-              color: Colors.white,
-            ),
-            ColorLoader3(
-              radius: 15.0,
-              dotRadius: 6.0,
-            ),
-            ColorLoader3(
-              radius: 20.0,
-              dotRadius: 5.0,
-            ),
-            Divider(height: 20.0, color: Colors.white),
-            ColorLoader2(),
-            Divider(
-              height: 50.0,
-              color: Colors.white,
-            ),
-            ColorLoader4(),
-            Divider(
-              height: 45.0,
-              color: Colors.white,
-            ),
-            ColorLoader4(
-              dotOneColor: Colors.pink,
-              dotTwoColor: Colors.amber,
-              dotThreeColor: Colors.deepOrange,
-              dotType: DotType.square,
-              duration: Duration(milliseconds: 1200),
-            ),
-            Divider(
-              height: 45.0,
-              color: Colors.white,
-            ),
-            ColorLoader4(
-              dotOneColor: Colors.pink,
-              dotTwoColor: Colors.amber,
-              dotThreeColor: Colors.deepOrange,
-              duration: Duration(seconds: 2),
-            ),
-            Divider(
-              height: 50.0,
-              color: Colors.white,
-            ),
-            ColorLoader4(
-              dotOneColor: Colors.indigoAccent,
-              dotTwoColor: Colors.teal,
-              dotThreeColor: Colors.pink,
-              dotType: DotType.diamond,
-              duration: Duration(milliseconds: 1500),
-            ),
-            Divider(
-              height: 45.0,
-              color: Colors.white,
-            ),
-            ColorLoader5(
+        backgroundColor: Colors.white,
+        body: Container(
+          child: new Column(
+            children: <Widget>[
+              Divider(
+                height: 50.0,
+                color: Colors.white,
+              ),
+              ColorLoader(
+                  colors: colors, duration: Duration(milliseconds: 1200)),
+              Divider(
+                height: 20.0,
+                color: Colors.white,
+              ),
+              ColorLoader3(
+                radius: 15.0,
+                dotRadius: 6.0,
+              ),
+              ColorLoader3(
+                radius: 20.0,
+                dotRadius: 5.0,
+              ),
+              Divider(height: 20.0, color: Colors.white),
+              ColorLoader2(),
+              Divider(
+                height: 50.0,
+                color: Colors.white,
+              ),
+              ColorLoader4(),
+              Divider(
+                height: 45.0,
+                color: Colors.white,
+              ),
+              ColorLoader4(
+                dotOneColor: Colors.pink,
+                dotTwoColor: Colors.amber,
+                dotThreeColor: Colors.deepOrange,
+                dotType: DotType.square,
+                duration: Duration(milliseconds: 1200),
+              ),
+              Divider(
+                height: 45.0,
+                color: Colors.white,
+              ),
+              ColorLoader4(
+                dotOneColor: Colors.pink,
+                dotTwoColor: Colors.amber,
+                dotThreeColor: Colors.deepOrange,
+                duration: Duration(seconds: 2),
+              ),
+              Divider(
+                height: 50.0,
+                color: Colors.white,
+              ),
+              ColorLoader4(
+                dotOneColor: Colors.indigoAccent,
+                dotTwoColor: Colors.teal,
+                dotThreeColor: Colors.pink,
+                dotType: DotType.diamond,
+                duration: Duration(milliseconds: 1500),
+              ),
+              Divider(
+                height: 45.0,
+                color: Colors.white,
+              ),
+              ColorLoader5(
                 dotOneColor: Colors.redAccent,
                 dotTwoColor: Colors.blueAccent,
                 dotThreeColor: Colors.green,
@@ -111,8 +112,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 dotIcon: Icon(Icons.adjust),
                 duration: Duration(seconds: 1),
               )
-          ],
-      ),)
-    );
+            ],
+          ),
+        ));
   }
 }

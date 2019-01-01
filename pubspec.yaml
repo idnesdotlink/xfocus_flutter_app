@@ -38,6 +38,7 @@ dependencies:
   flutter_colorpicker: ^0.1.0
   flutter_easyrefresh: ^1.0.7
   flutter_local_notifications: 0.4.2+1
+  flutter_map: ^0.4.0
   flutter_markdown: ^0.2.0
   flutter_picker: ^1.0.5
   flutter_range_slider: ^1.0.1
@@ -68,6 +69,7 @@ dependencies:
   open_iconic_flutter: ^0.3.0
   path_provider: ^0.4.1
   percent_indicator: ^1.0.11
+  photo_view: ^0.1.2
   qr_flutter: ^1.1.5
   qr_reader: ^0.1.3
   quick_actions: ^0.2.2
@@ -112,6 +114,8 @@ flutter:
     - assets/json/account_payable.json
     - assets/json/sales.json
     - assets/json/counter.json
+
+    # EXAMPLE ASSETS START
     # dribble
     - assets/example/dribble/login.jpg
     - assets/example/dribble/home.jpeg
@@ -131,8 +135,11 @@ flutter:
     - assets/example/bookreader/images/book4.gif
     # georgeous_login
     - assets/example/georgeous_login/img/login_logo.png
+    # EXAMPLE ASSETS END
   
   fonts:
+
+    # EXAMPLE FONTS START
     # georgeous_login
     - family: WorkSansSemiBold
       fonts:
@@ -147,3 +154,4 @@ flutter:
     - family: Fontello
       fonts:
         - asset: assets/example/bookreader/fonts/fontello.ttf
+    # EXAMPLE FONTS END

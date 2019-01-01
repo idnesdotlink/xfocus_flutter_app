@@ -7,7 +7,13 @@ class LoginScreen2 extends StatelessWidget {
   final Color foregroundColor;
   final AssetImage logo;
 
-  LoginScreen2({Key k, this.backgroundColor1, this.backgroundColor2, this.highlightColor, this.foregroundColor, this.logo});
+  LoginScreen2(
+      {Key k,
+      this.backgroundColor1,
+      this.backgroundColor2,
+      this.highlightColor,
+      this.foregroundColor,
+      this.logo});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +21,12 @@ class LoginScreen2 extends StatelessWidget {
       decoration: new BoxDecoration(
         gradient: new LinearGradient(
           begin: Alignment.centerLeft,
-          end: new Alignment(1.0, 0.0), // 10% of the width, so there are ten blinds.
-          colors: [this.backgroundColor1, this.backgroundColor2], // whitish to gray
+          end: new Alignment(
+              1.0, 0.0), // 10% of the width, so there are ten blinds.
+          colors: [
+            this.backgroundColor1,
+            this.backgroundColor2
+          ], // whitish to gray
           tileMode: TileMode.repeated, // repeats the gradient over the canvas
         ),
       ),
@@ -44,13 +54,13 @@ class LoginScreen2 extends StatelessWidget {
                       ),
                     ),
                     decoration: BoxDecoration(
-                        border: Border.all(
-                          color: this.foregroundColor,
-                          width: 1.0,
-                        ),
-                        shape: BoxShape.circle,
-                        //image: DecorationImage(image: this.logo)
+                      border: Border.all(
+                        color: this.foregroundColor,
+                        width: 1.0,
                       ),
+                      shape: BoxShape.circle,
+                      //image: DecorationImage(image: this.logo)
+                    ),
                   ),
                   new Padding(
                     padding: const EdgeInsets.all(16.0),
@@ -161,7 +171,6 @@ class LoginScreen2 extends StatelessWidget {
               ],
             ),
           ),
-
           new Container(
             width: MediaQuery.of(context).size.width,
             margin: const EdgeInsets.only(left: 40.0, right: 40.0, top: 10.0),
@@ -176,19 +185,21 @@ class LoginScreen2 extends StatelessWidget {
                     onPressed: () => {},
                     child: Text(
                       "Forgot your password?",
-                      style: TextStyle(color: this.foregroundColor.withOpacity(0.5)),
+                      style: TextStyle(
+                          color: this.foregroundColor.withOpacity(0.5)),
                     ),
                   ),
                 ),
               ],
             ),
           ),
-          
-          new Expanded(child: Divider(),),
-
+          new Expanded(
+            child: Divider(),
+          ),
           new Container(
             width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.only(left: 40.0, right: 40.0, top: 10.0, bottom: 20.0),
+            margin: const EdgeInsets.only(
+                left: 40.0, right: 40.0, top: 10.0, bottom: 20.0),
             alignment: Alignment.center,
             child: new Row(
               children: <Widget>[
@@ -200,7 +211,8 @@ class LoginScreen2 extends StatelessWidget {
                     onPressed: () => {},
                     child: Text(
                       "Don't have an account? Create One",
-                      style: TextStyle(color: this.foregroundColor.withOpacity(0.5)),
+                      style: TextStyle(
+                          color: this.foregroundColor.withOpacity(0.5)),
                     ),
                   ),
                 ),

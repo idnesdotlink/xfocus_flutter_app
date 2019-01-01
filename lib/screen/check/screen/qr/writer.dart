@@ -58,7 +58,7 @@ class _QrwriterState extends State<Qrwriter> {
 
   _contentWidget() {
     // final bodyHeight = MediaQuery.of(context).size.height -
-        // MediaQuery.of(context).viewInsets.bottom;
+    // MediaQuery.of(context).viewInsets.bottom;
     return new Container(
       color: const Color(0xFFFFFFFF),
       child: new Column(

@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
 class LoginScreen1 extends StatelessWidget {
-
   final Color primaryColor;
   final Color backgroundColor;
   final AssetImage backgroundImage;
 
-  LoginScreen1({
-    Key key,
-    this.primaryColor, this.backgroundColor, this.backgroundImage
-  });
+  LoginScreen1(
+      {Key key, this.primaryColor, this.backgroundColor, this.backgroundImage});
 
   @override
   Widget build(BuildContext context) {
@@ -69,12 +66,12 @@ class LoginScreen1 extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.0),
             ),
             margin:
-            const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
             child: Row(
               children: <Widget>[
                 new Padding(
                   padding:
-                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
                   child: Icon(
                     Icons.person_outline,
                     color: Colors.grey,
@@ -114,12 +111,12 @@ class LoginScreen1 extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.0),
             ),
             margin:
-            const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
             child: Row(
               children: <Widget>[
                 new Padding(
                   padding:
-                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
                   child: Icon(
                     Icons.lock_open,
                     color: Colors.grey,
@@ -173,7 +170,7 @@ class LoginScreen1 extends StatelessWidget {
                             child: FlatButton(
                               shape: new RoundedRectangleBorder(
                                   borderRadius:
-                                  new BorderRadius.circular(28.0)),
+                                      new BorderRadius.circular(28.0)),
                               splashColor: Colors.white,
                               color: Colors.white,
                               child: Icon(
@@ -222,7 +219,7 @@ class LoginScreen1 extends StatelessWidget {
                             child: FlatButton(
                               shape: new RoundedRectangleBorder(
                                   borderRadius:
-                                  new BorderRadius.circular(28.0)),
+                                      new BorderRadius.circular(28.0)),
                               splashColor: Colors.white,
                               color: Colors.white,
                               child: Icon(
@@ -265,8 +262,6 @@ class LoginScreen1 extends StatelessWidget {
               ],
             ),
           ),
-
-
         ],
       ),
     );
