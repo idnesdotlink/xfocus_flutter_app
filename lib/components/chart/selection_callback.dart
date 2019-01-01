@@ -8,38 +8,38 @@ class SelectionCallback extends StatefulWidget {
   SelectionCallback(this.seriesList, {this.animate});
 
   factory SelectionCallback.withSampleData() {
-    return new SelectionCallback(
+    return SelectionCallback(
       _createSampleData(),
       animate: false,
     );
   }
 
   @override
-  State<StatefulWidget> createState() => new _SelectionCallbackState();
+  State<StatefulWidget> createState() => _SelectionCallbackState();
 
   static List<charts.Series<TimeSeriesSales, DateTime>> _createSampleData() {
     final usData = [
-      new TimeSeriesSales(new DateTime(2017, 9, 19), 5),
-      new TimeSeriesSales(new DateTime(2017, 9, 26), 25),
-      new TimeSeriesSales(new DateTime(2017, 10, 3), 78),
-      new TimeSeriesSales(new DateTime(2017, 10, 10), 54),
+      TimeSeriesSales(DateTime(2017, 9, 19), 5),
+      TimeSeriesSales(DateTime(2017, 9, 26), 25),
+      TimeSeriesSales(DateTime(2017, 10, 3), 78),
+      TimeSeriesSales(DateTime(2017, 10, 10), 54),
     ];
 
     final ukData = [
-      new TimeSeriesSales(new DateTime(2017, 9, 19), 15),
-      new TimeSeriesSales(new DateTime(2017, 9, 26), 33),
-      new TimeSeriesSales(new DateTime(2017, 10, 3), 68),
-      new TimeSeriesSales(new DateTime(2017, 10, 10), 48),
+      TimeSeriesSales(DateTime(2017, 9, 19), 15),
+      TimeSeriesSales(DateTime(2017, 9, 26), 33),
+      TimeSeriesSales(DateTime(2017, 10, 3), 68),
+      TimeSeriesSales(DateTime(2017, 10, 10), 48),
     ];
 
     return [
-      new charts.Series<TimeSeriesSales, DateTime>(
+      charts.Series<TimeSeriesSales, DateTime>(
         id: 'US Sales',
         domainFn: (TimeSeriesSales sales, _) => sales.time,
         measureFn: (TimeSeriesSales sales, _) => sales.sales,
         data: usData,
       ),
-      new charts.Series<TimeSeriesSales, DateTime>(
+      charts.Series<TimeSeriesSales, DateTime>(
         id: 'UK Sales',
         domainFn: (TimeSeriesSales sales, _) => sales.time,
         measureFn: (TimeSeriesSales sales, _) => sales.sales,
@@ -74,13 +74,13 @@ class _SelectionCallbackState extends State<SelectionCallback> {
   @override
   Widget build(BuildContext context) {
     final children = <Widget>[
-      new SizedBox(
+      SizedBox(
           height: 150.0,
-          child: new charts.TimeSeriesChart(
+          child: charts.TimeSeriesChart(
             widget.seriesList,
             animate: widget.animate,
             selectionModels: [
-              new charts.SelectionModelConfig(
+              charts.SelectionModelConfig(
                 type: charts.SelectionModelType.info,
                 changedListener: _onSelectionChanged,
               )
@@ -89,15 +89,15 @@ class _SelectionCallbackState extends State<SelectionCallback> {
     ];
 
     if (_time != null) {
-      children.add(new Padding(
-          padding: new EdgeInsets.only(top: 5.0),
-          child: new Text(_time.toString())));
+      children.add(Padding(
+          padding: EdgeInsets.only(top: 5.0),
+          child: Text(_time.toString())));
     }
     _measures?.forEach((String series, num value) {
-      children.add(new Text('$series: $value'));
+      children.add(Text('$series: $value'));
     });
 
-    return new Column(children: children);
+    return Column(children: children);
   }
 }
 

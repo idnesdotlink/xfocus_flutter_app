@@ -9,21 +9,21 @@ class DonutChart extends StatefulWidget {
   DonutChart(this.seriesList, {this.animate, this.onSelected});
 
   factory DonutChart.withSampleData() {
-    return new DonutChart(
+    return DonutChart(
       _createSampleData(),
       animate: false,
     );
   }
 
   /* factory DonutChart.fromData() {
-    return new DonutChart(
+    return DonutChart(
       _createSampleData(),
       animate: false,
     );
   } */
 
   @override
-  State<StatefulWidget> createState() => new _DonutChartState();
+  State<StatefulWidget> createState() => _DonutChartState();
 
   static List<charts.Series<LinearSales, dynamic>> _createSampleData() {
     return sampleData();
@@ -52,7 +52,7 @@ class _DonutChartState extends State<DonutChart> {
           changedListener: _onSelectionChanged,
         ),
       ],
-      defaultRenderer: new charts.ArcRendererConfig(
+      defaultRenderer: charts.ArcRendererConfig(
         arcWidth: 50,
         arcRendererDecorators: [
           charts.ArcLabelDecorator(),
@@ -65,8 +65,8 @@ class _DonutChartState extends State<DonutChart> {
 
 List<charts.Series<LinearSales, dynamic>> sampleData() {
   final data = [
-    new LinearSales('Kas', 10000000),
-    new LinearSales('Kas Kecil', 500000),
+    LinearSales('Kas', 10000000),
+    LinearSales('Kas Kecil', 500000),
   ];
 
   return [

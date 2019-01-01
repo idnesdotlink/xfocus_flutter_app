@@ -63,7 +63,7 @@ class GraphPaint extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    Paint p1 = new Paint()
+    Paint p1 = Paint()
       ..color = Colors.deepOrangeAccent
       ..strokeWidth = 2.0
       ..strokeCap = StrokeCap.round
@@ -71,14 +71,14 @@ class GraphPaint extends CustomPainter {
 
     for (int i = 0; i <= size.width; i += 1) {
       canvas.drawLine(
-          new Offset(
+          Offset(
               i.toDouble(),
               (sin((time * 360 - i) % 360 * Vector.degrees2Radians) *
                       0.9 *
                       size.height /
                       2 +
                   size.height / 2)),
-          new Offset(
+          Offset(
               i.toDouble(),
               (sin((time * 360 - i) % 360 * Vector.degrees2Radians) *
                       0.9 *

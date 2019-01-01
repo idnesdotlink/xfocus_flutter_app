@@ -6,17 +6,17 @@ import 'loaders/color_loader_4.dart';
 import 'loaders/color_loader_5.dart';
 import 'loaders/dot_type.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Flutter Login Screen 1',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(),
+      home: MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         backgroundColor: Colors.white,
         body: Container(
-          child: new Column(
+          child: Column(
             children: <Widget>[
               Divider(
                 height: 50.0,

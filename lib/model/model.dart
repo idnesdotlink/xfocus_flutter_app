@@ -13,4 +13,4 @@ class A extends Model {
   A({this.data}) : super(data: data);
 }
 
-var a = new A().test();
+var a = A().test();

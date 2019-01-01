@@ -123,7 +123,7 @@ class AnimatedCircularChart extends StatefulWidget {
 
     if (nullOk || result != null) return result;
 
-    throw new FlutterError(
+    throw FlutterError(
         'AnimatedCircularChart.of() called with a context that does not contain a AnimatedCircularChart.\n'
         'No AnimatedCircularChart ancestor could be found starting from the context that was passed to AnimatedCircularChart.of(). '
         'This can happen when the context provided is from the same StatefulWidget that '
@@ -133,7 +133,7 @@ class AnimatedCircularChart extends StatefulWidget {
   }
 
   @override
-  AnimatedCircularChartState createState() => new AnimatedCircularChartState();
+  AnimatedCircularChartState createState() => AnimatedCircularChartState();
 }
 
 /// The state for a circular chart that animates when its data is updated.
@@ -144,9 +144,9 @@ class AnimatedCircularChart extends StatefulWidget {
 /// can refer to the [AnimatedCircularChart]'s state with a global key:
 ///
 /// ```dart
-/// GlobalKey<AnimatedCircularChartState> chartKey = new GlobalKey<AnimatedCircularChartState>();
+/// GlobalKey<AnimatedCircularChartState> chartKey = GlobalKey<AnimatedCircularChartState>();
 /// ...
-/// new AnimatedCircularChart(key: chartKey, ...);
+/// AnimatedCircularChart(key: chartKey, ...);
 /// ...
 /// chartKey.currentState.updateData(newData);
 /// ```
@@ -156,21 +156,21 @@ class AnimatedCircularChartState extends State<AnimatedCircularChart>
   AnimationController _animation;
   final Map<String, int> _stackRanks = <String, int>{};
   final Map<String, int> _entryRanks = <String, int>{};
-  final TextPainter _labelPainter = new TextPainter();
+  final TextPainter _labelPainter = TextPainter();
 
   @override
   void initState() {
     super.initState();
-    _animation = new AnimationController(
+    _animation = AnimationController(
       duration: widget.duration,
       vsync: this,
     );
 
     _assignRanks(widget.initialChartData);
 
-    _tween = new CircularChartTween(
-      new CircularChart.empty(chartType: widget.chartType),
-      new CircularChart.fromData(
+    _tween = CircularChartTween(
+      CircularChart.empty(chartType: widget.chartType),
+      CircularChart.fromData(
         size: widget.size,
         data: widget.initialChartData,
         chartType: widget.chartType,
@@ -220,7 +220,7 @@ class AnimatedCircularChartState extends State<AnimatedCircularChart>
       TextStyle _labelStyle =
           widget.labelStyle ?? Theme.of(context).textTheme.body2;
       _labelPainter
-        ..text = new TextSpan(style: _labelStyle, text: widget.holeLabel)
+        ..text = TextSpan(style: _labelStyle, text: widget.holeLabel)
         ..textDirection = Directionality.of(context)
         ..textScaleFactor = MediaQuery.of(context).textScaleFactor
         ..layout();
@@ -235,9 +235,9 @@ class AnimatedCircularChartState extends State<AnimatedCircularChart>
     _assignRanks(data);
 
     setState(() {
-      _tween = new CircularChartTween(
+      _tween = CircularChartTween(
         _tween.evaluate(_animation),
-        new CircularChart.fromData(
+        CircularChart.fromData(
           size: widget.size,
           data: data,
           chartType: widget.chartType,
@@ -255,9 +255,9 @@ class AnimatedCircularChartState extends State<AnimatedCircularChart>
 
   @override
   Widget build(BuildContext context) {
-    return new CustomPaint(
+    return CustomPaint(
       size: widget.size,
-      painter: new AnimatedCircularChartPainter(
+      painter: AnimatedCircularChartPainter(
         _tween.animate(_animation),
         widget.holeLabel != null ? _labelPainter : null,
       ),

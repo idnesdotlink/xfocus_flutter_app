@@ -9,14 +9,14 @@ class DonutCashYearlySelection extends StatefulWidget {
   DonutCashYearlySelection(this.seriesList, {this.animate, this.onSelected});
 
   factory DonutCashYearlySelection.withSampleData() {
-    return new DonutCashYearlySelection(
+    return DonutCashYearlySelection(
       _createSampleData(),
       animate: false,
     );
   }
 
   @override
-  State<StatefulWidget> createState() => new _DonutCashYearlySelectionState();
+  State<StatefulWidget> createState() => _DonutCashYearlySelectionState();
 
   static List<charts.Series<LinearSales, dynamic>> _createSampleData() {
     return sampleData();
@@ -45,7 +45,7 @@ class _DonutCashYearlySelectionState extends State<DonutCashYearlySelection> {
           changedListener: _onSelectionChanged,
         ),
       ],
-      defaultRenderer: new charts.ArcRendererConfig(
+      defaultRenderer: charts.ArcRendererConfig(
         arcWidth: 100,
         arcRendererDecorators: [
           charts.ArcLabelDecorator(),
@@ -58,8 +58,8 @@ class _DonutCashYearlySelectionState extends State<DonutCashYearlySelection> {
 
 List<charts.Series<LinearSales, dynamic>> sampleData() {
   final data = [
-    new LinearSales('Kas', 10000000),
-    new LinearSales('Kas Kecil', 500000),
+    LinearSales('Kas', 10000000),
+    LinearSales('Kas Kecil', 500000),
   ];
 
   return [

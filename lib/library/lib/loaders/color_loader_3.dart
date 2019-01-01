@@ -79,22 +79,22 @@ class _ColorLoader3State extends State<ColorLoader3>
       width: 100.0,
       height: 100.0,
       //color: Colors.black12,
-      child: new Center(
-        child: new RotationTransition(
+      child: Center(
+        child: RotationTransition(
           turns: animation_rotation,
-          child: new Container(
+          child: Container(
             //color: Colors.limeAccent,
-            child: new Center(
+            child: Center(
               child: Stack(
                 children: <Widget>[
-                  new Transform.translate(
+                  Transform.translate(
                     offset: Offset(0.0, 0.0),
                     child: Dot(
                       radius: radius,
                       color: Colors.black12,
                     ),
                   ),
-                  new Transform.translate(
+                  Transform.translate(
                     child: Dot(
                       radius: dotRadius,
                       color: Colors.amber,
@@ -104,7 +104,7 @@ class _ColorLoader3State extends State<ColorLoader3>
                       radius * sin(0.0),
                     ),
                   ),
-                  new Transform.translate(
+                  Transform.translate(
                     child: Dot(
                       radius: dotRadius,
                       color: Colors.deepOrangeAccent,
@@ -114,7 +114,7 @@ class _ColorLoader3State extends State<ColorLoader3>
                       radius * sin(0.0 + 1 * pi / 4),
                     ),
                   ),
-                  new Transform.translate(
+                  Transform.translate(
                     child: Dot(
                       radius: dotRadius,
                       color: Colors.pinkAccent,
@@ -124,7 +124,7 @@ class _ColorLoader3State extends State<ColorLoader3>
                       radius * sin(0.0 + 2 * pi / 4),
                     ),
                   ),
-                  new Transform.translate(
+                  Transform.translate(
                     child: Dot(
                       radius: dotRadius,
                       color: Colors.purple,
@@ -134,7 +134,7 @@ class _ColorLoader3State extends State<ColorLoader3>
                       radius * sin(0.0 + 3 * pi / 4),
                     ),
                   ),
-                  new Transform.translate(
+                  Transform.translate(
                     child: Dot(
                       radius: dotRadius,
                       color: Colors.yellow,
@@ -144,7 +144,7 @@ class _ColorLoader3State extends State<ColorLoader3>
                       radius * sin(0.0 + 4 * pi / 4),
                     ),
                   ),
-                  new Transform.translate(
+                  Transform.translate(
                     child: Dot(
                       radius: dotRadius,
                       color: Colors.lightGreen,
@@ -154,7 +154,7 @@ class _ColorLoader3State extends State<ColorLoader3>
                       radius * sin(0.0 + 5 * pi / 4),
                     ),
                   ),
-                  new Transform.translate(
+                  Transform.translate(
                     child: Dot(
                       radius: dotRadius,
                       color: Colors.orangeAccent,
@@ -164,7 +164,7 @@ class _ColorLoader3State extends State<ColorLoader3>
                       radius * sin(0.0 + 6 * pi / 4),
                     ),
                   ),
-                  new Transform.translate(
+                  Transform.translate(
                     child: Dot(
                       radius: dotRadius,
                       color: Colors.blueAccent,
@@ -198,7 +198,7 @@ class Dot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Center(
+    return Center(
       child: Container(
         width: radius,
         height: radius,

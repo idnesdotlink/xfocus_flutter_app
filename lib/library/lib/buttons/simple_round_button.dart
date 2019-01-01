@@ -14,18 +14,18 @@ class SimpleRoundButton extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 20.0),
       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-      child: new Row(
+      child: Row(
         children: <Widget>[
-          new Expanded(
+          Expanded(
             child: FlatButton(
-              shape: new RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(30.0)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0)),
               splashColor: this.backgroundColor,
               color: this.backgroundColor,
-              child: new Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new Padding(
+                  Padding(
                     padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
                     child: buttonText,
                   ),

@@ -57,7 +57,7 @@ class _ColorLoader2State extends State<ColorLoader2>
     return Container(
       child: Stack(
         children: <Widget>[
-          new RotationTransition(
+          RotationTransition(
             turns: animation1,
             child: CustomPaint(
               painter: Arc1Painter(widget.color1),
@@ -67,7 +67,7 @@ class _ColorLoader2State extends State<ColorLoader2>
               ),
             ),
           ),
-          new RotationTransition(
+          RotationTransition(
             turns: animation2,
             child: CustomPaint(
               painter: Arc2Painter(widget.color2),
@@ -77,7 +77,7 @@ class _ColorLoader2State extends State<ColorLoader2>
               ),
             ),
           ),
-          new RotationTransition(
+          RotationTransition(
             turns: animation3,
             child: CustomPaint(
               painter: Arc3Painter(widget.color3),
@@ -108,13 +108,13 @@ class Arc1Painter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    Paint p1 = new Paint()
+    Paint p1 = Paint()
       ..color = color
       ..strokeWidth = 2.0
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.stroke;
 
-    Rect rect1 = new Rect.fromLTWH(0.0, 0.0, size.width, size.height);
+    Rect rect1 = Rect.fromLTWH(0.0, 0.0, size.width, size.height);
 
     canvas.drawArc(rect1, 0.0, 0.5 * pi, false, p1);
     canvas.drawArc(rect1, 0.6 * pi, 0.8 * pi, false, p1);
@@ -134,13 +134,13 @@ class Arc2Painter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    Paint p2 = new Paint()
+    Paint p2 = Paint()
       ..color = color
       ..strokeWidth = 2.0
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.stroke;
 
-    Rect rect2 = new Rect.fromLTWH(
+    Rect rect2 = Rect.fromLTWH(
         0.0 + (0.2 * size.width) / 2,
         0.0 + (0.2 * size.height) / 2,
         size.width - 0.2 * size.width,
@@ -164,13 +164,13 @@ class Arc3Painter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    Paint p3 = new Paint()
+    Paint p3 = Paint()
       ..color = color
       ..strokeWidth = 1.5
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.stroke;
 
-    Rect rect3 = new Rect.fromLTWH(
+    Rect rect3 = Rect.fromLTWH(
         0.0 + (0.4 * size.width) / 2,
         0.0 + (0.4 * size.height) / 2,
         size.width - 0.4 * size.width,

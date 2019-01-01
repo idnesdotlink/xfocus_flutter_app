@@ -6,11 +6,11 @@ import '../buttons/simple_round_only_icon_button.dart';
 class ButtonExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
       padding: EdgeInsets.only(top: 30.0),
       color: Colors.white,
       height: MediaQuery.of(context).size.height,
-      child: new Column(
+      child: Column(
         children: <Widget>[
           SimpleRoundButton(
             backgroundColor: Colors.redAccent,
@@ -53,9 +53,9 @@ class ButtonExample extends StatelessWidget {
             icon: Icon(Icons.share),
             iconAlignment: Alignment.center,
           ),
-          new Row(
+          Row(
             children: <Widget>[
-              new Container(
+              Container(
                 width: MediaQuery.of(context).size.width * 0.5,
                 child: SimpleRoundOnlyIconButton(
                   backgroundColor: Colors.blueAccent,
@@ -63,7 +63,7 @@ class ButtonExample extends StatelessWidget {
                   iconAlignment: Alignment.center,
                 ),
               ),
-              new Container(
+              Container(
                 width: MediaQuery.of(context).size.width * 0.5,
                 child: SimpleRoundOnlyIconButton(
                   backgroundColor: Colors.redAccent,
@@ -85,9 +85,9 @@ class ButtonExample extends StatelessWidget {
             iconColor: Colors.redAccent,
             iconAlignment: Alignment.centerLeft,
           ),
-          new Row(
+          Row(
             children: <Widget>[
-              new Container(
+              Container(
                 width: MediaQuery.of(context).size.width * 0.66,
                 child: SimpleRoundIconButton(
                   backgroundColor: Colors.deepOrangeAccent,
@@ -100,7 +100,7 @@ class ButtonExample extends StatelessWidget {
                   iconAlignment: Alignment.centerRight,
                 ),
               ),
-              new Container(
+              Container(
                 width: MediaQuery.of(context).size.width * 0.33,
                 child: SimpleRoundButton(
                   backgroundColor: Colors.greenAccent,

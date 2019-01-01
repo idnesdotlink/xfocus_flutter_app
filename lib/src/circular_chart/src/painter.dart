@@ -44,7 +44,7 @@ void _paintLabel(Canvas canvas, Size size, TextPainter labelPainter) {
   if (labelPainter != null) {
     labelPainter.paint(
       canvas,
-      new Offset(
+      Offset(
         size.width / 2 - labelPainter.width / 2,
         size.height / 2 - labelPainter.height / 2,
       ),
@@ -53,7 +53,7 @@ void _paintLabel(Canvas canvas, Size size, TextPainter labelPainter) {
 }
 
 void _paintChart(Canvas canvas, Size size, CircularChart chart) {
-  final Paint segmentPaint = new Paint()
+  final Paint segmentPaint = Paint()
     ..style = chart.chartType == CircularChartType.Radial
         ? PaintingStyle.stroke
         : PaintingStyle.fill
@@ -67,8 +67,8 @@ void _paintChart(Canvas canvas, Size size, CircularChart chart) {
       segmentPaint.strokeWidth = stack.width;
 
       canvas.drawArc(
-        new Rect.fromCircle(
-          center: new Offset(size.width / 2, size.height / 2),
+        Rect.fromCircle(
+          center: Offset(size.width / 2, size.height / 2),
           radius: stack.radius,
         ),
         stack.startAngle * _kRadiansPerDegree,

@@ -110,7 +110,7 @@ class FullScreenDialogDemoState extends State<FullScreenDialogDemo> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              content: Text('Discard new event?', style: dialogTextStyle),
+              content: Text('Discard event?', style: dialogTextStyle),
               actions: <Widget>[
                 FlatButton(
                     child: const Text('CANCEL'),

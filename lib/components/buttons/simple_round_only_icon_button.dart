@@ -30,27 +30,27 @@ class SimpleRoundOnlyIconButton extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 20.0),
       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-      child: new Row(
+      child: Row(
         children: <Widget>[
-          new Expanded(
+          Expanded(
             child: FlatButton(
-              shape: new RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(30.0)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0)),
               splashColor: this.backgroundColor,
               color: this.backgroundColor,
-              child: new Row(
+              child: Row(
                 mainAxisAlignment: getMainAxisAlignment(),
                 children: <Widget>[
                   iconAlignment == Alignment.center
-                      ? new Transform.translate(
+                      ? Transform.translate(
                           offset: Offset(0.0, 0.0),
-                          child: new Container(
+                          child: Container(
                             padding: const EdgeInsets.only(
                                 left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                             child: FlatButton(
-                              shape: new RoundedRectangleBorder(
+                              shape: RoundedRectangleBorder(
                                   borderRadius:
-                                      new BorderRadius.circular(28.0)),
+                                      BorderRadius.circular(28.0)),
                               splashColor: backgroundColor,
                               color: backgroundColor,
                               child: Icon(
@@ -65,15 +65,15 @@ class SimpleRoundOnlyIconButton extends StatelessWidget {
                         )
                       : Container(),
                   iconAlignment == Alignment.centerLeft
-                      ? new Transform.translate(
+                      ? Transform.translate(
                           offset: Offset(-10.0, 0.0),
-                          child: new Container(
+                          child: Container(
                             padding: const EdgeInsets.only(
                                 left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                             child: FlatButton(
-                              shape: new RoundedRectangleBorder(
+                              shape: RoundedRectangleBorder(
                                   borderRadius:
-                                      new BorderRadius.circular(28.0)),
+                                      BorderRadius.circular(28.0)),
                               splashColor: Colors.white,
                               color: Colors.white,
                               child: Icon(
@@ -94,15 +94,15 @@ class SimpleRoundOnlyIconButton extends StatelessWidget {
                         )
                       : Container(),
                   iconAlignment == Alignment.centerRight
-                      ? new Transform.translate(
+                      ? Transform.translate(
                           offset: Offset(10.0, 0.0),
-                          child: new Container(
+                          child: Container(
                             padding: const EdgeInsets.only(
                                 left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                             child: FlatButton(
-                              shape: new RoundedRectangleBorder(
+                              shape: RoundedRectangleBorder(
                                   borderRadius:
-                                      new BorderRadius.circular(28.0)),
+                                      BorderRadius.circular(28.0)),
                               splashColor: Colors.white,
                               color: Colors.white,
                               child: Icon(

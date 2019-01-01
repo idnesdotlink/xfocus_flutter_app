@@ -129,11 +129,11 @@ class _FlipLoaderState extends State<FlipLoader>
   }
 
   Widget buildHalfFlipper(BuildContext context) {
-    return new AnimatedBuilder(
+    return AnimatedBuilder(
       animation: controller,
       builder: (BuildContext context, Widget child) {
         return Container(
-          child: new Transform(
+          child: Transform(
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.006)
               ..rotateX(sin(2 * pi * rotationVertical.value))
@@ -145,17 +145,17 @@ class _FlipLoaderState extends State<FlipLoader>
                       shape == "circle" ? BoxShape.circle : BoxShape.rectangle,
                   borderRadius: shape == "circle"
                       ? null
-                      : new BorderRadius.all(const Radius.circular(8.0)),
+                      : BorderRadius.all(const Radius.circular(8.0)),
                   color: loaderColor,
                 ),
                 width: 40.0,
                 height: 40.0,
                 child: rotateIcon == true
-                    ? new RotationTransition(
+                    ? RotationTransition(
                         turns: rotationHorizontal.value == 1.0
                             ? rotationVertical
                             : rotationHorizontal,
-                        child: new Center(
+                        child: Center(
                           child: Icon(
                             icon,
                             color: iconColor,
@@ -177,11 +177,11 @@ class _FlipLoaderState extends State<FlipLoader>
   }
 
   Widget buildFullFlipper(BuildContext context) {
-    return new AnimatedBuilder(
+    return AnimatedBuilder(
       animation: controller,
       builder: (BuildContext context, Widget child) {
         return Container(
-          child: new Transform(
+          child: Transform(
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.006)
               ..rotateX((2 * pi * rotationVertical.value))
@@ -192,12 +192,12 @@ class _FlipLoaderState extends State<FlipLoader>
                 shape: shape == "circle" ? BoxShape.circle : BoxShape.rectangle,
                 borderRadius: shape == "circle"
                     ? null
-                    : new BorderRadius.all(const Radius.circular(8.0)),
+                    : BorderRadius.all(const Radius.circular(8.0)),
                 color: loaderColor,
               ),
               width: 40.0,
               height: 40.0,
-              child: new Center(
+              child: Center(
                 child: Icon(
                   icon,
                   color: iconColor,
