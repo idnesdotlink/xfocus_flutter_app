@@ -20,7 +20,7 @@ class DashboardIcon extends StatelessWidget {
       child: Icon(
         (this.icon == null) ? Icons.access_alarms : this.icon,
         color: Colors.black.withOpacity(0.3),
-        size: 70.0,
+        size: 60.0,
       ),
     );
   }
@@ -59,19 +59,23 @@ class DashboardIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.transparent,
       child: Center(
         child: Container(
+          color: Colors.transparent,
           child: Padding(
             padding: EdgeInsets.all(10.0),
             child: InkWell(
               onTap: this.onTap,
               child: Container(
+                color: Colors.transparent,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     Container(
+                      color: Colors.transparent,
                       child: Center(
                         child: Stack(
                           overflow: Overflow.clip,

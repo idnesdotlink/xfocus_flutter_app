@@ -82,7 +82,7 @@ class _SelectionCallbackState extends State<SelectionCallback> {
             selectionModels: [
               new charts.SelectionModelConfig(
                 type: charts.SelectionModelType.info,
-                listener: _onSelectionChanged,
+                changedListener: _onSelectionChanged,
               )
             ],
           )),
