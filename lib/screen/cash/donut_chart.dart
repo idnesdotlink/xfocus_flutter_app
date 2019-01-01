@@ -49,7 +49,7 @@ class _DonutChartState extends State<DonutChart> {
       selectionModels: [
         charts.SelectionModelConfig(
           type: charts.SelectionModelType.info,
-          listener: _onSelectionChanged,
+          changedListener: _onSelectionChanged,
         ),
       ],
       defaultRenderer: new charts.ArcRendererConfig(
