@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:xfocus_mobile/components/app_bar/primary_app_bar.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:xfocus_mobile/service/camera.dart';
 
-List<CameraDescription> cameras;
+//List<CameraDescription> cameras;
 
 void logError(String code, String message) =>
     print('Error: $code\nError Message: $message');

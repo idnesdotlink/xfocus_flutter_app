@@ -4,12 +4,12 @@ import 'dart:io';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
-
+import 'package:xfocus_mobile/service/camera.dart';
 class CameraScreen2 extends StatefulWidget {
   CameraScreen2({Key key}) : super(key: key);
 
   factory CameraScreen2.withCameraList() {
-    gcl();
+    // gcl();
     return CameraScreen2(
         // storage: LocalJson(),
         );
@@ -237,7 +237,7 @@ class CameraApp extends StatelessWidget {
   }
 }
 
-List<CameraDescription> cameras;
+/* List<CameraDescription> cameras;
 
 Future<void> gcl() async {
   // Fetch the available cameras before initializing the app.
@@ -246,4 +246,4 @@ Future<void> gcl() async {
   } on CameraException catch (e) {
     logError(e.code, e.description);
   }
-}
+} */

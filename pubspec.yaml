@@ -133,8 +133,8 @@ flutter:
     - assets/example/bookreader/images/book2.gif
     - assets/example/bookreader/images/book3.gif
     - assets/example/bookreader/images/book4.gif
-    # georgeous_login
-    - assets/example/georgeous_login/img/login_logo.png
+    # gorgeous_login
+    - assets/example/gorgeous_login/img/login_logo.png
     # EXAMPLE ASSETS END
   
   fonts:
@@ -143,13 +143,13 @@ flutter:
     # georgeous_login
     - family: WorkSansSemiBold
       fonts:
-        - asset: assets/example/georgeous_login/fonts/Work_Sans/WorkSans-SemiBold.ttf
+        - asset: assets/example/gorgeous_login/fonts/Work_Sans/WorkSans-SemiBold.ttf
     - family: WorkSansBold
       fonts:
-        - asset: assets/example/georgeous_login/fonts/Work_Sans/WorkSans-Bold.ttf
+        - asset: assets/example/gorgeous_login/fonts/Work_Sans/WorkSans-Bold.ttf
     - family: WorkSansMedium
       fonts:
-        - asset: assets/example/georgeous_login/fonts/Work_Sans/WorkSans-Medium.ttf
+        - asset: assets/example/gorgeous_login/fonts/Work_Sans/WorkSans-Medium.ttf
     # bookreader
     - family: Fontello
       fonts:
