@@ -21,8 +21,8 @@ class LoginScreen2 extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.centerLeft,
-          end: Alignment(
-              1.0, 0.0), // 10% of the width, so there are ten blinds.
+          end:
+              Alignment(1.0, 0.0), // 10% of the width, so there are ten blinds.
           colors: [
             this.backgroundColor1,
             this.backgroundColor2

@@ -115,7 +115,7 @@ class _LoginScreen3State extends State<LoginScreen3>
     */
   }
 
-  Widget HomePage() {
+  Widget homePage() {
     return Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
@@ -241,7 +241,7 @@ class _LoginScreen3State extends State<LoginScreen3>
     );
   }
 
-  Widget LoginPage() {
+  Widget loginPage() {
     return Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
@@ -475,7 +475,7 @@ class _LoginScreen3State extends State<LoginScreen3>
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                              new Expanded(
+                                  new Expanded(
                                     child: FlatButton(
                                       onPressed: () => {},
                                       padding: EdgeInsets.only(
@@ -574,7 +574,7 @@ class _LoginScreen3State extends State<LoginScreen3>
     );
   }
 
-  Widget SignupPage() {
+  Widget signUpPage() {
     return Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
@@ -848,15 +848,15 @@ class _LoginScreen3State extends State<LoginScreen3>
 //          children: <Widget>[
 //            FractionalTranslation(
 //              translation: Offset(-1 - (scrollPercent / (1 / numCards)), 0.0),
-//              child: SignupPage(),
+//              child: signUpPage(),
 //            ),
 //            FractionalTranslation(
 //              translation: Offset(0 - (scrollPercent / (1 / numCards)), 0.0),
-//              child: HomePage(),
+//              child: homePage(),
 //            ),
 //            FractionalTranslation(
 //              translation: Offset(1 - (scrollPercent / (1 / numCards)), 0.0),
-//              child: LoginPage(),
+//              child: loginPage(),
 //            ),
 //          ],
 //        ),
@@ -864,7 +864,7 @@ class _LoginScreen3State extends State<LoginScreen3>
         child: PageView(
           controller: _controller,
           physics: AlwaysScrollableScrollPhysics(),
-          children: <Widget>[LoginPage(), HomePage(), SignupPage()],
+          children: <Widget>[loginPage(), homePage(), signUpPage()],
           scrollDirection: Axis.horizontal,
         ));
   }

@@ -59,8 +59,7 @@ class CircularChart {
 
 class CircularChartTween extends Tween<CircularChart> {
   CircularChartTween(CircularChart begin, CircularChart end)
-      : _stacksTween =
-            MergeTween<CircularChartStack>(begin.stacks, end.stacks),
+      : _stacksTween = MergeTween<CircularChartStack>(begin.stacks, end.stacks),
         super(begin: begin, end: end);
 
   final MergeTween<CircularChartStack> _stacksTween;

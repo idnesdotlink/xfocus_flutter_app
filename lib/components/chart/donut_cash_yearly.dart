@@ -25,8 +25,7 @@ class DonutCashYearly extends StatelessWidget {
         // Configure the width of the pie slices to 60px. The remaining space in
         // the chart will be left as a hole in the center.
         defaultRenderer: charts.ArcRendererConfig(
-            arcWidth: 40,
-            arcRendererDecorators: [charts.ArcLabelDecorator()]));
+            arcWidth: 40, arcRendererDecorators: [charts.ArcLabelDecorator()]));
   }
 
   /// Create one series with sample hard coded data.

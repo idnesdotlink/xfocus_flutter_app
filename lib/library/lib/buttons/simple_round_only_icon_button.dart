@@ -49,8 +49,7 @@ class SimpleRoundOnlyIconButton extends StatelessWidget {
                                 left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                             child: FlatButton(
                               shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(28.0)),
+                                  borderRadius: BorderRadius.circular(28.0)),
                               splashColor: backgroundColor,
                               color: backgroundColor,
                               child: Icon(
@@ -72,8 +71,7 @@ class SimpleRoundOnlyIconButton extends StatelessWidget {
                                 left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                             child: FlatButton(
                               shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(28.0)),
+                                  borderRadius: BorderRadius.circular(28.0)),
                               splashColor: Colors.white,
                               color: Colors.white,
                               child: Icon(
@@ -101,8 +99,7 @@ class SimpleRoundOnlyIconButton extends StatelessWidget {
                                 left: 5.0, right: 5.0, top: 10.0, bottom: 10.0),
                             child: FlatButton(
                               shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(28.0)),
+                                  borderRadius: BorderRadius.circular(28.0)),
                               splashColor: Colors.white,
                               color: Colors.white,
                               child: Icon(

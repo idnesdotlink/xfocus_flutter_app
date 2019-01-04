@@ -40,8 +40,7 @@ class SimpleRoundIconButton extends StatelessWidget {
                             padding: const EdgeInsets.all(5.0),
                             child: FlatButton(
                               shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(28.0)),
+                                  borderRadius: BorderRadius.circular(28.0)),
                               splashColor: Colors.white,
                               color: Colors.white,
                               child: Icon(
@@ -77,8 +76,7 @@ class SimpleRoundIconButton extends StatelessWidget {
                             padding: const EdgeInsets.all(5.0),
                             child: FlatButton(
                               shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(28.0)),
+                                  borderRadius: BorderRadius.circular(28.0)),
                               splashColor: Colors.white,
                               color: Colors.white,
                               child: Icon(

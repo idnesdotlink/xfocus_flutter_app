@@ -92,14 +92,16 @@ class _CameraScreenState extends State<CameraScreen> {
     try {
       await controller.takePicture(filePath);
     } on CameraException catch (e) {
-      // _showCameraException(e);
+      _showCameraException(e);
       return null;
     }
     return filePath;
   }
 
+  _showCameraException(e) {}
+
   /// Display the preview from the camera (or a message if the preview is not available).
-  Widget _cameraPreviewWidget() {
+  /* Widget _cameraPreviewWidget() {
     if (controller == null || !controller.value.isInitialized) {
       return const Text(
         'Tap a camera',
@@ -115,7 +117,7 @@ class _CameraScreenState extends State<CameraScreen> {
         child: CameraPreview(controller),
       );
     }
-  }
+  } */
 
   void onTakePictureButtonPressed() {
     takePicture().then((String filePath) {

@@ -1,3 +1,1 @@
-final Map<String, String> app = {
-  'title': 'Auto Drive'
-};
+final Map<String, String> app = {'title': 'Auto Drive'};

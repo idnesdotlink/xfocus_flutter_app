@@ -5,6 +5,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:xfocus_mobile/service/camera.dart';
+
 class CameraScreen2 extends StatefulWidget {
   CameraScreen2({Key key}) : super(key: key);
 

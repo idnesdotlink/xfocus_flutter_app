@@ -25,8 +25,8 @@ class SelectorButton extends StatelessWidget {
             color: active ? Colors.orange : Colors.transparent,
             child: InkWell(
               borderRadius: BorderRadius.all(
-              Radius.circular(20.0),
-            ),
+                Radius.circular(20.0),
+              ),
               onTap: () {
                 onTap();
               },

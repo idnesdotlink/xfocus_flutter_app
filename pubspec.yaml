@@ -37,7 +37,7 @@ dependencies:
   flutter_circular_chart: ^0.1.0
   flutter_colorpicker: ^0.1.0
   flutter_easyrefresh: ^1.0.7
-  flutter_local_notifications: 0.4.2+1
+  flutter_local_notifications: ^0.4.3
   flutter_map: ^0.4.0
   flutter_markdown: ^0.2.0
   flutter_picker: ^1.0.5
