@@ -91,7 +91,7 @@ packages:
       name: camera
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.8"
+    version: "0.2.9"
   carousel_pro:
     dependency: "direct main"
     description:
@@ -306,7 +306,7 @@ packages:
       name: flutter_easyrefresh
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.9"
+    version: "1.1.0"
   flutter_image:
     dependency: transitive
     description:
@@ -598,7 +598,7 @@ packages:
       name: material_design_icons_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.3289"
+    version: "3.0.3392"
   material_search:
     dependency: "direct main"
     description:
@@ -710,7 +710,7 @@ packages:
       name: petitparser
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.2"
+    version: "2.1.0"
   photo_view:
     dependency: "direct main"
     description:
@@ -1065,7 +1065,7 @@ packages:
       name: xml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.2.3"
+    version: "3.2.4"
   yaml:
     dependency: transitive
     description:
