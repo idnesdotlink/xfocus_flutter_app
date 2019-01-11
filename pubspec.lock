@@ -91,7 +91,7 @@ packages:
       name: camera
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.9"
+    version: "0.2.9+1"
   carousel_pro:
     dependency: "direct main"
     description:
@@ -348,7 +348,7 @@ packages:
       name: flutter_picker
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.5"
+    version: "1.0.6"
   flutter_range_slider:
     dependency: "direct main"
     description:
@@ -411,7 +411,7 @@ packages:
       name: flutter_staggered_grid_view
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.6"
+    version: "0.2.7"
   flutter_statusbar_manager:
     dependency: "direct main"
     description:
